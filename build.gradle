@@ -1,0 +1,220 @@
+buildscript {
+    ext {
+
+        defaultCompileSdkVersion = 33
+        defaultMinCompileSdkVersion = 21
+        defaultTargetCompileSdkVersion = 33
+        javaCompileVersion = JavaVersion.VERSION_17
+        javaTargetVersion = "17"
+        composeCompilerVersion = "1.4.7"
+
+        resourcesExcluded = ['META-INF/DEPENDENCIES',
+                             'META-INF/LICENSE',
+                             'META-INF/LICENSE.txt',
+                             'META-INF/LICENSE.md',
+                             'META-INF/LICENSE-notice.md',
+                             'META-INF/NOTICE',
+                             'META-INF/NOTICE.txt',
+                             'META-INF/NOTICE.md',
+                             'META-INF/ASL2.0',
+                             'META-INF/LGPL2.1']
+
+        version = [
+                classpath        : [
+                        androidGraddlePlugin: "8.0.2",
+                        kotlinPlugin        : "1.8.21"
+                ],
+                dependencies     : [
+                        core   : [
+                                multidex             : "2.0.1",
+                                kotlin_core          : '1.10.1',
+                                coroutines_core      : '1.7.2',
+                                coroutines_android   : '1.7.2',
+                                appcompat            : '1.6.1',
+                                appcompat_resources  : "1.5.1",
+                                material             : '1.9.0',
+                                viewmodel            : '2.6.1',
+                                viewmodel_saved_state: '2.6.1',
+                                lifecycle_runtime    : '2.6.1',
+                                lifecycle_extensions : "2.2.0",
+                                lifecycle_livedata   : '2.6.1',
+                                reflection           : '1.9.0',
+                        ],
+                        compose: [
+                                ui                          : '1.4.3',
+                                ui_util                     : '1.4.3',
+                                ui_preview                  : "1.2.1",
+                                runtime                     : '1.4.3',
+                                material                    : '1.4.3',
+                                material_icons_core         : "1.1.1",
+                                material_icons_extended     : "1.1.1",
+                                foundation                  : '1.4.3',
+                                accompanist_pager_indicators: '0.31.5-beta',
+                                animation                   : '1.4.3',
+                                activity                    : '1.7.2',
+                                constraintlayout            : "1.0.1",
+                                viewmodel                   : '2.6.1',
+                                livedata                    : '1.4.3',
+                                navigation                  : '2.6.0',
+                                google_maps                 : "2.2.0",
+                        ],
+                        lib    : [
+                                threetenabp : '1.4.6',
+                                bouncycastle: '1.75',
+                                zxing       : '3.5.1',
+                                webkit      : '1.7.0',
+                                dagger      : '2.46.1',
+                                dagger_kapt : '2.46.1',
+                        ],
+                        app    : [
+                                google_play_services_maps: "18.1.0",
+                                gson                     : "2.9.0",
+                                browser                  : "1.4.0",
+                                okhttp3_interceptor      : "5.0.0-alpha.11",
+                                retrofit                 : "2.9.0",
+                                retrofit2_scalar         : "2.1.0",
+                                retrofit2_gson           : "2.9.0",
+                                glide                    : "4.13.2",
+                                glide_kapt               : "4.13.2",
+                                glide_okhttp3            : "4.13.2",
+                        ]
+                ],
+
+                dependencies_test: [
+                        core_integration: [
+                                test               : '1.5.0',
+                                test_ktx           : '1.5.0',
+                                junit_test         : '1.1.5',
+                                junit_test_ktx     : '1.1.5',
+                                espresso_core      : '3.5.1',
+                                espresso_contrib   : '3.5.1',
+                                uiautomator        : "2.2.0",
+                                truth              : '1.1.5',
+                                coroutine          : '1.7.2',
+                                compose_ui         : '1.4.3',
+                                compose_ui_manifest: '1.4.3',
+                        ],
+                        misc_integration: [
+
+                        ],
+                        core_unit       : [
+                                juint        : "4.13.2",
+                                truth        : '1.1.5',
+                                mockk        : '1.13.5',
+                                mockk_android: '1.13.5',
+                        ],
+                        misc_unit       : [
+
+                        ],
+                ]
+        ]
+
+        dependencies_lib = [
+                core   : [
+                        multidex             : "androidx.multidex:multidex:${version.dependencies.core.multidex}",
+                        kotlin_core          : "androidx.core:core-ktx:${version.dependencies.core.kotlin_core}",
+                        coroutines_core      : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${version.dependencies.core.coroutines_core}",
+                        coroutines_android   : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${version.dependencies.core.coroutines_android}",
+                        appcompat            : "androidx.appcompat:appcompat:${version.dependencies.core.appcompat}",
+                        appcompat_resources  : "androidx.appcompat:appcompat-resources:${version.dependencies.core.appcompat_resources}",
+                        material             : "com.google.android.material:material:${version.dependencies.core.material}",
+                        viewmodel            : "androidx.lifecycle:lifecycle-viewmodel-ktx:${version.dependencies.core.viewmodel}",
+                        viewmodel_saved_state: "androidx.lifecycle:lifecycle-viewmodel-savedstate:${version.dependencies.core.viewmodel_saved_state}",
+                        lifecycle_runtime    : "androidx.lifecycle:lifecycle-runtime-ktx:${version.dependencies.core.lifecycle_runtime}",
+                        lifecycle_extensions : "androidx.lifecycle:lifecycle-extensions:${version.dependencies.core.lifecycle_extensions}",
+                        lifecycle_livedata   : "androidx.lifecycle:lifecycle-livedata-ktx:${version.dependencies.core.lifecycle_livedata}",
+                        reflection           : "org.jetbrains.kotlin:kotlin-reflect:${version.dependencies.core.reflection}",
+                ],
+                compose: [
+                        ui                          : "androidx.compose.ui:ui:${version.dependencies.compose.ui}",
+                        ui_util                     : "androidx.compose.ui:ui-util:${version.dependencies.compose.ui_util}",
+                        ui_preview                  : "androidx.compose.ui:ui-tooling-preview:${version.dependencies.compose.ui_preview}",
+                        runtime                     : "androidx.compose.runtime:runtime:${version.dependencies.compose.runtime}",
+                        material                    : "androidx.compose.material:material:${version.dependencies.compose.material}",
+                        material_icons_core         : "androidx.compose.material:material-icons-core:${version.dependencies.compose.material_icons_core}",
+                        material_icons_extended     : "androidx.compose.material:material-icons-extended:${version.dependencies.compose.material_icons_extended}",
+                        foundation                  : "androidx.compose.foundation:foundation:${version.dependencies.compose.foundation}",
+                        accompanist_pager_indicators: "com.google.accompanist:accompanist-pager-indicators:${version.dependencies.compose.accompanist_pager_indicators}",
+                        animation                   : "androidx.compose.animation:animation:${version.dependencies.compose.animation}",
+                        activity                    : "androidx.activity:activity-compose:${version.dependencies.compose.activity}",
+                        constraintlayout            : "androidx.constraintlayout:constraintlayout-compose:${version.dependencies.compose.constraintlayout}",
+                        viewmodel                   : "androidx.lifecycle:lifecycle-viewmodel-compose:${version.dependencies.compose.viewmodel}",
+                        livedata                    : "androidx.compose.runtime:runtime-livedata:${version.dependencies.compose.livedata}",
+                        navigation                  : "androidx.navigation:navigation-compose:${version.dependencies.compose.navigation}",
+                        google_maps                 : "com.google.maps.android:maps-compose:${version.dependencies.compose.google_maps}",
+                ],
+                lib    : [
+                        threetenabp : "com.jakewharton.threetenabp:threetenabp:${version.dependencies.lib.threetenabp}",
+                        bouncycastle: "org.bouncycastle:bcpkix-jdk15to18:${version.dependencies.lib.bouncycastle}",
+                        zxing       : "com.google.zxing:core:${version.dependencies.lib.zxing}",
+                        webkit      : "androidx.webkit:webkit:${version.dependencies.lib.webkit}",
+                        dagger      : "com.google.dagger:dagger:${version.dependencies.lib.dagger}",
+                        dagger_kapt : "com.google.dagger:dagger-compiler:${version.dependencies.lib.dagger_kapt}",
+                ],
+                app    : [
+                        google_play_services_maps: "com.google.android.gms:play-services-maps${version.dependencies.app.google_play_services_maps}",
+                        gson                     : "com.google.code.gson:gson:${version.dependencies.app.gson}",
+                        browser                  : "androidx.browser:browser:${version.dependencies.app.browser}",
+                        okhttp3_interceptor      : "com.squareup.okhttp3:logging-interceptor:${version.dependencies.app.okhttp3_interceptor}",
+                        retrofit                 : "com.squareup.retrofit2:retrofit:${version.dependencies.app.retrofit}",
+                        retrofit2_scalar         : "com.squareup.retrofit2:converter-scalars:${version.dependencies.app.retrofit2_scalar}",
+                        retrofit2_gson           : "com.squareup.retrofit2:converter-gson:${version.dependencies.app.retrofit2_gson}",
+                        glide                    : "com.github.bumptech.glide:glide:${version.dependencies.app.glide}",
+                        glide_kapt               : "com.github.bumptech.glide:compiler::${version.dependencies.app.glide_kapt}",
+                        glide_okhttp3            : "com.github.bumptech.glide:okhttp3-integration:${version.dependencies.app.glide_okhttp3}",
+                ]
+        ]
+
+        dependencies_test = [
+                core_integration: [
+                        test               : "androidx.test:core:${version.dependencies_test.core_integration.test}",
+                        test_ktx           : "androidx.test:core-ktx:${version.dependencies_test.core_integration.test_ktx}",
+                        junit_test         : "androidx.test.ext:junit:${version.dependencies_test.core_integration.junit_test}",
+                        junit_test_ktx     : "androidx.test.ext:junit-ktx:${version.dependencies_test.core_integration.junit_test_ktx}",
+                        espresso_core      : "androidx.test.espresso:espresso-core:${version.dependencies_test.core_integration.espresso_core}",
+                        espresso_contrib   : "androidx.test.espresso:espresso-contrib:${version.dependencies_test.core_integration.espresso_contrib}",
+                        uiautomator        : "androidx.test.uiautomator:uiautomator:${version.dependencies_test.core_integration.uiautomator}",
+                        truth              : "com.google.truth:truth:${version.dependencies_test.core_integration.truth}",
+                        coroutine          : "org.jetbrains.kotlinx:kotlinx-coroutines-test:${version.dependencies_test.core_integration.coroutine}",
+                        compose_ui         : "androidx.compose.ui:ui-test-junit4:${version.dependencies_test.core_integration.compose_ui}",
+                        compose_ui_manifest: "androidx.compose.ui:ui-test-manifest:${version.dependencies_test.core_integration.compose_ui_manifest}",
+                ],
+                misc_integration: [
+
+                ],
+                core_unit       : [
+                        juint        : "junit:junit:${version.dependencies_test.core_unit.juint}",
+                        truth        : "com.google.truth:truth:${version.dependencies_test.core_unit.truth}",
+                        mockk        : "io.mockk:mockk:${version.dependencies_test.core_unit.mockk}",
+                        mockk_android: "io.mockk:mockk-android:${version.dependencies_test.core_unit.mockk_android}",
+                ],
+                misc_unit       : [
+
+                ],
+        ]
+
+        classpath = [
+                android: "com.android.tools.build:gradle:${version.classpath.androidGraddlePlugin}",
+                kotlin : "org.jetbrains.kotlin:kotlin-gradle-plugin:${version.classpath.kotlinPlugin}",
+        ]
+
+    }
+
+
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+
+    dependencies {
+        classpath.each { key, value ->
+            classpath value
+        }
+    }
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

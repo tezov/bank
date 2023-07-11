@@ -1,0 +1,117 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+}
+
+android {
+    compileSdk defaultCompileSdkVersion
+    compileOptions {
+        sourceCompatibility javaCompileVersion
+        targetCompatibility javaCompileVersion
+    }
+    kotlinOptions {
+        jvmTarget = javaTargetVersion
+    }
+    defaultConfig {
+        applicationId "com.tezov.bank"
+        resourceConfigurations += ['en', 'fr']
+        versionCode 23
+        minSdk defaultMinCompileSdkVersion
+        targetSdk defaultTargetCompileSdkVersion
+        testInstrumentationRunner "com.tezov.bank.jUnit.JUnitRunner"
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion composeCompilerVersion
+    }
+    packagingOptions {
+        resources {
+            excludes.addAll(resourcesExcluded)
+        }
+    }
+    signingConfigs {
+        releaseConfig {
+            def keystoreReleaseProperties = new Properties()
+            keystoreReleaseProperties.load(new FileInputStream(file("keyStoreRelease.properties")))
+            storeFile file(keystoreReleaseProperties.storeFile)
+            storePassword keystoreReleaseProperties.storePassword
+            keyAlias keystoreReleaseProperties.keyAlias
+            keyPassword keystoreReleaseProperties.keyPassword
+        }
+        debugConfig {
+            def keystoreDebugProperties = new Properties()
+            keystoreDebugProperties.load(new FileInputStream(file("keyStoreDebug.properties")))
+            storeFile file(keystoreDebugProperties.storeFile)
+            storePassword keystoreDebugProperties.storePassword
+            keyAlias keystoreDebugProperties.keyAlias
+            keyPassword keystoreDebugProperties.keyPassword
+        }
+    }
+    buildTypes {
+        release {
+            applicationIdSuffix ".rse"
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+            signingConfig signingConfigs.releaseConfig
+        }
+        debug {
+            applicationIdSuffix ".dbg"
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles file('../proguard/proguard-rules-test.txt')
+            debuggable true
+            signingConfig signingConfigs.debugConfig
+        }
+    }
+    sourceSets {
+        main {
+            java {
+                srcDirs 'src/main/java', 'src/main/kotlin'
+                filter.exclude '**/*TODO*'
+            }
+        }
+        debug {
+            res {
+                srcDirs 'src/build_type/debug/res'
+            }
+            java {
+                srcDirs 'src/build_type/debug/java', 'src/build_type/debug/kotlin'
+            }
+        }
+        release {
+            res {
+                srcDirs 'src/build_type/release/res'
+            }
+            java {
+                srcDirs 'src/build_type/release/java', 'src/build_type/release/kotlin'
+            }
+        }
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+//        disable 'InvalidPackage'
+    }
+    namespace 'com.tezov.bank'
+}
+
+dependencies {
+    implementation project(':lib_core_kotlin')
+    implementation project(':lib_core_android_kotlin')
+
+    implementation dependencies_lib.lib.threetenabp
+    implementation dependencies_lib.lib.webkit
+
+    implementation dependencies_lib.lib.dagger
+    kapt dependencies_lib.lib.dagger_kapt
+
+    // test
+    testImplementation project(':test_common')
+    androidTestImplementation project(':test_common')
+    debugImplementation dependencies_test.core_integration.compose_ui_manifest
+}

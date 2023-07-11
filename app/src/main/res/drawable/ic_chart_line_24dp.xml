@@ -1,0 +1,22 @@
+
+
+
+
+<!--
+  ~ Copyright (c) 2023.
+  ~ Created by Tezov on 09/07/2023 17:00
+  ~ Last modified 09/07/2023 16:53
+  ~ MIT Licence
+  ~ Feel free to contact me for any request / feedback at tezov.app@gmail.com
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:autoMirrored="true"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="M3.5,18.49l6,-6.01 4,4L22,6.92l-1.41,-1.41 -7.09,7.97 -4,-4L2,16.99z" />
+</vector>

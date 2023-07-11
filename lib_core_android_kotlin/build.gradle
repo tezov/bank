@@ -1,0 +1,102 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+}
+
+android {
+    compileSdk defaultCompileSdkVersion
+    compileOptions {
+        sourceCompatibility javaCompileVersion
+        targetCompatibility javaCompileVersion
+    }
+    kotlinOptions {
+        jvmTarget = javaTargetVersion
+    }
+    defaultConfig {
+        minSdk defaultMinCompileSdkVersion
+        targetSdk defaultTargetCompileSdkVersion
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion composeCompilerVersion
+    }
+    packagingOptions {
+        resources {
+            excludes.addAll(resourcesExcluded)
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+    sourceSets {
+        main {
+            java {
+                srcDirs 'src/main/kotlin'
+                filter.exclude '**/*TODO*'
+            }
+        }
+        debug {
+            res {
+                srcDirs 'src/build_type/debug/res'
+            }
+            java {
+                srcDirs 'src/build_type/debug/kotlin'
+            }
+        }
+        release {
+            res {
+                srcDirs 'src/build_type/release/res'
+            }
+            java {
+                srcDirs 'src/build_type/release/kotlin'
+            }
+        }
+    }
+    namespace 'com.tezov.lib_core_android_kotlin'
+}
+
+dependencies {
+    api project(':lib_core_kotlin')
+
+    api dependencies_lib.core.reflection
+    api dependencies_lib.core.appcompat
+    api dependencies_lib.core.material
+
+    api dependencies_lib.core.viewmodel
+    api dependencies_lib.core.viewmodel_saved_state
+
+    api dependencies_lib.core.lifecycle_runtime
+    api dependencies_lib.core.lifecycle_extensions
+    api dependencies_lib.core.lifecycle_livedata
+
+    api dependencies_lib.compose.ui
+    api dependencies_lib.compose.runtime
+    api dependencies_lib.compose.material
+    api dependencies_lib.compose.foundation
+    api dependencies_lib.compose.accompanist_pager_indicators
+    api dependencies_lib.compose.animation
+    api dependencies_lib.compose.activity
+    api dependencies_lib.compose.constraintlayout
+    api dependencies_lib.compose.viewmodel
+    api dependencies_lib.compose.livedata
+    api dependencies_lib.compose.navigation
+    api dependencies_lib.compose.ui_util
+
+    implementation dependencies_lib.lib.dagger
+    kapt dependencies_lib.lib.dagger_kapt
+
+    implementation dependencies_lib.lib.webkit
+
+
+}

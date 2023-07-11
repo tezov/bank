@@ -1,0 +1,40 @@
+- add dialog celebration
++ bug disparition background when compose is overlay after rotation
+
+Ensuite:
+- Un bon coups de propre à faire
+    - check TODO //
+- Finir les regles proguard de Dagger pour une release correcte
+- Rotation, Nav, keep scroll and other saved/restore
+
+Details:
+- Couleur Payment Lyf, Paypal, etc
+- Scroll end blanc visible sous le bleu?
+- Ripple BottomBar absent
+- Ripple section row unbounded
+- Ajouter un visuel pour savoir ce qui est actif ou notImplemented sur les actions de démo
+- Test Contenu pour voir le comportement et rendu
+
+Disposition des composants
+--> Vérifier le scope activité -> le coroutine scope doit pas etre utilisé cross activité
+
+Finition:
+- Sortir les lib en depots independant.
+- OnClick Custom ripple unbounded
+- Snackbar selector (+ permettre au dessus d'un dialog ???)
+- Dialog selector
+- BottomSheet selector
+- Carousel first and last take edge to edge
+- Pager / Roller find the highest
+
+Suite si tu t'ennuis:
+- refactor des parties importantes de la lib Java avec vrai mise au propre plus test de non regression
+    - parser
+    - bufferProvider
+    - encryption
+    - network listener
+    - autre ? runnable group to coroutine
+
+Et Enfin:
+- Module ViewModel + Clean Architecture sample up to nextwwork request
+- Test Unit / UI / EE

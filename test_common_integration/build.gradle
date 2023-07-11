@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk defaultCompileSdkVersion
+    compileOptions {
+        sourceCompatibility javaCompileVersion
+        targetCompatibility javaCompileVersion
+    }
+    kotlinOptions {
+        jvmTarget = javaTargetVersion
+    }
+    defaultConfig {
+        minSdk defaultMinCompileSdkVersion
+        targetSdk defaultTargetCompileSdkVersion
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+    packagingOptions {
+        resources {
+            excludes.addAll(resourcesExcluded)
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            java {
+                srcDirs 'src/main/kotlin'
+                filter.exclude '**/*TODO*'
+            }
+        }
+        debug {
+            res {
+                srcDirs 'src/build_type/debug/res'
+            }
+            java {
+                srcDirs 'src/build_type/debug/kotlin'
+            }
+        }
+        release {
+            res {
+                srcDirs 'src/build_type/release/res'
+            }
+            java {
+                srcDirs 'src/build_type/release/kotlin'
+            }
+        }
+    }
+    namespace 'com.tezov.test_common_integration'
+}
+
+dependencies {
+    implementation dependencies_lib.core.kotlin_core
+
+    api dependencies_test.core_integration.junit_test
+    api dependencies_test.core_integration.junit_test_ktx
+    api dependencies_test.core_integration.test
+    api dependencies_test.core_integration.test_ktx
+
+    api dependencies_test.core_integration.coroutine
+    api dependencies_test.core_integration.compose_ui
+    api dependencies_test.core_integration.truth
+    api dependencies_test.core_integration.espresso_core
+    api(dependencies_test.core_integration.espresso_contrib) {
+        exclude group: "org.checkerframework", module: "checker"
+    }
+
+    api dependencies_test.core_integration.uiautomator
+
+}

@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk defaultCompileSdkVersion
+    compileOptions {
+        sourceCompatibility javaCompileVersion
+        targetCompatibility javaCompileVersion
+    }
+    kotlinOptions {
+        jvmTarget = javaTargetVersion
+    }
+    defaultConfig {
+        minSdk defaultMinCompileSdkVersion
+        targetSdk defaultTargetCompileSdkVersion
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+    packagingOptions {
+        resources {
+            excludes.addAll(resourcesExcluded)
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            java {
+                srcDirs 'src/main/kotlin'
+                filter.exclude '**/*TODO*'
+            }
+        }
+        debug {
+            res {
+                srcDirs 'src/build_type/debug/res'
+            }
+            java {
+                srcDirs 'src/build_type/debug/kotlin'
+            }
+        }
+        release {
+            res {
+                srcDirs 'src/build_type/release/res'
+            }
+            java {
+                srcDirs 'src/build_type/release/kotlin'
+            }
+        }
+    }
+    namespace 'com.tezov.test_common_unit'
+}
+
+dependencies {
+    implementation dependencies_lib.core.kotlin_core
+
+    api dependencies_test.core_unit.juint
+    api dependencies_test.core_unit.truth
+    api dependencies_test.core_unit.mockk
+    api dependencies_test.core_unit.mockk_android
+
+}

@@ -1,0 +1,59 @@
+
+
+<resources>
+    <string name="app_name">TezovBank</string>
+
+<!--    LOBBY -->
+    <!--    page launch-->
+    <string name="pg_login_pager_0">Balayer l\'écran vers la gauche\npour afficher votre solde.</string>
+    <string name="pg_login_pager_1">Accédez à votre solde en\nun coups d\'oeil</string>
+    <string name="pg_login_btn_connect">Accéder à mes comptes</string>
+    <string name="pg_login_btn_send_money">Envoyer de l\'argent avec paylib</string>
+    <string name="pg_login_btn_activate_balance">Activer le solde</string>
+    <string name="pg_login_link_help_and_service">Aide &amp; Services</string>
+    <string name="pg_login_img_logo">image logo banque</string>
+    <string name="pg_login_img_suit_case">icon utilisateur</string>
+    <string name="pg_login_icon_add_account">icon ajouter un compte</string>
+    <string name="pg_login_icon_more_action">icon plus d\'action</string>
+    <string-array name="pg_login_drop_down_menu">
+        <item>Se connecter avec un autre compte</item>
+        <item>Supprimer le profil</item>
+    </string-array>
+
+    <!--    page login auth-->
+    <string name="dlg_login_auth_icon_close">icon fermeture</string>
+    <string name="dlg_login_auth_enter_password">Saisissez votre code secret pour\naccéder à vos comptes</string>
+    <string name="dlg_login_auth_icon_login_info">icon login info</string>
+    <string name="dlg_login_auth_fld_label_login">Login</string>
+    <string name="dlg_login_auth_fld_placeholder_login">1234</string>
+    <string name="dlg_login_auth_icon_login_clear">icon login clear</string>
+    <string name="dlg_login_auth_icon_password_info">icon password info</string>
+    <string name="dlg_login_auth_fld_label_password">Password</string>
+    <string name="dlg_login_auth_fld_placeholder_password">1234</string>
+    <string name="dlg_login_auth_icon_password_delete">icon password delete</string>
+    <string name="dlg_login_auth_btn_connect">Se connecter</string>
+    <string name="dlg_login_auth_link_login_forgotten">Mon n° client?</string>
+    <string name="dlg_login_auth_link_password_forgotten">Code secret oublié ?</string>
+
+    <!--    page help and service-->
+    <string name="pg_h_and_s_icon_close">icon fermeture</string>
+
+<!--    AUTH -->
+    <!--    top app bar-->
+    <string name="nav_top_message_info">Boîte de réception</string>
+
+    <!--    bottom navigation-->
+    <string name="nav_btm_account">Compte</string>
+    <string name="nav_btm_help">Aide</string>
+    <string name="nav_btm_discover">Découvrir</string>
+    <string name="nav_btm_payment">Payment</string>
+    <string name="nav_btm_profile">Profile</string>
+
+    <!--    page profil-->
+    <string name="pg_profile_icon_close">icon déconnection utilisateur</string>
+    <string name="pg_profile_icon_use">icon utilisateur</string>
+
+    <!--    account-->
+    <string name="pg_a_bts_icon_close">icon fermeture</string>
+
+</resources>

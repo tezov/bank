@@ -59,7 +59,7 @@ android {
         packaging {
             resources {
                 excludes.addAll(
-                    stringList("projectPath.resourcesExcluded")
+                    stringList("resourcesExcluded")
                 )
             }
         }
@@ -108,8 +108,8 @@ dependencies {
     }
 
     // test
-    testImplementation(project(":test_common"))
-    androidTestImplementation(project(":test_common"))
+    testImplementation(project(":lib_test_common"))
+    androidTestImplementation(project(":lib_test_common"))
     tezovCatalog {
         with("projectPath.dependencies_test.core_integration"){
             debugImplementation(string("compose_ui_manifest"))

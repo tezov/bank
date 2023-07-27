@@ -1,5 +1,17 @@
 {
   "domain": "com.tezov",
+  "resourcesExcluded": [
+    "META-INF/DEPENDENCIES",
+    "META-INF/LICENSE",
+    "META-INF/LICENSE.txt",
+    "META-INF/LICENSE.md",
+    "META-INF/LICENSE-notice.md",
+    "META-INF/NOTICE",
+    "META-INF/NOTICE.txt",
+    "META-INF/NOTICE.md",
+    "META-INF/ASL2.0",
+    "META-INF/LGPL2.1"
+  ],
   "projectVersion": {
     "defaultCompileSdk": 33,
     "defaultMinCompileSdk": 21,
@@ -8,13 +20,6 @@
     "javaTarget": "${javasource}",
     "jvmTarget": "17",
     "composeCompiler": "1.4.8",
-    "plugin": {
-      "android": "8.0.2",
-      "kotlin": "1.8.22",
-      "kapt": "1.8.22",
-      "ksp": "1.8.21-1.0.11",
-      "tezov_project": "8.0.2-alpha.6"
-    },
     "dependencies": {
       "core": {
         "multidex": "2.0.1",
@@ -66,7 +71,7 @@
         "kotlin_serialization_json": "1.5.1",
         "google_play_services_maps": "18.1.0",
         "okhttp3_interceptor": "5.0.0-alpha.11",
-        "retrofit": "2.9.0",
+        "retrofit": "2.8.0",
         "retrofit2_scalar": "2.1.0",
         "retrofit2_gson": "2.9.0",
         "glide": "4.13.2",
@@ -98,28 +103,6 @@
     }
   },
   "projectPath": {
-    "resourcesExcluded" : [
-      "META-INF/DEPENDENCIES",
-      "META-INF/LICENSE",
-      "META-INF/LICENSE.txt",
-      "META-INF/LICENSE.md",
-      "META-INF/LICENSE-notice.md",
-      "META-INF/NOTICE",
-      "META-INF/NOTICE.txt",
-      "META-INF/NOTICE.md",
-      "META-INF/ASL2.0",
-      "META-INF/LGPL2.1"
-    ],
-    "plugin": {
-      "android": "com.android",
-      "application": "${android}.application",
-      "library": "${android}.library",
-      "kotlin": "org.jetbrains.kotlin.android",
-      "kapt": "org.jetbrains.kotlin.kapt",
-      "ksp": "com.google.devtools.ksp",
-      "tezov_project": "com.tezov.plugin_project",
-      "tezov_project_config": "${tezov_project}.config"
-    },
     "dependencies": {
       "core": {
         "multidex": "androidx.multidex:multidex:${projectVersion.dependencies.core.multidex}",
@@ -151,9 +134,9 @@
         "foundation": "androidx.compose.foundation:foundation:${projectVersion.dependencies.compose.foundation}",
         "accompanist_pager_indicators": "com.google.accompanist:accompanist-pager-indicators:${projectVersion.dependencies.compose.accompanist_pager_indicators}",
         "animation": "androidx.compose.ui:ui-graphics:${projectVersion.dependencies.compose.animation}",
-        "activity":  "androidx.activity:activity-compose:${projectVersion.dependencies.compose.activity}",
+        "activity": "androidx.activity:activity-compose:${projectVersion.dependencies.compose.activity}",
         "constraintlayout": "androidx.constraintlayout:constraintlayout-compose:${projectVersion.dependencies.compose.constraintlayout}",
-        "viewmodel":  "androidx.lifecycle:lifecycle-viewmodel-compose:${projectVersion.dependencies.compose.viewmodel}",
+        "viewmodel": "androidx.lifecycle:lifecycle-viewmodel-compose:${projectVersion.dependencies.compose.viewmodel}",
         "livedata": "androidx.compose.runtime:runtime-livedata:${projectVersion.dependencies.compose.livedata}",
         "navigation": "androidx.navigation:navigation-compose:${projectVersion.dependencies.compose.navigation}",
         "google_maps": "com.google.maps.android:maps-compose:${projectVersion.dependencies.compose.google_maps}"
@@ -169,13 +152,13 @@
         "jackson_databind": "com.fasterxml.jackson.core:jackson-databind:${projectVersion.dependencies.lib.jackson_databind}",
         "kotlin_serialization": "org.jetbrains.kotlin.plugin.serialization:${projectVersion.dependencies.lib.kotlin_serialization}",
         "kotlin_serialization_json": "org.jetbrains.kotlin.plugin.serialization-json:${projectVersion.dependencies.lib.kotlin_serialization_json}",
-        "google_play_services_maps": "com.google.android.gms:play-services-maps${projectVersion.dependencies.lib.google_play_services_maps}",
+        "google_play_services_maps": "com.google.android.gms:play-services-maps:${projectVersion.dependencies.lib.google_play_services_maps}",
         "okhttp3_interceptor": "com.squareup.okhttp3:logging-interceptor:${projectVersion.dependencies.lib.okhttp3_interceptor}",
         "retrofit": "com.squareup.retrofit2:retrofit:${projectVersion.dependencies.lib.retrofit}",
         "retrofit2_scalar": "com.squareup.retrofit2:converter-scalars:${projectVersion.dependencies.lib.retrofit2_scalar}",
         "retrofit2_gson": "com.squareup.retrofit2:converter-gson:${projectVersion.dependencies.lib.retrofit2_gson}",
         "glide": "com.github.bumptech.glide:glide:${projectVersion.dependencies.lib.glide}",
-        "glide_kapt": "com.github.bumptech.glide:compiler::${projectVersion.dependencies.lib.glide_kapt}",
+        "glide_kapt": "com.github.bumptech.glide:compiler:${projectVersion.dependencies.lib.glide_kapt}",
         "glide_okhttp3": "com.github.bumptech.glide:okhttp3-integration:${projectVersion.dependencies.lib.glide_okhttp3}"
       }
     },
@@ -184,7 +167,7 @@
         "test": "androidx.test:core:${projectVersion.dependencies_test.core_integration.test}",
         "test_ktx": "androidx.test:core-ktx:${projectVersion.dependencies_test.core_integration.test_ktx}",
         "junit_test": "androidx.test.ext:junit:${projectVersion.dependencies_test.core_integration.junit_test}",
-        "junit_test_ktx":  "androidx.test.ext:junit-ktx:${projectVersion.dependencies_test.core_integration.junit_test_ktx}",
+        "junit_test_ktx": "androidx.test.ext:junit-ktx:${projectVersion.dependencies_test.core_integration.junit_test_ktx}",
         "espresso_core": "androidx.test.espresso:espresso-core:${projectVersion.dependencies_test.core_integration.espresso_core}",
         "espresso_contrib": "androidx.test.espresso:espresso-contrib:${projectVersion.dependencies_test.core_integration.espresso_contrib}",
         "uiautomator": "androidx.test.uiautomator:uiautomator:${projectVersion.dependencies_test.core_integration.uiautomator}",
@@ -202,45 +185,48 @@
       }
     }
   },
-  "project": [
-    "${projectPath.plugin.library}:${projectVersion.plugin.android}",
-    "${projectPath.plugin.kotlin}:${projectVersion.plugin.kotlin}",
-    "${projectPath.plugin.kapt}:${projectVersion.plugin.kapt}",
-    "${projectPath.plugin.ksp}:${projectVersion.plugin.ksp}",
-    "${projectPath.plugin.tezov_project_config}:${projectVersion.plugin.tezov_project_config}"
-  ],
+  "appPlugin": {
+    "android": "com.android",
+    "application": "${android}.application",
+    "library": "${android}.library",
+    "kotlin": "org.jetbrains.kotlin.android",
+    "kapt": "org.jetbrains.kotlin.kapt",
+    "ksp": "com.google.devtools.ksp",
+    "tezov_project": "com.tezov.plugin_project",
+    "tezov_project_config": "${tezov_project}.config"
+  },
   "app": [
-    "${projectPath.plugin.application}",
-    "${projectPath.plugin.kotlin}",
-    "${projectPath.plugin.kapt}",
-    "${projectPath.plugin.tezov_project_config}"
+    "${appPlugin.application}",
+    "${appPlugin.kotlin}",
+    "${appPlugin.kapt}",
+    "${appPlugin.tezov_project_config}"
   ],
   "lib_core_android_kotlin": [
-    "${projectPath.plugin.library}",
-    "${projectPath.plugin.kotlin}",
-    "${projectPath.plugin.kapt}",
-    "${projectPath.plugin.tezov_project_config}"
+    "${appPlugin.library}",
+    "${appPlugin.kotlin}",
+    "${appPlugin.kapt}",
+    "${appPlugin.tezov_project_config}"
   ],
   "lib_core_kotlin": [
-    "${projectPath.plugin.library}",
-    "${projectPath.plugin.kotlin}",
-    "${projectPath.plugin.kapt}",
-    "${projectPath.plugin.tezov_project_config}"
+    "${appPlugin.library}",
+    "${appPlugin.kotlin}",
+    "${appPlugin.kapt}",
+    "${appPlugin.tezov_project_config}"
   ],
-  "test_common": [
-    "${projectPath.plugin.library}",
-    "${projectPath.plugin.kotlin}",
-    "${projectPath.plugin.kapt}",
-    "${projectPath.plugin.tezov_project_config}"
+  "lib_test_common": [
+    "${appPlugin.library}",
+    "${appPlugin.kotlin}",
+    "${appPlugin.kapt}",
+    "${appPlugin.tezov_project_config}"
   ],
-  "test_common_integration": [
-    "${projectPath.plugin.library}",
-    "${projectPath.plugin.kotlin}",
-    "${projectPath.plugin.tezov_project_config}"
+  "lib_test_common_integration": [
+    "${appPlugin.library}",
+    "${appPlugin.kotlin}",
+    "${appPlugin.tezov_project_config}"
   ],
-  "test_common_unit": [
-    "${projectPath.plugin.library}",
-    "${projectPath.plugin.kotlin}",
-    "${projectPath.plugin.tezov_project_config}"
+  "lib_test_common_unit": [
+    "${appPlugin.library}",
+    "${appPlugin.kotlin}",
+    "${appPlugin.tezov_project_config}"
   ]
 }

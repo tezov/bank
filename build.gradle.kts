@@ -1,5 +1,3 @@
-import java.net.URI
-
 plugins {
     id("com.tezov.plugin_project.catalog")
 }
@@ -13,17 +11,17 @@ tezovCatalog {
 //    jsonFile = jsonFromUrl("https://www.tezov.com/tezov_bank.catalog.json")
     configureProjects()
 
-    with("projectPath.dependencies"){
-        with("core"){
-            checkDependenciesVersion()
-        }
-        with("compose"){
-            checkDependenciesVersion()
-        }
-        with("lib"){
-            checkDependenciesVersion()
-        }
-    }
+//    with("projectPath.dependencies"){
+//        with("core"){
+//            checkDependenciesVersion()
+//        }
+//        with("compose"){
+//            checkDependenciesVersion()
+//        }
+//        with("lib"){
+//            checkDependenciesVersion()
+//        }
+//    }
 
 }
 

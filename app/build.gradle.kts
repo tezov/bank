@@ -36,14 +36,14 @@ tezovConfig {
 
 android {
     tezovCatalog {
-        with("projectVersion"){
+        with("projectVersion") {
             compileSdk = int("defaultCompileSdk")
             compileOptions {
                 sourceCompatibility = javaVersion("javasource")
                 targetCompatibility = javaVersion("javaTarget")
             }
             kotlinOptions {
-                jvmTarget = string("jvmTarget")
+                jvmTarget = javaVersion("jvmTarget").toString()
             }
             defaultConfig {
                 minSdk = int("defaultMinCompileSdk")
@@ -58,9 +58,9 @@ android {
         }
         packaging {
             resources {
-                excludes.addAll(
-                    stringList("resourcesExcluded")
-                )
+                stringListOrNull("resourcesExcluded")?.let {
+                    excludes.addAll(it)
+                }
             }
         }
     }
@@ -97,11 +97,11 @@ android {
 dependencies {
     implementation(project(":lib_core_android_kotlin"))
     tezovCatalog {
-        with("projectPath.dependencies.core"){
+        with("projectPath.dependencies.core") {
             implementation(string("dagger"))
             kapt(string("dagger_kapt"))
         }
-        with("projectPath.dependencies.lib"){
+        with("projectPath.dependencies.lib") {
             implementation(string("threetenabp"))
             implementation(string("webkit"))
         }
@@ -111,7 +111,7 @@ dependencies {
     testImplementation(project(":lib_test_common"))
     androidTestImplementation(project(":lib_test_common"))
     tezovCatalog {
-        with("projectPath.dependencies_test.core_integration"){
+        with("projectPath.dependencies_test.core_integration") {
             debugImplementation(string("compose_ui_manifest"))
         }
     }

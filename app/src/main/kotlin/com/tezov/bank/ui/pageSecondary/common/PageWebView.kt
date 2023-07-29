@@ -11,7 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import com.tezov.bank.R
+import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.lib_core_android_kotlin.navigation.navigator.GraphEntry
 import com.tezov.lib_core_android_kotlin.ui.component.chunk.Icon

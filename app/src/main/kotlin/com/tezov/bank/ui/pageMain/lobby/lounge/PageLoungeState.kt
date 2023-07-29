@@ -5,7 +5,7 @@ package com.tezov.bank.ui.pageMain.lobby.lounge
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
-import com.tezov.bank.R
+import com.tezov.app.R
 import com.tezov.bank.ui.pageMain.lobby.help_and_service.PageHelpAndServiceState
 import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.PageState
 

@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.navigation
-import com.tezov.bank.R
+import com.tezov.app.R
 import com.tezov.bank.navigation.NavigationRoutes.Route
 import com.tezov.bank.ui.activity.MainActivity
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiActivity

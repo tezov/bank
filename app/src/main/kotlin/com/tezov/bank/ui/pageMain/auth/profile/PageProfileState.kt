@@ -3,7 +3,7 @@
 package com.tezov.bank.ui.pageMain.auth.profile
 
 import androidx.compose.runtime.Composable
-import com.tezov.bank.R
+import com.tezov.app.R
 import com.tezov.bank.ui.component.block.SectionSimpleRow
 import com.tezov.bank.ui.component.element.SimpleRow
 import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.PageState

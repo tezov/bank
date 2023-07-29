@@ -2,7 +2,7 @@
 
 package com.tezov.bank.navigation.bottom_navigation
 
-import com.tezov.bank.R
+import com.tezov.app.R
 import com.tezov.bank.navigation.NavigationRoutes.*
 import com.tezov.lib_core_android_kotlin.navigation.NavigationRouteManager
 import com.tezov.lib_core_android_kotlin.navigation.bottom_navigation.BottomNavigationItemData

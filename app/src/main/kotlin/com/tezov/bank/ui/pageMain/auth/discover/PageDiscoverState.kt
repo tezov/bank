@@ -3,7 +3,7 @@
 package com.tezov.bank.ui.pageMain.auth.discover
 
 import androidx.compose.runtime.Composable
-import com.tezov.bank.R
+import com.tezov.app.R
 import com.tezov.bank.ui.component.block.SectionCarouselCard
 import com.tezov.bank.ui.component.block.SectionRollerCard
 import com.tezov.bank.ui.component.block.SectionSimpleRow

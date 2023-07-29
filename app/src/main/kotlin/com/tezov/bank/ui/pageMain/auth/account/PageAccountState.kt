@@ -4,7 +4,7 @@ package com.tezov.bank.ui.pageMain.auth.account
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import com.tezov.bank.R
+import com.tezov.app.R
 import com.tezov.bank.ui.component.block.SectionAccountValueSimpleRow
 import com.tezov.bank.ui.component.element.AccountSummaryCard
 import com.tezov.bank.ui.component.element.AccountValueSimpleRow

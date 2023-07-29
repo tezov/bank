@@ -18,7 +18,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
-import com.tezov.bank.R
+import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.pageMain.lobby.loginAuth.PageLoginAuthState.Companion.LOGIN_LENGTH
 import com.tezov.bank.ui.pageMain.lobby.loginAuth.PageLoginAuthState.Companion.PASSWORD_LENGTH

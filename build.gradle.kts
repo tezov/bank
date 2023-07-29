@@ -11,15 +11,26 @@ tezovCatalog {
 //    jsonFile = jsonFromUrl("https://www.tezov.com/tezov_bank.catalog.json")
     configureProjects()
 
+//    val ignore_alpha = true
+//    val ignore_beta = true
+//    val ignore_rc = false
 //    with("projectPath.dependencies"){
 //        with("core"){
-//            checkDependenciesVersion()
+//            checkDependenciesVersion(ignore_alpha, ignore_beta, ignore_rc)
 //        }
 //        with("compose"){
-//            checkDependenciesVersion()
+//            checkDependenciesVersion(ignore_alpha, ignore_beta, ignore_rc)
 //        }
 //        with("lib"){
-//            checkDependenciesVersion()
+//            checkDependenciesVersion(ignore_alpha, ignore_beta, ignore_rc)
+//        }
+//    }
+//    with("projectPath.dependencies_test"){
+//        with("core_integration"){
+//            checkDependenciesVersion(ignore_alpha, ignore_beta, ignore_rc)
+//        }
+//        with("core_unit"){
+//            checkDependenciesVersion(ignore_alpha, ignore_beta, ignore_rc)
 //        }
 //    }
 

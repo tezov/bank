@@ -3,7 +3,7 @@
 package com.tezov.bank.ui.pageMain.lobby.help_and_service
 
 import androidx.compose.runtime.Composable
-import com.tezov.bank.R
+import com.tezov.app.R
 import com.tezov.bank.ui.component.block.SectionSimpleRow
 import com.tezov.bank.ui.component.block.SectionSimpleTile
 import com.tezov.bank.ui.component.element.SimpleRow

@@ -1,7 +1,7 @@
 # Tezov project (Kotlin / Compose)
 
 ## What's New
-- 24/07/2023 - refactor gradle groovy to kts + split project with external modules with tezov config and catalog plugin
+- 24/07/2023 - refactor gradle groovy to kts + split project with external modules. Applied tezov config and catalog plugin
 - 09/07/2023 - custom navigation + navigator supporting overlay and customizable animation transition 
 
 ## What's Next
@@ -33,7 +33,5 @@ Ce projet est actuellement focalisé sur l'UI en particulier une grosse structur
 
 Voir mon fichier TODO pour savoir où j'en suis.
 
-
-Add somes sreens here
 
 

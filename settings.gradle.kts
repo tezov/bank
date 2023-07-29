@@ -34,13 +34,14 @@ pluginManagement {
 buildscript {
 
     dependencies {
-        classpath("com.tezov:plugin_project:1.0.0-8.0.2+-alpha.12")
+        classpath("com.tezov:plugin_project:1.0.1-8.0.2")
         classpath("com.android.tools.build:gradle:8.0.2")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22")
     }
 
     repositories {
         mavenLocal()
+        gradlePluginPortal()
         google()
         mavenCentral()
         maven("https://jitpack.io")

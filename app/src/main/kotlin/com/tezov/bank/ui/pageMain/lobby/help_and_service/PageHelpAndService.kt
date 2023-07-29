@@ -14,7 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import com.tezov.bank.R
+import com.tezov.app.R
 import com.tezov.bank.ui.component.block.SectionSimpleTile
 import com.tezov.bank.ui.component.block.SectionSimpleRow
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage

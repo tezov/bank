@@ -2,10 +2,6 @@ tezovConfig {
 
     configuration {
         domain = tezovCatalog.string("domain")
-//        proguardPaths.apply {
-//            add("proguard-android-optimize.txt")
-//            add("proguard-rules.pro")
-//        }
 //        languages.apply{
 //            add("fr")
 //            add("en")
@@ -19,7 +15,7 @@ tezovConfig {
     }
 
     debug {
-        keepLog = true
+        keepProguard = true
         keepSourceFile = true
         repackage = false
         obfuscate = false
@@ -29,6 +25,9 @@ tezovConfig {
 
     release {
         enableDebug = true
+//        proguards.apply {
+//            add(File("proguards-rules.pro"))
+//        }
     }
 
     configureAndroidPlugin()

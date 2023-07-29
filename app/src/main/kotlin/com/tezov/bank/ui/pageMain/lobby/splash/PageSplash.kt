@@ -16,7 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import com.tezov.bank.R
+import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.lib_core_android_kotlin.navigation.navigator.GraphEntry
 import com.tezov.lib_core_android_kotlin.ui.component.chunk.WebViewRawResource

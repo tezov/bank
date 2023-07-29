@@ -14,7 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import com.tezov.bank.R
+import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.lib_core_android_kotlin.animation.AnimationCompound.Companion.animate
 import com.tezov.lib_core_android_kotlin.navigation.navigator.GraphEntry

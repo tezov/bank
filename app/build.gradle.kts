@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 tezovConfig {
 
     configuration {
@@ -63,32 +66,32 @@ android {
             }
         }
     }
-//    signingConfigs {
-//
-//        releaseConfig {
-//            def keystoreReleaseProperties = new Properties()
-//            keystoreReleaseProperties.load(new FileInputStream(file("keyStoreRelease.properties")))
-//            storeFile file(keystoreReleaseProperties.storeFile)
-//            storePassword keystoreReleaseProperties.storePassword
-//            keyAlias keystoreReleaseProperties.keyAlias
-//            keyPassword keystoreReleaseProperties.keyPassword
-//        }
-//
-//        debugConfig {
-//            def keystoreDebugProperties = new Properties()
-//            keystoreDebugProperties.load(new FileInputStream(file("keyStoreDebug.properties")))
-//            storeFile file(keystoreDebugProperties.storeFile)
-//            storePassword keystoreDebugProperties.storePassword
-//            keyAlias keystoreDebugProperties.keyAlias
-//            keyPassword keystoreDebugProperties.keyPassword
-//        }
-//    }
-    buildTypes {
-        getByName("release") {
-//            signingConfig signingConfigs.releaseConfig
+    signingConfigs {
+        create("release") {
+            val keystoreReleaseProperties = Properties().apply {
+                load(file("${project.projectDir}/keyStoreRelease.properties").inputStream())
+            }
+            storeFile = file("${project.projectDir}/${keystoreReleaseProperties.getProperty("storeFile")}")
+            storePassword = keystoreReleaseProperties.getProperty("storePassword")
+            keyAlias = keystoreReleaseProperties.getProperty("keyAlias")
+            keyPassword = keystoreReleaseProperties.getProperty("keyPassword")
         }
         getByName("debug") {
-//            signingConfig signingConfigs.debugConfig
+            val keystoreDebugProperties = Properties().apply {
+                load(File("${project.projectDir}/keyStoreDebug.properties").inputStream())
+            }
+            storeFile = file("${project.projectDir}/${keystoreDebugProperties.getProperty("storeFile")}")
+            storePassword =keystoreDebugProperties.getProperty("storePassword")
+            keyAlias = keystoreDebugProperties.getProperty("keyAlias")
+            keyPassword = keystoreDebugProperties.getProperty("keyPassword")
+        }
+    }
+    buildTypes {
+        getByName("release") {
+            signingConfig = signingConfigs.getByName("release")
+        }
+        getByName("debug") {
+            //signingConfig = signingConfigs.getByName("debug")
         }
     }
 }

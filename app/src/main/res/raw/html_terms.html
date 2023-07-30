@@ -36,11 +36,10 @@
             <p>Cette application est réalisée majoritairement en Kotlin. L'interface visuelle est entièrement réalisée avec Compose.</p>
             <ul>
                 <li>Architecture : 3 modules (core - 100% Kotlin, core - Android UI, application - UI)</li>
-                <li>Injection de dépendance avec Dagger multi-module (State et Action fournis à l'UI)</li>
+                <li>Injection de dépendances avec Dagger multi-module (State et Action fournis à l'UI)</li>
                 <li>Séparation de l'UI avec injection du State (données + états de la vue) et Action (gestion des actions de l'utilisateur)</li>
                 <li>Navigation en seule source de vérité (coordinator pattern)</li>
-                <li>Chaque module a un module de test associé.</li>
-                <li>La totalité du contenu affiché par l'UI est reçue par le viewModel (Sauf bottom navigation, top app bar et icône/image). La vue se construit en fonction des données reçues du viewModel</li>
+                <li>La totalité du contenu affiché par l'UI sera reçue par le viewModel (Sauf bottom navigation, top app bar et icône/image). La vue se construit en fonction des données reçues</li>
             </ul>
             <br/>
             <p><b>En cours d'ajout :</b></p>
@@ -55,6 +54,7 @@
             <h3>UI</h3>
             <p>Liste des composants UI que l'on trouve dans cette application :</p>
             <ul>
+                <li>Custom navigation et navigator avec animations</li>
                 <li>Bottom navigation bar</li>
                 <li>Top navigation bar</li>
                 <li>Dialog</li>

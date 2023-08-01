@@ -37,6 +37,11 @@ tezovConfig {
 }
 
 android {
+
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+
     tezovCatalog {
         with("projectVersion") {
             compileSdk = int("defaultCompileSdk")

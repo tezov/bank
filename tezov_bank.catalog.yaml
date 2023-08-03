@@ -1,3 +1,4 @@
+#Common configuration
 domain: com.tezov
 
 resourcesExcluded:
@@ -11,7 +12,7 @@ resourcesExcluded:
   - META-INF/NOTICE.md
   - META-INF/ASL2.0
   - META-INF/LGPL2.1
-  -
+
 projectVersion:
   defaultCompileSdk: 33
   defaultMinCompileSdk: 21
@@ -20,7 +21,6 @@ projectVersion:
   javaTarget: ${javasource}
   jvmTarget: ${javasource}
   composeCompiler: 1.4.8
-
   dependencies:
     core:
       multidex: 2.0.1
@@ -76,7 +76,6 @@ projectVersion:
       glide: 4.15.1
       glide_kapt: 4.15.1
       glide_okhttp3: 4.15.1
-
   dependencies_test:
     core_integration:
       test: 1.5.0
@@ -153,7 +152,6 @@ projectPath:
       glide: com.github.bumptech.glide:glide:${projectVersion.dependencies.lib.glide}
       glide_kapt: com.github.bumptech.glide:compiler:${projectVersion.dependencies.lib.glide_kapt}
       glide_okhttp3: com.github.bumptech.glide:okhttp3-integration:${projectVersion.dependencies.lib.glide_okhttp3}
-
   dependencies_test:
     core_integration:
       test: androidx.test:core:${projectVersion.dependencies_test.core_integration.test}
@@ -174,6 +172,7 @@ projectPath:
       mockk: io.mockk:mockk:${projectVersion.dependencies_test.core_unit.mockk}
       mockk_android: io.mockk:mockk-android:${projectVersion.dependencies_test.core_unit.mockk_android}
 
+#Modules configuration
 plugin:
   android: com.android
   application: ${android}.application

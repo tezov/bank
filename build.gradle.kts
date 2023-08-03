@@ -3,11 +3,6 @@ plugins {
 }
 
 tezovCatalog {
-//    verboseCatalogBuild = true
-//    verbosePluginApply = true
-//    verboseReadValue = true
-//    verboseCheckDependenciesVersion = true
-
     catalogFile = catalogFromFile("F:/android_project/tezov_banque/tezov_bank.catalog.yaml")
     configureProjects()
 

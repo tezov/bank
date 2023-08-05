@@ -1,9 +1,11 @@
+import kotlin.io.path.Path
+
 plugins {
     id("com.tezov.plugin_project.catalog")
 }
 
 tezovCatalog {
-    catalogFile = catalogFromFile("F:/android_project/tezov_banque/tezov_bank.catalog.yaml")
+    catalogFile = catalogFromFile(Path("${project.projectDir}", "/tezov_bank.catalog.yaml").toString())
     configureProjects()
 
 /*    val ignore_alpha = true

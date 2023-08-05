@@ -14,13 +14,13 @@ resourcesExcluded:
   - META-INF/LGPL2.1
 
 projectVersion:
-  defaultCompileSdk: 33
-  defaultMinCompileSdk: 21
+  defaultCompileSdk: 34
+  defaultMinCompileSdk: 26 #crash on version 24 because of painter... need to fix that
   defaultTargetCompileSdk: ${defaultCompileSdk}
   javaSource: VERSION_17
   javaTarget: ${javaSource}
   jvmTarget: ${javaSource}
-  composeCompiler: 1.4.8
+  composeCompiler: 1.5.1
   dependencies:
     core:
       multidex: 2.0.1
@@ -41,12 +41,12 @@ projectVersion:
       dagger_kapt: 2.47
     compose:
       activity: 1.7.2
-      ui: 1.4.3
-      ui_util: 1.4.3
-      runtime: 1.4.3
-      material: 1.4.3
-      foundation: 1.4.3
-      animation: 1.4.3
+      ui: 1.5.0-rc01
+      ui_util: 1.5.0-rc01
+      runtime: 1.5.0-rc01
+      material: 1.5.0-rc01
+      foundation: 1.5.0-rc01
+      animation: 1.5.0-rc01
       livedata: 1.4.3
       material3: 1.1.1
       material_icons_core: 1.1.1
@@ -60,7 +60,7 @@ projectVersion:
       threetenabp: 1.4.6
       bouncycastle: 1.75
       zxing: 3.5.1
-      webkit: 1.7.0
+      webkit: 1.8.0-beta01
       browser: 1.4.0
       gson: 2.10.1
       jackson_core: 2.15.2

@@ -6,6 +6,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -25,6 +26,9 @@ import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsCommonExtended
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsIconExtended
 import com.tezov.lib_adr_sdk_core.ui.type.primaire.size
 import com.tezov.lib_adr_core.type.collection.ListEntry
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.WebView
+import com.tezov.lib_adr_sdk_core.ui.theme.style.padding
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
 
 object PageWebView : Page<PageWebViewState, PageWebViewAction> {
 
@@ -88,12 +92,22 @@ object PageWebView : Page<PageWebViewState, PageWebViewAction> {
     private fun ColumnScope.contentBody(
         placeholders:ListEntry<String, String>?
     ) {
-        WebViewRawResource(
+        WebView(
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1.0f),
             rawHtmlResourceId = R.raw.html_not_implemented,
-            placeholders = placeholders
+            placeholders = placeholders,
+            onUnavailable = {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(MaterialTheme.dimensionsPaddingExtended.block.normal)
+                ) {
+                    //hack: webview crash if missing -> find another solution
+                    Text(text = "Webview not installed on your device, can not render the view")
+                }
+            }
         )
 
     }

@@ -107,10 +107,6 @@ dependencies {
             implementation(string("dagger"))
             kapt(string("dagger_kapt"))
         }
-        with("projectPath.dependencies.lib") {
-            implementation(string("threetenabp"))
-            implementation(string("webkit"))
-        }
         with("projectPath.dependencies_debug.compose") {
             implementation(string("ui_tooling_preview"))
             debugImplementation(string("ui_tooling"))

@@ -16,13 +16,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.tezov.bank.ui.component.block.SectionMessageRow
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
-import com.tezov.lib_core_android_kotlin.navigation.navigator.GraphEntry
-import com.tezov.lib_core_android_kotlin.ui.component.block.HorizontalPager
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.Page
-import com.tezov.lib_core_android_kotlin.ui.di.common.ExtensionCoreUi.action
-import com.tezov.lib_core_android_kotlin.ui.di.common.ExtensionCoreUi.state
-import com.tezov.lib_core_android_kotlin.ui.extension.ExtensionCompositionLocal
-import com.tezov.lib_core_kotlin.type.collection.ListEntry
+import com.tezov.lib_adr_sdk_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_sdk_core.ui.component.block.HorizontalPager
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.Page
+import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
+import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.state
+import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionCompositionLocal
+import com.tezov.lib_adr_core.type.collection.ListEntry
 
 object PageMessageInfo : Page<PageMessageInfoState, PageMessageInfoAction> {
 

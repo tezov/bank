@@ -2,11 +2,10 @@
 
 package com.tezov.bank.ui.pageMain.auth.help
 
-import androidx.compose.runtime.Composable
 import com.tezov.app.R
 import com.tezov.bank.ui.component.block.SectionSimpleRow
 import com.tezov.bank.ui.component.element.SimpleRow
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.PageState
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
 
 class PageHelpState private constructor() : PageState {
 

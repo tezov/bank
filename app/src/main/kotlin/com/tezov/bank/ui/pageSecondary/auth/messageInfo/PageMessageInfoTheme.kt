@@ -10,24 +10,9 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import com.tezov.bank.ui.component.block.SectionMessageRow
 import com.tezov.bank.ui.component.block.SectionMessageRow.Style.Companion.copy
-import com.tezov.bank.ui.component.block.SectionSimpleRow
-import com.tezov.bank.ui.component.block.SectionSimpleRow.Style.Companion.copy
 import com.tezov.bank.ui.theme.ThemeComponentProviders
-import com.tezov.lib_core_android_kotlin.ui.type.primaire.DpSize
-import com.tezov.lib_core_android_kotlin.ui.type.primaire.dpSize
-import com.tezov.lib_core_android_kotlin.ui.component.block.HorizontalPager
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Icon
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Image
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitBorder.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitBorderStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitFrameStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitShape.StateColor.Style.Companion.asFrameStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitShape.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitShapeStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitTextStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.*
+import com.tezov.lib_adr_sdk_core.ui.component.block.HorizontalPager
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.*
 
 val PageMessageInfoTheme.colors: PageMessageInfoTheme.Colors
     @Composable

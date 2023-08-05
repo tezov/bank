@@ -4,10 +4,10 @@ package com.tezov.bank.ui.di.module
 
 import com.tezov.bank.ui.activity.MainActivityAction
 import com.tezov.bank.ui.activity.MainActivityState
-import com.tezov.lib_core_android_kotlin.ui.di.annotation.scope.ScopeAppUiActivity
-import com.tezov.lib_core_android_kotlin.ui.di.common.ComposableContext
-import com.tezov.lib_core_android_kotlin.ui.di.common.ComposableWrapper
-import com.tezov.lib_core_android_kotlin.ui.di.module.ModuleCoreUiActivity
+import com.tezov.lib_adr_sdk_core.ui.di.annotation.scope.ScopeAppUiActivity
+import com.tezov.lib_adr_sdk_core.ui.di.common.ComposableContext
+import com.tezov.lib_adr_sdk_core.ui.di.common.ComposableWrapper
+import com.tezov.lib_adr_sdk_core.ui.di.module.ModuleCoreUiActivity
 import dagger.Module
 import dagger.Provides
 import javax.inject.Inject

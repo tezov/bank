@@ -4,14 +4,13 @@ package com.tezov.bank.ui.di.accessor
 
 import androidx.compose.runtime.Composable
 import com.tezov.bank.ui.di.component.ComponentAppUiModal
-import com.tezov.bank.ui.di.component.DaggerComponentAppUiActivity_EntryPoint
 import com.tezov.bank.ui.di.component.DaggerComponentAppUiModal_EntryPoint
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.activity.Activity
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.modal.dialog.Dialog
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.Page
-import com.tezov.lib_core_android_kotlin.ui.di.accessor.DiAccessor
-import com.tezov.lib_core_android_kotlin.ui.di.accessor.DiAccessorCoreUiModal
-import com.tezov.lib_core_android_kotlin.ui.di.annotation.scope.ScopeAppUiPage
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.modal.dialog.Dialog
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.Page
+import com.tezov.lib_adr_sdk_core.ui.di.accessor.DiAccessor
+import com.tezov.lib_adr_sdk_core.ui.di.accessor.DiAccessorCoreUiModal
+import com.tezov.lib_adr_sdk_core.ui.di.annotation.scope.ScopeAppUiPage
 import javax.inject.Inject
 
 @ScopeAppUiPage

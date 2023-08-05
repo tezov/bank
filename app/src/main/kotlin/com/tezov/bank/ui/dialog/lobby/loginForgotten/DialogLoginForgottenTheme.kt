@@ -8,11 +8,11 @@ import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitTextStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.colorsExtended
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.typographiesExtended
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitTextStateColor
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.colorsExtended
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.typographiesExtended
 
 val DialogLoginForgottenTheme.colors: DialogLoginForgottenTheme.Colors
     @Composable

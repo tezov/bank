@@ -3,10 +3,10 @@
 package com.tezov.bank.ui.pageMain.auth.profile
 
 import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppConfirmation
-import com.tezov.lib_core_android_kotlin.navigation.NavigationController
-import com.tezov.lib_core_android_kotlin.navigation.NavigationRouteManager.NotImplemented
-import com.tezov.lib_core_android_kotlin.ui.composition.activity.sub.dialog.DialogAction
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.PageAction
+import com.tezov.lib_adr_sdk_core.navigation.NavigationController
+import com.tezov.lib_adr_sdk_core.navigation.NavigationRouteManager.NotImplemented
+import com.tezov.lib_adr_sdk_core.ui.composition.activity.sub.dialog.DialogAction
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageAction
 
 class PageProfileAction private constructor(
     private val navigationController: NavigationController,

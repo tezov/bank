@@ -12,13 +12,13 @@ import androidx.compose.ui.Modifier
 import com.tezov.bank.ui.component.block.SectionSimpleRow
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
-import com.tezov.lib_core_android_kotlin.navigation.navigator.GraphEntry
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Text
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.Page
-import com.tezov.lib_core_android_kotlin.ui.di.common.ExtensionCoreUi.action
-import com.tezov.lib_core_android_kotlin.ui.di.common.ExtensionCoreUi.state
-import com.tezov.lib_core_android_kotlin.ui.extension.ExtensionCompositionLocal
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_sdk_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Text
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.Page
+import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
+import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.state
+import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionCompositionLocal
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
 
 object PageHelp : Page<PageHelpState, PageHelpAction> {
 

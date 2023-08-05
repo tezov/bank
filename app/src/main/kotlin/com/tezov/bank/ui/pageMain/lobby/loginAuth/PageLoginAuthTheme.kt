@@ -14,21 +14,21 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.tezov.bank.ui.theme.ThemeComponentProviders
 import com.tezov.bank.ui.theme.font.fontRoboto
-import com.tezov.lib_core_android_kotlin.ui.type.primaire.QuadDirection
-import com.tezov.lib_core_android_kotlin.ui.component.block.KeyBoard
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Button
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Button.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.TextField
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitBorder.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitFrame.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitFrameStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitShape
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitShape.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitStateBiStable
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitTextStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.*
+import com.tezov.lib_adr_sdk_core.ui.type.primaire.QuadDirection
+import com.tezov.lib_adr_sdk_core.ui.component.block.KeyBoard
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Button
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Button.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.TextField
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitBorder.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitFrame.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitFrameStateColor
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitShape
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitShape.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitStateBiStable
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitTextStateColor
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.*
 
 val PageLoginAuthTheme.colors: PageLoginAuthTheme.Colors
     @Composable

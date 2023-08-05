@@ -15,15 +15,15 @@ import com.tezov.bank.ui.component.block.SectionAccountValueSimpleRow.Style.Comp
 import com.tezov.bank.ui.component.element.AccountSummaryCard
 import com.tezov.bank.ui.component.element.AccountSummaryCard.Style.Companion.copy
 import com.tezov.bank.ui.theme.ThemeComponentProviders
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.DropDownMenu.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Icon
-import com.tezov.lib_core_android_kotlin.ui.component.layout.ColumnCollapsibleHeader
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitFrameStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitShape.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitTextStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.*
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.DropDownMenu.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
+import com.tezov.lib_adr_sdk_core.ui.component.layout.ColumnCollapsibleHeader
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitFrameStateColor
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitShape.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitTextStateColor
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.*
 
 val PageAccountTheme.colors: PageAccountTheme.Colors
     @Composable

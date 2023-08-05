@@ -9,14 +9,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.tezov.lib_core_android_kotlin.ui.type.primaire.DpSize
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Image
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Text
-import com.tezov.lib_core_android_kotlin.ui.modifier.thenOnNotNull
-import com.tezov.lib_core_android_kotlin.ui.theme.style.*
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.ThemeColorsExtended
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.dimensionsPaddingExtended
-import com.tezov.lib_core_kotlin.delegate.DelegateNullFallBack
+import com.tezov.lib_adr_sdk_core.ui.type.primaire.DpSize
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Image
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Text
+import com.tezov.lib_adr_sdk_core.ui.modifier.thenOnNotNull
+import com.tezov.lib_adr_sdk_core.ui.theme.style.*
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.ThemeColorsExtended
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_core.delegate.DelegateNullFallBack
 
 
 object RollerCard {

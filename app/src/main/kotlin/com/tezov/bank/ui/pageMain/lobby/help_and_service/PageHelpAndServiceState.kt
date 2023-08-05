@@ -2,13 +2,12 @@
 
 package com.tezov.bank.ui.pageMain.lobby.help_and_service
 
-import androidx.compose.runtime.Composable
 import com.tezov.app.R
 import com.tezov.bank.ui.component.block.SectionSimpleRow
 import com.tezov.bank.ui.component.block.SectionSimpleTile
 import com.tezov.bank.ui.component.element.SimpleRow
 import com.tezov.bank.ui.component.element.SimpleTile
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.PageState
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
 
 class PageHelpAndServiceState private constructor() : PageState {
     var header: Header? = null

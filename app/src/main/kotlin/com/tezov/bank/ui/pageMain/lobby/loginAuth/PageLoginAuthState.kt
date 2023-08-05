@@ -2,10 +2,9 @@
 
 package com.tezov.bank.ui.pageMain.lobby.loginAuth
 
-import android.util.Log
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.TextField
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.PageState
-import com.tezov.lib_core_kotlin.type.collection.ListEntry
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.TextField
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
+import com.tezov.lib_adr_core.type.collection.ListEntry
 
 class PageLoginAuthState private constructor(
     val textFieldValues: ListEntry<Field, TextField.State> = ListEntry(),

@@ -5,16 +5,16 @@ package com.tezov.bank.viewModel
 import androidx.compose.runtime.Composable
 import com.tezov.bank.navigation.NavigationRoutes.Route.WebView
 import com.tezov.bank.navigation.NavigationUrl
-import com.tezov.lib_core_android_kotlin.navigation.NavigationController
-import com.tezov.lib_core_android_kotlin.navigation.NavigationNotifier
-import com.tezov.lib_core_android_kotlin.navigation.NavigationRouteManager
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.activity.Activity
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.PageState
-import com.tezov.lib_core_android_kotlin.ui.di.accessor.DiAccessorCoreUiActivity
-import com.tezov.lib_core_android_kotlin.ui.di.common.ExtensionCoreUi.action
-import com.tezov.lib_core_kotlin.async.notifier.Notifier
-import com.tezov.lib_core_kotlin.async.notifier.observer.value.ObserverValue
-import com.tezov.lib_core_kotlin.extension.ExtensionBoolean.isTrue
+import com.tezov.lib_adr_sdk_core.navigation.NavigationController
+import com.tezov.lib_adr_sdk_core.navigation.NavigationNotifier
+import com.tezov.lib_adr_sdk_core.navigation.NavigationRouteManager
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
+import com.tezov.lib_adr_sdk_core.ui.di.accessor.DiAccessorCoreUiActivity
+import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
+import com.tezov.lib_adr_core.async.notifier.Notifier
+import com.tezov.lib_adr_core.async.notifier.observer.value.ObserverValue
+import com.tezov.lib_adr_core.extension.ExtensionBoolean.isTrue
 
 //TODO, ViewModel complet async + adapter la navigation en async pour gérer l'attente réponse avant ouverture page.
 class ViewModelManager private constructor(

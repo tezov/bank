@@ -13,18 +13,18 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
-import com.tezov.lib_core_android_kotlin.navigation.navigator.GraphEntry
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Icon
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Shadow
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.WebViewRawResource
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.Page
-import com.tezov.lib_core_android_kotlin.ui.di.common.ExtensionCoreUi.action
-import com.tezov.lib_core_android_kotlin.ui.di.common.ExtensionCoreUi.state
-import com.tezov.lib_core_android_kotlin.ui.extension.ExtensionCompositionLocal
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.dimensionsCommonExtended
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.dimensionsIconExtended
-import com.tezov.lib_core_android_kotlin.ui.type.primaire.size
-import com.tezov.lib_core_kotlin.type.collection.ListEntry
+import com.tezov.lib_adr_sdk_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Shadow
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.WebViewRawResource
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.Page
+import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
+import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.state
+import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionCompositionLocal
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsCommonExtended
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsIconExtended
+import com.tezov.lib_adr_sdk_core.ui.type.primaire.size
+import com.tezov.lib_adr_core.type.collection.ListEntry
 
 object PageWebView : Page<PageWebViewState, PageWebViewAction> {
 

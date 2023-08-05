@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
-import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -16,17 +15,17 @@ import com.tezov.bank.navigation.NavigationGraph
 import com.tezov.bank.navigation.bottom_navigation.BottomNavigationItems
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiActivity
 import com.tezov.bank.ui.theme.ThemeApplication
-import com.tezov.lib_core_android_kotlin.navigation.bottom_navigation.BottomNavigation
-import com.tezov.lib_core_android_kotlin.navigation.top_app_bar.TopAppBar
-import com.tezov.lib_core_android_kotlin.navigation.top_app_bar.TopAppBarItemData
-import com.tezov.lib_core_android_kotlin.ui.composition.activity.ActivityBase
-import com.tezov.lib_core_android_kotlin.ui.composition.activity.sub.bottomsheet.BottomSheet
-import com.tezov.lib_core_android_kotlin.ui.composition.activity.sub.dialog.Dialog
-import com.tezov.lib_core_android_kotlin.ui.composition.activity.sub.snackbar.Snackbar
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.activity.Activity
-import com.tezov.lib_core_android_kotlin.ui.di.common.ExtensionCoreUi.state
-import com.tezov.lib_core_android_kotlin.ui.theme.style.padding
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_sdk_core.navigation.bottom_navigation.BottomNavigation
+import com.tezov.lib_adr_sdk_core.navigation.top_app_bar.TopAppBar
+import com.tezov.lib_adr_sdk_core.navigation.top_app_bar.TopAppBarItemData
+import com.tezov.lib_adr_sdk_core.ui.composition.activity.ActivityBase
+import com.tezov.lib_adr_sdk_core.ui.composition.activity.sub.bottomsheet.BottomSheet
+import com.tezov.lib_adr_sdk_core.ui.composition.activity.sub.dialog.Dialog
+import com.tezov.lib_adr_sdk_core.ui.composition.activity.sub.snackbar.Snackbar
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity
+import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.state
+import com.tezov.lib_adr_sdk_core.ui.theme.style.padding
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

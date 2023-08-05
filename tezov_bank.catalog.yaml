@@ -15,7 +15,7 @@ resourcesExcluded:
 
 projectVersion:
   defaultCompileSdk: 34
-  defaultMinCompileSdk: 26 #crash on version 24 because of painter... need to fix that
+  defaultMinCompileSdk: 24
   defaultTargetCompileSdk: ${defaultCompileSdk}
   javaSource: VERSION_17
   javaTarget: ${javaSource}

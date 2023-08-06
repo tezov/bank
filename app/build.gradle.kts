@@ -14,7 +14,7 @@ tezovConfig {
     version {
         major = 0
         minor = 1
-        patch = 0
+        patch = 1
     }
 
     debug {
@@ -27,7 +27,7 @@ tezovConfig {
     }
 
     release {
-        enableDebug = true
+        enableDebug = false
 //        proguards.apply {
 //            add(File("proguards-rules.pro"))
 //        }
@@ -92,10 +92,12 @@ android {
     }
     buildTypes {
         getByName("release") {
+            isMinifyEnabled = false
+            isShrinkResources = false
             signingConfig = signingConfigs.getByName("release")
         }
         getByName("debug") {
-            //signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 }

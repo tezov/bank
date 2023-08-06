@@ -12,14 +12,14 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.*
 import com.tezov.bank.ui.pageMain.lobby.lounge.*
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.DropDownMenu
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Icon
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Text
-import com.tezov.lib_core_android_kotlin.ui.modifier.*
-import com.tezov.lib_core_android_kotlin.ui.theme.style.*
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.ThemeColorsExtended
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.dimensionsPaddingExtended
-import com.tezov.lib_core_kotlin.delegate.DelegateNullFallBack
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.DropDownMenu
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Text
+import com.tezov.lib_adr_sdk_core.ui.modifier.*
+import com.tezov.lib_adr_sdk_core.ui.theme.style.*
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.ThemeColorsExtended
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_core.delegate.DelegateNullFallBack
 import java.util.*
 
 object AccountSummaryCard {

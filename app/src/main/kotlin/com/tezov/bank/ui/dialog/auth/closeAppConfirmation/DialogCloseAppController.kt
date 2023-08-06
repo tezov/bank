@@ -5,9 +5,9 @@ package com.tezov.bank.ui.dialog.auth.closeAppConfirmation
 import androidx.compose.runtime.Composable
 import com.tezov.bank.navigation.NavigationRoutes.Route
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
-import com.tezov.lib_core_android_kotlin.navigation.NavigationController
-import com.tezov.lib_core_android_kotlin.ui.composition.activity.sub.dialog.DialogAction
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.activity.Activity.Companion.LocalPagesBundle
+import com.tezov.lib_adr_sdk_core.navigation.NavigationController
+import com.tezov.lib_adr_sdk_core.ui.composition.activity.sub.dialog.DialogAction
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity.Companion.LocalPagesBundle
 
 class DialogCloseAppController private constructor(
     private val navigationController: NavigationController,

@@ -3,7 +3,7 @@
 package com.tezov.bank.ui.bottomsheet.account.accountIncoming
 
 import androidx.compose.runtime.Composable
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.modal.bottomSheet.BottomSheetState
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.modal.bottomSheet.BottomSheetState
 
 class BottomSheetAccountIncomingState private constructor(
 

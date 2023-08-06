@@ -1,6 +1,6 @@
 
 
-package com.tezov.lib_core_android_kotlin.ui.di.annotation.scope
+package com.tezov.lib_adr_sdk_core.ui.di.annotation.scope
 
 import javax.inject.Scope
 

@@ -12,17 +12,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Icon
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Icon.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Text
-import com.tezov.lib_core_android_kotlin.ui.modifier.thenOnNotNull
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitFrame.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitShape.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitTextStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.dimensionsPaddingExtended
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.shapesExtended
-import com.tezov.lib_core_kotlin.delegate.DelegateNullFallBack
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Text
+import com.tezov.lib_adr_sdk_core.ui.modifier.thenOnNotNull
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitFrame.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitShape.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitTextStateColor
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.shapesExtended
+import com.tezov.lib_adr_core.delegate.DelegateNullFallBack
 
 object AccountValueSimpleRow {
 

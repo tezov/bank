@@ -3,9 +3,9 @@
 package com.tezov.bank.navigation.top_app_bar
 
 import com.tezov.app.R
-import com.tezov.lib_core_android_kotlin.navigation.NavigationRouteManager
-import com.tezov.lib_core_android_kotlin.navigation.NavigationRouteManager.Route
-import com.tezov.lib_core_android_kotlin.navigation.top_app_bar.TopAppBarItemData
+import com.tezov.lib_adr_sdk_core.navigation.NavigationRouteManager
+import com.tezov.lib_adr_sdk_core.navigation.NavigationRouteManager.Route
+import com.tezov.lib_adr_sdk_core.navigation.top_app_bar.TopAppBarItemData
 
 sealed class TopAppBarItems(icon: Int, route: Route) : TopAppBarItemData(icon, route) {
     companion object {

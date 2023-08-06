@@ -3,10 +3,10 @@
 package com.tezov.bank.ui.theme
 
 import androidx.compose.ui.unit.dp
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitBorder.StateColor.Style.Companion.asPaletteSize
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitBorder.StateColor.Style.Companion.asStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitPaletteSize
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.ThemeBordersExtended
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitBorder.StateColor.Style.Companion.asPaletteSize
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitBorder.StateColor.Style.Companion.asStateColor
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitPaletteSize
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.ThemeBordersExtended
 
 object ThemeBorderProviders {
 

@@ -16,12 +16,12 @@ import com.tezov.bank.ui.component.block.SectionSimpleTile
 import com.tezov.bank.ui.component.block.SectionSimpleTile.Style.Companion.copy
 import com.tezov.bank.ui.component.element.SimpleTile.Style.Companion.copy
 import com.tezov.bank.ui.theme.ThemeComponentProviders
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Icon.Simple.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.component.layout.ColumnCollapsibleHeader
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitTextStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.*
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon.Simple.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.component.layout.ColumnCollapsibleHeader
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitTextStateColor
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.*
 
 val PagePaymentTheme.colors: PagePaymentTheme.Colors
     @Composable

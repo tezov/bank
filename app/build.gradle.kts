@@ -37,22 +37,21 @@ tezovConfig {
 }
 
 android {
-
     lint {
         baseline = file("lint-baseline.xml")
     }
-
     tezovCatalog {
         with("projectVersion") {
             compileSdk = int("defaultCompileSdk")
             compileOptions {
-                sourceCompatibility = javaVersion("javasource")
+                sourceCompatibility = javaVersion("javaSource")
                 targetCompatibility = javaVersion("javaTarget")
             }
             kotlinOptions {
                 jvmTarget = javaVersion("jvmTarget").toString()
             }
             defaultConfig {
+                multiDexEnabled = true
                 minSdk = int("defaultMinCompileSdk")
                 targetSdk = int("defaultTargetCompileSdk")
             }
@@ -102,24 +101,25 @@ android {
 }
 
 dependencies {
-    implementation(project(":lib_core_android_kotlin"))
+    implementation(project(":lib_adr_sdk_core"))
     tezovCatalog {
         with("projectPath.dependencies.core") {
             implementation(string("dagger"))
             kapt(string("dagger_kapt"))
         }
-        with("projectPath.dependencies.lib") {
-            implementation(string("threetenabp"))
-            implementation(string("webkit"))
+        with("projectPath.dependencies_debug.compose") {
+            implementation(string("ui_tooling_preview"))
+            debugImplementation(string("ui_tooling"))
+            debugImplementation(string("ui_manifest"))
         }
     }
 
-    // test
-    testImplementation(project(":lib_test_common"))
-    androidTestImplementation(project(":lib_test_common"))
-    tezovCatalog {
-        with("projectPath.dependencies_test.core_integration") {
-            debugImplementation(string("compose_ui_manifest"))
-        }
-    }
+//    // test
+//    testImplementation(project(":lib_test_common"))
+//    androidTestImplementation(project(":lib_test_common"))
+//    tezovCatalog {
+//        with("projectPath.dependencies_test.core_integration") {
+//            debugImplementation(string("compose_ui_manifest"))
+//        }
+//    }
 }

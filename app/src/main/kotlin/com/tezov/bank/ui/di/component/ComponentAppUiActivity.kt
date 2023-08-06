@@ -6,9 +6,9 @@ import com.tezov.bank.ui.activity.MainActivityAction
 import com.tezov.bank.ui.activity.MainActivityState
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.di.module.ModuleAppUiActivity
-import com.tezov.lib_core_android_kotlin.ui.di.annotation.scope.ScopeAppUiActivity
-import com.tezov.lib_core_android_kotlin.ui.di.common.ComposableContext
-import com.tezov.lib_core_android_kotlin.ui.di.component.ComponentCoreUiActivity
+import com.tezov.lib_adr_sdk_core.ui.di.annotation.scope.ScopeAppUiActivity
+import com.tezov.lib_adr_sdk_core.ui.di.common.ComposableContext
+import com.tezov.lib_adr_sdk_core.ui.di.component.ComponentCoreUiActivity
 import dagger.Component
 
 object ComponentAppUiActivity {

@@ -12,14 +12,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.tezov.bank.ui.component.element.RollerCard
-import com.tezov.lib_core_android_kotlin.ui.component.block.HorizontalRoller
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Button
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Icon
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Text
-import com.tezov.lib_core_android_kotlin.ui.modifier.thenOnNotNull
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitText
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.dimensionsPaddingExtended
-import com.tezov.lib_core_kotlin.delegate.DelegateNullFallBack
+import com.tezov.lib_adr_sdk_core.ui.component.block.HorizontalRoller
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Button
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Text
+import com.tezov.lib_adr_sdk_core.ui.modifier.thenOnNotNull
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_core.delegate.DelegateNullFallBack
 
 object SectionRollerCard {
 

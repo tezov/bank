@@ -2,7 +2,6 @@
 
 package com.tezov.bank.ui.pageMain.auth.discover
 
-import androidx.compose.runtime.Composable
 import com.tezov.app.R
 import com.tezov.bank.ui.component.block.SectionCarouselCard
 import com.tezov.bank.ui.component.block.SectionRollerCard
@@ -12,7 +11,7 @@ import com.tezov.bank.ui.component.element.CarouselCard
 import com.tezov.bank.ui.component.element.RollerCard
 import com.tezov.bank.ui.component.element.SimpleRow
 import com.tezov.bank.ui.component.element.SimpleTile
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.PageState
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
 
 class PageDiscoverState private constructor() : PageState {
 

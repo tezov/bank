@@ -3,9 +3,9 @@
 package com.tezov.bank.ui.theme
 
 import androidx.compose.ui.unit.dp
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitPaletteSize
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitShape.StateColor.Style.Companion.asStateColor
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.ThemeShapesExtended
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitPaletteSize
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitShape.StateColor.Style.Companion.asStateColor
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.ThemeShapesExtended
 
 object ThemeShapeProviders {
 

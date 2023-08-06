@@ -1,24 +1,25 @@
 rootProject.name = "bank"
 include(
     ":app",
-    ":lib_core_kotlin",
-    ":lib_core_android_kotlin",
-    ":lib_test_common",
-    ":lib_test_common_unit",
-    ":lib_test_common_integration",
+    ":lib_adr_sdk_core",
+    ":lib_adr_core",
+//    ":lib_test_common",
+//    ":lib_test_common_unit",
+//    ":lib_test_common_integration",
 )
 
-project(":lib_core_kotlin")
-    .projectDir = file("../lib_core_kotlin/")
-project(":lib_core_android_kotlin")
-    .projectDir = file("../lib_core_android_kotlin/")
+project(":lib_adr_sdk_core")
+    .projectDir = file("../lib_adr_sdk_core/")
+project(":lib_adr_core")
+    .projectDir = file("../lib_adr_core/")
 
-project(":lib_test_common")
-    .projectDir = file("../lib_test/test_common/")
-project(":lib_test_common_unit")
-    .projectDir = file("../lib_test/test_common_unit/")
-project(":lib_test_common_integration")
-    .projectDir = file("../lib_test/test_common_integration/")
+
+//project(":lib_test_common")
+//    .projectDir = file("../lib_test/test_common/")
+//project(":lib_test_common_unit")
+//    .projectDir = file("../lib_test/test_common_unit/")
+//project(":lib_test_common_integration")
+//    .projectDir = file("../lib_test/test_common_integration/")
 
 pluginManagement {
 
@@ -34,9 +35,9 @@ pluginManagement {
 buildscript {
 
     dependencies {
-        classpath("com.tezov:plugin_project:1.0.1")
-        classpath("com.android.tools.build:gradle:8.0.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22")
+        classpath("com.android.tools.build:gradle:8.1.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
+        classpath("com.tezov:plugin_project:1.0.2")
     }
 
     repositories {
@@ -56,6 +57,8 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven("https://jitpack.io")
+        maven("https://maven.mozilla.org/maven2/")
+
     }
 }
 

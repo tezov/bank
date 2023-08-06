@@ -23,24 +23,24 @@ import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.pageMain.lobby.loginAuth.PageLoginAuthState.Companion.LOGIN_LENGTH
 import com.tezov.bank.ui.pageMain.lobby.loginAuth.PageLoginAuthState.Companion.PASSWORD_LENGTH
 import com.tezov.bank.ui.pageMain.lobby.loginAuth.PageLoginAuthState.Field
-import com.tezov.lib_core_android_kotlin.navigation.navigator.GraphEntry
-import com.tezov.lib_core_android_kotlin.ui.component.block.KeyBoard
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Button
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Icon
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.Text
-import com.tezov.lib_core_android_kotlin.ui.component.chunk.TextField
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.Page
-import com.tezov.lib_core_android_kotlin.ui.di.common.ExtensionCoreUi.action
-import com.tezov.lib_core_android_kotlin.ui.di.common.ExtensionCoreUi.state
-import com.tezov.lib_core_android_kotlin.ui.extension.ExtensionCompositionLocal
-import com.tezov.lib_core_android_kotlin.ui.localProvider.LocalProviderTextField
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitBorder.StateColor.Style.Companion.copy
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
-import com.tezov.lib_core_android_kotlin.ui.theme.style.border
-import com.tezov.lib_core_android_kotlin.ui.theme.style.padding
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.*
-import com.tezov.lib_core_android_kotlin.ui.type.primaire.size
-import com.tezov.lib_core_kotlin.type.collection.ListEntry
+import com.tezov.lib_adr_sdk_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_sdk_core.ui.component.block.KeyBoard
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Button
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.Text
+import com.tezov.lib_adr_sdk_core.ui.component.chunk.TextField
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.Page
+import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
+import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.state
+import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionCompositionLocal
+import com.tezov.lib_adr_sdk_core.ui.localProvider.LocalProviderTextField
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitBorder.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
+import com.tezov.lib_adr_sdk_core.ui.theme.style.border
+import com.tezov.lib_adr_sdk_core.ui.theme.style.padding
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.*
+import com.tezov.lib_adr_sdk_core.ui.type.primaire.size
+import com.tezov.lib_adr_core.type.collection.ListEntry
 
 object PageLoginAuth : Page<PageLoginAuthState, PageLoginAuthAction> {
 

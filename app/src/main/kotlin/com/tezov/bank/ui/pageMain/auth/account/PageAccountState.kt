@@ -2,14 +2,13 @@
 
 package com.tezov.bank.ui.pageMain.auth.account
 
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import com.tezov.app.R
 import com.tezov.bank.ui.component.block.SectionAccountValueSimpleRow
 import com.tezov.bank.ui.component.element.AccountSummaryCard
 import com.tezov.bank.ui.component.element.AccountValueSimpleRow
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.page.PageState
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitStateSemantic
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitStateSemantic
 
 class PageAccountState private constructor() : PageState {
     var header: Header?=null

@@ -5,7 +5,7 @@ package com.tezov.bank.application
 import androidx.compose.runtime.Composable
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiActivity
 import com.tezov.bank.viewModel.ViewModelManager
-import com.tezov.lib_core_android_kotlin.ui.compositionTree.activity.Activity.Companion.LocalCoreApplication
+import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity.Companion.LocalCoreApplication
 import kotlin.reflect.full.primaryConstructor
 import kotlin.reflect.jvm.isAccessible
 
@@ -13,7 +13,7 @@ val LocalApplication @Composable get() = LocalCoreApplication.current as Applica
 
 val LocalViewModelManager @Composable get() = LocalApplication.viewModelManager ?: throw IllegalStateException("Application compose not initialized")
 
-class Application : com.tezov.lib_core_android_kotlin.application.Application() {
+class Application : com.tezov.lib_adr_sdk_core.application.Application() {
     lateinit var accessorAppUi: DiAccessorAppUiActivity
     internal var viewModelManager: ViewModelManager? = null
         private set

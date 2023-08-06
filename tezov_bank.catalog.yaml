@@ -14,13 +14,13 @@ resourcesExcluded:
   - META-INF/LGPL2.1
 
 projectVersion:
-  defaultCompileSdk: 33
-  defaultMinCompileSdk: 21
+  defaultCompileSdk: 34
+  defaultMinCompileSdk: 24
   defaultTargetCompileSdk: ${defaultCompileSdk}
-  javasource: VERSION_17
-  javaTarget: ${javasource}
-  jvmTarget: ${javasource}
-  composeCompiler: 1.4.8
+  javaSource: VERSION_17
+  javaTarget: ${javaSource}
+  jvmTarget: ${javaSource}
+  composeCompiler: 1.5.1
   dependencies:
     core:
       multidex: 2.0.1
@@ -34,34 +34,33 @@ projectVersion:
       viewmodel: 2.6.1
       viewmodel_saved_state: 2.6.1
       lifecycle_runtime: 2.6.1
-      lifecycle_extensions: 2.2.0
       lifecycle_livedata: 2.6.1
+      lifecycle_extensions: 2.2.0
       reflection: 1.9.0
-      dagger: '2.47'
-      dagger_kapt: '2.47'
+      dagger: 2.47
+      dagger_kapt: 2.47
     compose:
-      ui: 1.4.3
-      ui_util: 1.4.3
-      ui_preview: 1.4.3
-      runtime: 1.4.3
-      material: 1.4.3
+      activity: 1.7.2
+      ui: 1.5.0-rc01
+      ui_util: 1.5.0-rc01
+      runtime: 1.5.0-rc01
+      material: 1.5.0-rc01
+      foundation: 1.5.0-rc01
+      animation: 1.5.0-rc01
+      livedata: 1.4.3
       material3: 1.1.1
       material_icons_core: 1.1.1
       material_icons_extended: 1.1.1
-      foundation: 1.4.3
       accompanist_pager_indicators: 0.31.5-beta
-      animation: 1.4.3
-      activity: 1.7.2
       constraintlayout: 1.0.1
       viewmodel: 2.6.1
-      livedata: 1.4.3
       navigation: 2.6.0
       google_maps: 2.2.0
     lib:
       threetenabp: 1.4.6
-      bouncycastle: '1.75'
+      bouncycastle: 1.75
       zxing: 3.5.1
-      webkit: 1.7.0
+      webkit: 1.8.0-beta01
       browser: 1.4.0
       gson: 2.10.1
       jackson_core: 2.15.2
@@ -76,20 +75,22 @@ projectVersion:
       glide: 4.15.1
       glide_kapt: 4.15.1
       glide_okhttp3: 4.15.1
+  dependencies_debug:
+    compose:
+      ui_tooling_preview: 1.4.3
+      ui_tooling: 1.4.3
+      ui_manifest: 1.4.3
   dependencies_test:
     core_integration:
       test: 1.5.0
       test_ktx: 1.5.0
       junit_test: 1.1.5
       junit_test_ktx: 1.1.5
+      truth: 1.1.5
       espresso_core: 3.5.1
       espresso_contrib: 3.5.1
       uiautomator: 2.2.0
-      truth: 1.1.5
-      coroutine: 1.7.2
-      compose_ui: 1.4.3
-      compose_ui_tooling: 1.4.3
-      compose_ui_manifest: 1.4.3
+      coroutine: 1.7.3
     core_unit:
       juint: 4.13.2
       truth: 1.1.5
@@ -116,21 +117,20 @@ projectPath:
       dagger: com.google.dagger:dagger:${projectVersion.dependencies.core.dagger}
       dagger_kapt: com.google.dagger:dagger-compiler:${projectVersion.dependencies.core.dagger_kapt}
     compose:
+      activity: androidx.activity:activity-compose:${projectVersion.dependencies.compose.activity}
       ui: androidx.compose.ui:ui:${projectVersion.dependencies.compose.ui}
       ui_util: androidx.compose.ui:ui-util:${projectVersion.dependencies.compose.ui_util}
-      ui_preview: androidx.compose.ui:ui-tooling-preview:${projectVersion.dependencies.compose.ui_preview}
       runtime: androidx.compose.runtime:runtime:${projectVersion.dependencies.compose.runtime}
       material: androidx.compose.material:material:${projectVersion.dependencies.compose.material}
+      foundation: androidx.compose.foundation:foundation:${projectVersion.dependencies.compose.foundation}
+      animation: androidx.compose.ui:ui-graphics:${projectVersion.dependencies.compose.animation}
+      livedata: androidx.compose.runtime:runtime-livedata:${projectVersion.dependencies.compose.livedata}
       material3: androidx.compose.material3:material3:${projectVersion.dependencies.compose.material3}
       material_icons_core: androidx.compose.material:material-icons-core:${projectVersion.dependencies.compose.material_icons_core}
       material_icons_extended: androidx.compose.material:material-icons-extended:${projectVersion.dependencies.compose.material_icons_extended}
-      foundation: androidx.compose.foundation:foundation:${projectVersion.dependencies.compose.foundation}
       accompanist_pager_indicators: com.google.accompanist:accompanist-pager-indicators:${projectVersion.dependencies.compose.accompanist_pager_indicators}
-      animation: androidx.compose.ui:ui-graphics:${projectVersion.dependencies.compose.animation}
-      activity: androidx.activity:activity-compose:${projectVersion.dependencies.compose.activity}
       constraintlayout: androidx.constraintlayout:constraintlayout-compose:${projectVersion.dependencies.compose.constraintlayout}
       viewmodel: androidx.lifecycle:lifecycle-viewmodel-compose:${projectVersion.dependencies.compose.viewmodel}
-      livedata: androidx.compose.runtime:runtime-livedata:${projectVersion.dependencies.compose.livedata}
       navigation: androidx.navigation:navigation-compose:${projectVersion.dependencies.compose.navigation}
       google_maps: com.google.maps.android:maps-compose:${projectVersion.dependencies.compose.google_maps}
     lib:
@@ -152,6 +152,11 @@ projectPath:
       glide: com.github.bumptech.glide:glide:${projectVersion.dependencies.lib.glide}
       glide_kapt: com.github.bumptech.glide:compiler:${projectVersion.dependencies.lib.glide_kapt}
       glide_okhttp3: com.github.bumptech.glide:okhttp3-integration:${projectVersion.dependencies.lib.glide_okhttp3}
+  dependencies_debug:
+    compose:
+      ui_tooling_preview: androidx.compose.ui:ui-tooling-preview:${projectVersion.dependencies_debug.compose.ui_tooling_preview}
+      ui_tooling: androidx.compose.ui:ui-tooling:${projectVersion.dependencies_debug.compose.ui_tooling}
+      ui_manifest: androidx.compose.ui:ui-test-manifest:${projectVersion.dependencies_debug.compose.ui_manifest}
   dependencies_test:
     core_integration:
       test: androidx.test:core:${projectVersion.dependencies_test.core_integration.test}
@@ -163,9 +168,6 @@ projectPath:
       uiautomator: androidx.test.uiautomator:uiautomator:${projectVersion.dependencies_test.core_integration.uiautomator}
       truth: com.google.truth:truth:${projectVersion.dependencies_test.core_integration.truth}
       coroutine: org.jetbrains.kotlinx:kotlinx-coroutines-test:${projectVersion.dependencies_test.core_integration.coroutine}
-      compose_ui: androidx.compose.ui:ui-test-junit4:${projectVersion.dependencies_test.core_integration.compose_ui}
-      compose_ui_tooling: androidx.compose.ui:ui-tooling:${projectVersion.dependencies_test.core_integration.compose_ui_tooling}
-      compose_ui_manifest: androidx.compose.ui:ui-test-manifest:${projectVersion.dependencies_test.core_integration.compose_ui_manifest}
     core_unit:
       juint: junit:junit:${projectVersion.dependencies_test.core_unit.juint}
       truth: com.google.truth:truth:${projectVersion.dependencies_test.core_unit.truth}
@@ -188,26 +190,26 @@ app:
   - ${plugin.kotlin}
   - ${plugin.kapt}
   - ${plugin.tezov_project_config}
-lib_core_android_kotlin:
+lib_adr_sdk_core:
   - ${plugin.library}
   - ${plugin.kotlin}
   - ${plugin.kapt}
   - ${plugin.tezov_project_config}
-lib_core_kotlin:
+lib_adr_core:
   - ${plugin.library}
   - ${plugin.kotlin}
   - ${plugin.kapt}
   - ${plugin.tezov_project_config}
-lib_test_common:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_test_common_integration:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.tezov_project_config}
-lib_test_common_unit:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.tezov_project_config}
+#lib_test_common:
+#  - ${plugin.library}
+#  - ${plugin.kotlin}
+#  - ${plugin.kapt}
+#  - ${plugin.tezov_project_config}
+#lib_test_common_integration:
+#  - ${plugin.library}
+#  - ${plugin.kotlin}
+#  - ${plugin.tezov_project_config}
+#lib_test_common_unit:
+#  - ${plugin.library}
+#  - ${plugin.kotlin}
+#  - ${plugin.tezov_project_config}

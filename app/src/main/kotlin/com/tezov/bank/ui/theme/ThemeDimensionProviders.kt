@@ -4,12 +4,12 @@ package com.tezov.bank.ui.theme
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.ui.unit.dp
-import com.tezov.lib_core_android_kotlin.ui.type.primaire.DpSize
-import com.tezov.lib_core_android_kotlin.ui.type.primaire.dpSize
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitPalette.Size.Style.Companion.asPaletteSize
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitPaletteDirection
-import com.tezov.lib_core_android_kotlin.ui.theme.style.OutfitPaletteSize
-import com.tezov.lib_core_android_kotlin.ui.theme.theme.ThemeDimensionsExtended
+import com.tezov.lib_adr_sdk_core.ui.type.primaire.DpSize
+import com.tezov.lib_adr_sdk_core.ui.type.primaire.dpSize
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitPalette.Size.Style.Companion.asPaletteSize
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitPaletteDirection
+import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitPaletteSize
+import com.tezov.lib_adr_sdk_core.ui.theme.theme.ThemeDimensionsExtended
 
 object ThemeDimensionProviders {
 

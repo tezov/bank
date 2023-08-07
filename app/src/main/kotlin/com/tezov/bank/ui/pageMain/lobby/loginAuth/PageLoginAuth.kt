@@ -40,7 +40,7 @@ import com.tezov.lib_adr_sdk_core.ui.theme.style.border
 import com.tezov.lib_adr_sdk_core.ui.theme.style.padding
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.*
 import com.tezov.lib_adr_sdk_core.ui.type.primaire.size
-import com.tezov.lib_adr_core.type.collection.ListEntry
+import com.tezov.lib_kmm_core.type.collection.ListEntry
 
 object PageLoginAuth : Page<PageLoginAuthState, PageLoginAuthAction> {
 

@@ -1,4 +1,3 @@
-import java.io.FileInputStream
 import java.util.Properties
 
 tezovConfig {
@@ -27,7 +26,7 @@ tezovConfig {
     }
 
     release {
-        enableDebug = false
+        enableDebug = true
 //        proguards.apply {
 //            add(File("proguards-rules.pro"))
 //        }
@@ -92,8 +91,6 @@ android {
     }
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false
-            isShrinkResources = false
             signingConfig = signingConfigs.getByName("release")
         }
         getByName("debug") {

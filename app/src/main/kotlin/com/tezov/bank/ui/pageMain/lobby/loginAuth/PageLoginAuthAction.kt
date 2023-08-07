@@ -8,8 +8,8 @@ import com.tezov.bank.ui.dialog.lobby.loginForgotten.DialogLoginForgotten
 import com.tezov.lib_adr_sdk_core.navigation.NavigationController
 import com.tezov.lib_adr_sdk_core.ui.composition.activity.sub.dialog.DialogAction
 import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageAction
-import com.tezov.lib_adr_core.async.notifier.Event
-import com.tezov.lib_adr_core.async.notifier.observer.event.ObserverEventE
+import com.tezov.lib_kmm_core.async.notifier.Event
+import com.tezov.lib_kmm_core.async.notifier.observer.event.ObserverEventE
 
 class PageLoginAuthAction private constructor(
     private val navigationController: NavigationController,

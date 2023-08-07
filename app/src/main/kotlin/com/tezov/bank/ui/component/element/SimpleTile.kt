@@ -18,7 +18,7 @@ import com.tezov.lib_adr_sdk_core.ui.theme.style.*
 import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.ThemeColorsExtended
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
-import com.tezov.lib_adr_core.delegate.DelegateNullFallBack
+import com.tezov.lib_kmm_core.delegate.DelegateNullFallBack
 
 object SimpleTile {
 

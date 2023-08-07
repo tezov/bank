@@ -7,7 +7,7 @@ import com.tezov.bank.application.LocalViewModelManager
 import com.tezov.bank.navigation.NavigationRoutes.Route.WebView
 import com.tezov.lib_adr_sdk_core.navigation.NavigationRouteManager
 import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
-import com.tezov.lib_adr_core.type.collection.ListEntry
+import com.tezov.lib_kmm_core.type.collection.ListEntry
 
 class PageWebViewState private constructor() : PageState {
 

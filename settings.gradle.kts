@@ -3,6 +3,7 @@ include(
     ":app",
     ":lib_adr_sdk_core",
     ":lib_adr_core",
+    ":lib_kmm_core",
 //    ":lib_test_common",
 //    ":lib_test_common_unit",
 //    ":lib_test_common_integration",
@@ -12,6 +13,8 @@ project(":lib_adr_sdk_core")
     .projectDir = file("../lib_adr_sdk_core/")
 project(":lib_adr_core")
     .projectDir = file("../lib_adr_core/")
+project(":lib_kmm_core")
+    .projectDir = file("../lib_kmm_core/")
 
 
 //project(":lib_test_common")

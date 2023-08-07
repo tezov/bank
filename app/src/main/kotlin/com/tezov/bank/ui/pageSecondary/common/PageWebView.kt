@@ -25,7 +25,7 @@ import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionCompositionLocal
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsCommonExtended
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsIconExtended
 import com.tezov.lib_adr_sdk_core.ui.type.primaire.size
-import com.tezov.lib_adr_core.type.collection.ListEntry
+import com.tezov.lib_kmm_core.type.collection.ListEntry
 import com.tezov.lib_adr_sdk_core.ui.component.chunk.WebView
 import com.tezov.lib_adr_sdk_core.ui.theme.style.padding
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended

@@ -12,9 +12,9 @@ import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity
 import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
 import com.tezov.lib_adr_sdk_core.ui.di.accessor.DiAccessorCoreUiActivity
 import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
-import com.tezov.lib_adr_core.async.notifier.Notifier
+import com.tezov.lib_kmm_core.async.notifier.Notifier
 import com.tezov.lib_adr_core.async.notifier.observer.value.ObserverValue
-import com.tezov.lib_adr_core.extension.ExtensionBoolean.isTrue
+import com.tezov.lib_kmm_core.extension.ExtensionBoolean.isTrue
 
 //TODO, ViewModel complet async + adapter la navigation en async pour gérer l'attente réponse avant ouverture page.
 class ViewModelManager private constructor(

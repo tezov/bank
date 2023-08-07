@@ -19,7 +19,7 @@ import com.tezov.lib_adr_sdk_core.ui.theme.style.background
 import com.tezov.lib_adr_sdk_core.ui.theme.style.padding
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.ThemeColorsExtended
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
-import com.tezov.lib_adr_core.delegate.DelegateNullFallBack
+import com.tezov.lib_kmm_core.delegate.DelegateNullFallBack
 import com.tezov.lib_adr_sdk_core.ui.component.chunk.Button as ButtonImport
 
 object CarouselCard {

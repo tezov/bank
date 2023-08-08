@@ -11,10 +11,10 @@ import androidx.compose.ui.unit.sp
 import com.tezov.bank.ui.theme.font.fontIbm
 import com.tezov.bank.ui.theme.font.fontIndie
 import com.tezov.bank.ui.theme.font.fontRoboto
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitPaletteSize
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.asPaletteSize
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.asTextStateColor
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.ThemeTypographiesExtended
+import com.tezov.lib_adr_ui_core.theme.style.OutfitPaletteSize
+import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.asPaletteSize
+import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.asTextStateColor
+import com.tezov.lib_adr_ui_core.theme.theme.ThemeTypographiesExtended
 
 object ThemeTypographyProviders {
 

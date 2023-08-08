@@ -1,7 +1,9 @@
 rootProject.name = "bank"
 include(
     ":app",
-    ":lib_adr_sdk_core",
+    ":lib_adr_app_core",
+    ":lib_adr_ui_cpt",
+    ":lib_adr_ui_core",
     ":lib_adr_core",
     ":lib_kmm_core",
 //    ":lib_test_common",
@@ -9,8 +11,12 @@ include(
 //    ":lib_test_common_integration",
 )
 
-project(":lib_adr_sdk_core")
-    .projectDir = file("../lib_adr_sdk_core/")
+project(":lib_adr_app_core")
+    .projectDir = file("../lib_adr_app_core/")
+project(":lib_adr_ui_cpt")
+    .projectDir = file("../lib_adr_ui_cpt/")
+project(":lib_adr_ui_core")
+    .projectDir = file("../lib_adr_ui_core/")
 project(":lib_adr_core")
     .projectDir = file("../lib_adr_core/")
 project(":lib_kmm_core")
@@ -40,7 +46,7 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle:8.1.0")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
-        classpath("com.tezov:plugin_project:1.0.2")
+        classpath("com.tezov:plugin_project:1.0.3")
     }
 
     repositories {

@@ -5,12 +5,12 @@ package com.tezov.bank.ui.di.accessor
 import androidx.compose.runtime.Composable
 import com.tezov.bank.ui.di.component.ComponentAppUiPage
 import com.tezov.bank.ui.di.component.DaggerComponentAppUiPage_EntryPoint
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity.Companion.LocalPagesBundle
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.Page
-import com.tezov.lib_adr_sdk_core.ui.di.accessor.DiAccessor
-import com.tezov.lib_adr_sdk_core.ui.di.accessor.DiAccessorCoreUiPage
-import com.tezov.lib_adr_sdk_core.ui.di.annotation.scope.ScopeAppUiActivity
+import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
+import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity.Companion.LocalPagesBundle
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
+import com.tezov.lib_adr_app_core.ui.di.accessor.DiAccessor
+import com.tezov.lib_adr_app_core.ui.di.accessor.DiAccessorCoreUiPage
+import com.tezov.bank.ui.di.annotation.scope.ScopeAppUiActivity
 import javax.inject.Inject
 
 @ScopeAppUiActivity

@@ -22,19 +22,19 @@ import com.tezov.bank.ui.component.block.SectionRollerCard.Style.Companion.copy
 import com.tezov.bank.ui.component.element.SimpleTile.Style.Companion.copy
 import com.tezov.bank.ui.component.element.RollerCard.Style.Companion.copy
 import com.tezov.bank.ui.theme.ThemeComponentProviders
-import com.tezov.lib_adr_sdk_core.ui.type.primaire.DpSize
-import com.tezov.lib_adr_sdk_core.ui.type.primaire.dpSize
-import com.tezov.lib_adr_sdk_core.ui.component.block.HorizontalPager.WithIndicator.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.component.block.HorizontalRoller.Simple.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon.Simple.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Image.Simple.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitTextStateColor
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.colorsExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsIconExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.typographiesExtended
+import com.tezov.lib_adr_ui_core.type.primaire.DpSize
+import com.tezov.lib_adr_ui_core.type.primaire.dpSize
+import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager.WithIndicator.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalRoller.Simple.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon.Simple.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Image.Simple.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
+import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.OutfitTextStateColor
+import com.tezov.lib_adr_ui_core.theme.theme.colorsExtended
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsIconExtended
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_core.theme.theme.typographiesExtended
 
 val PageDiscoverTheme.colors: PageDiscoverTheme.Colors
     @Composable

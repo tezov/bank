@@ -7,13 +7,13 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiModal
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Text
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.modal.dialog.Dialog
-import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
-import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.state
-import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionCompositionLocal
-import com.tezov.lib_adr_sdk_core.ui.theme.style.padding
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
+import com.tezov.lib_adr_app_core.ui.compositionTree.modal.dialog.Dialog
+import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
+import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
+import com.tezov.lib_adr_ui_core.extension.ExtensionCompositionLocal
+import com.tezov.lib_adr_ui_core.theme.style.padding
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
 
 object DialogCloseAppConfirmation :
     Dialog<DialogCloseAppConfirmationState, DialogCloseAppConfirmationAction> {

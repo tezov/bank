@@ -4,8 +4,8 @@ package com.tezov.bank.ui.pageMain.lobby.loginAuth
 
 import androidx.compose.runtime.Composable
 import com.tezov.bank.ui.pageMain.lobby.loginAuth.PageLoginAuthState.Field
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.TextField
-import com.tezov.lib_adr_sdk_core.ui.misc.FocusDispatcher
+import com.tezov.lib_adr_ui_core.misc.FocusDispatcher
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.TextField
 import com.tezov.lib_kmm_core.type.collection.ListEntry
 
 //TODO modifier lenght control par une validation login / password

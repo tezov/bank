@@ -5,9 +5,9 @@ package com.tezov.bank.ui.pageMain.lobby.loginAuth
 import com.tezov.bank.navigation.NavigationRoutes.Route
 import com.tezov.bank.navigation.NavigationUrl
 import com.tezov.bank.ui.dialog.lobby.loginForgotten.DialogLoginForgotten
-import com.tezov.lib_adr_sdk_core.navigation.NavigationController
-import com.tezov.lib_adr_sdk_core.ui.composition.activity.sub.dialog.DialogAction
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageAction
+import com.tezov.lib_adr_app_core.navigation.NavigationController
+import com.tezov.lib_adr_app_core.ui.composition.activity.sub.dialog.DialogAction
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 import com.tezov.lib_kmm_core.async.notifier.Event
 import com.tezov.lib_kmm_core.async.notifier.observer.event.ObserverEventE
 

@@ -2,20 +2,20 @@
 
 package com.tezov.bank.navigation
 
-import com.tezov.lib_adr_sdk_core.navigation.NavigationController.Option
-import com.tezov.lib_adr_sdk_core.navigation.NavigationController.Request
-import com.tezov.lib_adr_sdk_core.navigation.NavigationRouteManager
-import com.tezov.lib_adr_sdk_core.navigation.NavigationRouteManager.*
-import com.tezov.lib_adr_sdk_core.navigation.bottom_navigation.BottomNavigationAction
-import com.tezov.lib_adr_sdk_core.navigation.top_app_bar.TopAppBarAction
-import com.tezov.lib_adr_sdk_core.ui.composition.activity.sub.snackbar.SnackbarAction
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.modal.dialog.DialogAction
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageAction
+import com.tezov.lib_adr_app_core.navigation.NavigationController.Option
+import com.tezov.lib_adr_app_core.navigation.NavigationController.Request
+import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager
+import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.*
+import com.tezov.lib_adr_app_core.navigation.bottom_navigation.BottomNavigationAction
+import com.tezov.lib_adr_app_core.navigation.top_app_bar.TopAppBarAction
+import com.tezov.lib_adr_app_core.ui.composition.activity.sub.snackbar.SnackbarAction
+import com.tezov.lib_adr_app_core.ui.compositionTree.modal.dialog.DialogAction
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 
 class NavigationRoutes(
-    val controller: com.tezov.lib_adr_sdk_core.navigation.NavigationController,
+    val controller: com.tezov.lib_adr_app_core.navigation.NavigationController,
     private val snackbarAction: SnackbarAction,
-) : com.tezov.lib_adr_sdk_core.navigation.NavigationController.Friend {
+) : com.tezov.lib_adr_app_core.navigation.NavigationController.Friend {
 
     companion object Route {
 

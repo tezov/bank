@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import com.tezov.app.R
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
 
 class PageLoungeState private constructor(

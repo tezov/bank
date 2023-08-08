@@ -8,7 +8,7 @@ import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.colorsExtended
+import com.tezov.lib_adr_ui_core.theme.theme.colorsExtended
 
 val PageWebViewTheme.colors: PageWebViewTheme.Colors
     @Composable

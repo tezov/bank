@@ -9,13 +9,14 @@ import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitShape.StateColor.Style.Companion.asFrameStateColor
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitShape.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitTextStateColor
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.*
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
+import com.tezov.lib_adr_ui_core.theme.style.OutfitShape.StateColor.Style.Companion.asFrameStateColor
+import com.tezov.lib_adr_ui_core.theme.style.OutfitShape.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
+import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.OutfitTextStateColor
+import com.tezov.lib_adr_ui_core.theme.theme.*
+import com.tezov.lib_adr_ui_core.theme.theme.colorsExtended
 
 val BottomSheetAccountIncomingTheme.colors: BottomSheetAccountIncomingTheme.Colors
     @Composable

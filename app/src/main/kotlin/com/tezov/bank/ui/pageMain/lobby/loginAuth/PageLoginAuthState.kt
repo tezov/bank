@@ -2,8 +2,8 @@
 
 package com.tezov.bank.ui.pageMain.lobby.loginAuth
 
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.TextField
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.TextField
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 import com.tezov.lib_kmm_core.type.collection.ListEntry
 
 class PageLoginAuthState private constructor(

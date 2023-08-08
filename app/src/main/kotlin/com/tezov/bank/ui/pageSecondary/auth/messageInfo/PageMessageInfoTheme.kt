@@ -11,8 +11,10 @@ import androidx.compose.ui.graphics.Color
 import com.tezov.bank.ui.component.block.SectionMessageRow
 import com.tezov.bank.ui.component.block.SectionMessageRow.Style.Companion.copy
 import com.tezov.bank.ui.theme.ThemeComponentProviders
-import com.tezov.lib_adr_sdk_core.ui.component.block.HorizontalPager
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.*
+import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager
+import com.tezov.lib_adr_app_core.ui.theme.theme.*
+import com.tezov.lib_adr_ui_core.theme.theme.colorsExtended
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
 
 val PageMessageInfoTheme.colors: PageMessageInfoTheme.Colors
     @Composable

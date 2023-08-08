@@ -9,9 +9,9 @@ import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppConfirma
 import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppConfirmationState
 import com.tezov.bank.ui.dialog.lobby.loginForgotten.DialogLoginForgottenAction
 import com.tezov.bank.ui.dialog.lobby.loginForgotten.DialogLoginForgottenState
-import com.tezov.lib_adr_sdk_core.ui.di.annotation.scope.ScopeAppUiModal
-import com.tezov.lib_adr_sdk_core.ui.di.common.ComposableContext
-import com.tezov.lib_adr_sdk_core.ui.di.component.ComponentCoreUiModal
+import com.tezov.bank.ui.di.annotation.scope.ScopeAppUiModal
+import com.tezov.lib_adr_app_core.ui.di.common.ComposableContext
+import com.tezov.lib_adr_app_core.ui.di.component.ComponentCoreUiModal
 import dagger.Component
 
 object ComponentAppUiModal {

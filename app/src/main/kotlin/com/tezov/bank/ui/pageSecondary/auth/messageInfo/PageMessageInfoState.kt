@@ -5,8 +5,8 @@ package com.tezov.bank.ui.pageSecondary.auth.messageInfo
 import androidx.compose.runtime.Composable
 import com.tezov.bank.ui.component.block.SectionMessageRow
 import com.tezov.bank.ui.component.element.MessageRow
-import com.tezov.lib_adr_sdk_core.ui.component.block.HorizontalPager
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
+import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
 class PageMessageInfoState private constructor() : PageState {
 

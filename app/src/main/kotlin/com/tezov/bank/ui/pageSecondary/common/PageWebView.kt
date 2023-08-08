@@ -14,21 +14,21 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
-import com.tezov.lib_adr_sdk_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Shadow
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.WebViewRawResource
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.Page
-import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
-import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.state
-import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionCompositionLocal
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsCommonExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsIconExtended
-import com.tezov.lib_adr_sdk_core.ui.type.primaire.size
+import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Shadow
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.WebViewRawResource
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
+import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
+import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
 import com.tezov.lib_kmm_core.type.collection.ListEntry
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.WebView
-import com.tezov.lib_adr_sdk_core.ui.theme.style.padding
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.WebView
+import com.tezov.lib_adr_ui_core.extension.ExtensionCompositionLocal
+import com.tezov.lib_adr_ui_core.theme.style.padding
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsCommonExtended
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsIconExtended
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_core.type.primaire.size
 
 object PageWebView : Page<PageWebViewState, PageWebViewAction> {
 

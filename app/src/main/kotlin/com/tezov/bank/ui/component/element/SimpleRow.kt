@@ -10,11 +10,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import com.tezov.app.R
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Text
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitTextStateColor
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.shapesExtended
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
+import com.tezov.lib_adr_ui_core.theme.style.OutfitTextStateColor
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_core.theme.theme.shapesExtended
 import com.tezov.lib_kmm_core.delegate.DelegateNullFallBack
 
 object SimpleRow {

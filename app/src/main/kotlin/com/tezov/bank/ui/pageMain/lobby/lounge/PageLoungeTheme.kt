@@ -14,20 +14,32 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.tezov.bank.ui.theme.ThemeComponentProviders
-import com.tezov.lib_adr_sdk_core.ui.type.primaire.DpSize
-import com.tezov.lib_adr_sdk_core.ui.type.primaire.dpSize
-import com.tezov.lib_adr_sdk_core.ui.component.block.HorizontalPager
-import com.tezov.lib_adr_sdk_core.ui.component.block.HorizontalPager.WithIndicator.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.*
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Button.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.DropDownMenu.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.style.*
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitBorder.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitFrame.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitShape.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.*
+import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager
+import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager.WithIndicator.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.DropDownMenu.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_app_core.ui.theme.theme.*
+import com.tezov.lib_adr_ui_core.theme.style.OutfitBorder.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.OutfitBorderStateColor
+import com.tezov.lib_adr_ui_core.theme.style.OutfitFrame.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.OutfitFrameStateColor
+import com.tezov.lib_adr_ui_core.theme.style.OutfitShape.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.OutfitShapeStateColor
+import com.tezov.lib_adr_ui_core.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
+import com.tezov.lib_adr_ui_core.theme.style.OutfitStateBiStable
+import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.OutfitTextStateColor
+import com.tezov.lib_adr_ui_core.theme.theme.bordersExtended
+import com.tezov.lib_adr_ui_core.theme.theme.colorsExtended
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_core.theme.theme.shapesExtended
+import com.tezov.lib_adr_ui_core.theme.theme.typographiesExtended
+import com.tezov.lib_adr_ui_core.type.primaire.DpSize
+import com.tezov.lib_adr_ui_core.type.primaire.dpSize
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.DropDownMenu
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Image
 
 val PageLoungeTheme.colors: PageLoungeTheme.Colors
     @Composable
@@ -220,7 +232,7 @@ object PageLoungeTheme {
                 tint = colors.onBackground,
                 outfitFrame = OutfitFrameStateColor(
                     outfitShape = shapes.icon.copy {
-                        outfitState = colors.dark.asStateSimple
+                        var outfitState = colors.dark.asStateSimple
                     }
                 )
             )

@@ -7,8 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitPaletteColor
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.ThemeColorsExtended
+import com.tezov.lib_adr_ui_core.theme.style.OutfitPaletteColor
+import com.tezov.lib_adr_ui_core.theme.theme.ThemeColorsExtended
 
 val MaterialTheme.colorsPalette
     @Composable

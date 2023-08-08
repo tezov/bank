@@ -7,8 +7,8 @@ import com.tezov.app.R
 import com.tezov.bank.ui.component.block.SectionAccountValueSimpleRow
 import com.tezov.bank.ui.component.element.AccountSummaryCard
 import com.tezov.bank.ui.component.element.AccountValueSimpleRow
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitStateSemantic
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
+import com.tezov.lib_adr_ui_core.theme.style.OutfitStateSemantic
 
 class PageAccountState private constructor() : PageState {
     var header: Header?=null

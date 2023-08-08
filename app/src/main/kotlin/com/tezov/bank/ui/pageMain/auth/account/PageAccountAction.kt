@@ -4,10 +4,10 @@ package com.tezov.bank.ui.pageMain.auth.account
 
 import com.tezov.bank.navigation.NavigationRoutes.Route
 import com.tezov.bank.ui.bottomsheet.account.accountIncoming.BottomSheetAccountIncoming
-import com.tezov.lib_adr_sdk_core.navigation.NavigationController
-import com.tezov.lib_adr_sdk_core.navigation.NavigationRouteManager.NotImplemented
-import com.tezov.lib_adr_sdk_core.ui.composition.activity.sub.bottomsheet.BottomSheetAction
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageAction
+import com.tezov.lib_adr_app_core.navigation.NavigationController
+import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.NotImplemented
+import com.tezov.lib_adr_app_core.ui.composition.activity.sub.bottomsheet.BottomSheetAction
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 
 class PageAccountAction private constructor(
     private val navigationController: NavigationController,

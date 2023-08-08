@@ -12,12 +12,12 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
-import com.tezov.lib_adr_sdk_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.WebView
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.WebViewRawResource
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.Page
-import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.colorsExtended
+import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.WebView
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.WebViewRawResource
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
+import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
+import com.tezov.lib_adr_ui_core.theme.theme.colorsExtended
 import kotlinx.coroutines.delay
 
 object PageSplash : Page<PageSplashState, PageSplashAction> {

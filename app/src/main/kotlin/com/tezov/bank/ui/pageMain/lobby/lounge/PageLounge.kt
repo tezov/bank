@@ -16,18 +16,22 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
-import com.tezov.lib_adr_sdk_core.animation.AnimationCompound.Companion.animate
-import com.tezov.lib_adr_sdk_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_sdk_core.paintArt.Shape
-import com.tezov.lib_adr_sdk_core.ui.component.block.HorizontalPager
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.*
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.Page
-import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
-import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.state
-import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionCompositionLocal
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.style.padding
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_core.animation.AnimationCompound.Companion.animate
+import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_ui_cpt.paintArt.Shape
+import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
+import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
+import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
+import com.tezov.lib_adr_ui_core.extension.ExtensionCompositionLocal
+import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.padding
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.DropDownMenu
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Image
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
 
 object PageLounge : Page<PageLoungeState, PageLoungeAction> {
 

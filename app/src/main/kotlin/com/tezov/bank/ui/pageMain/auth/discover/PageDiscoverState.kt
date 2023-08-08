@@ -11,7 +11,7 @@ import com.tezov.bank.ui.component.element.CarouselCard
 import com.tezov.bank.ui.component.element.RollerCard
 import com.tezov.bank.ui.component.element.SimpleRow
 import com.tezov.bank.ui.component.element.SimpleTile
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageState
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
 class PageDiscoverState private constructor() : PageState {
 

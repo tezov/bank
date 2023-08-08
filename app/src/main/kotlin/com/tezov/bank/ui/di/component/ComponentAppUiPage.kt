@@ -26,10 +26,10 @@ import com.tezov.bank.ui.pageSecondary.auth.messageInfo.PageMessageInfoAction
 import com.tezov.bank.ui.pageSecondary.auth.messageInfo.PageMessageInfoState
 import com.tezov.bank.ui.pageSecondary.common.PageWebViewAction
 import com.tezov.bank.ui.pageSecondary.common.PageWebViewState
-import com.tezov.lib_adr_sdk_core.ui.di.annotation.scope.ScopeAppUiPage
-import com.tezov.lib_adr_sdk_core.ui.di.common.ComposableContext
-import com.tezov.lib_adr_sdk_core.ui.di.component.ComponentCoreUiActivity
-import com.tezov.lib_adr_sdk_core.ui.di.component.ComponentCoreUiPage
+import com.tezov.bank.ui.di.annotation.scope.ScopeAppUiPage
+import com.tezov.lib_adr_app_core.ui.di.common.ComposableContext
+import com.tezov.lib_adr_app_core.ui.di.component.ComponentCoreUiActivity
+import com.tezov.lib_adr_app_core.ui.di.component.ComponentCoreUiPage
 import dagger.Component
 
 object ComponentAppUiPage {

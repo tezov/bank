@@ -20,9 +20,9 @@ import com.tezov.bank.ui.pageMain.lobby.lounge.PageLoungeAnimation.Companion.DUR
 import com.tezov.bank.ui.pageMain.lobby.lounge.PageLoungeAnimation.Companion.DURATION_LOGO_TRANSLATE_ms
 import com.tezov.bank.ui.pageMain.lobby.lounge.PageLoungeAnimation.Companion.DURATION_PAGE_APPEAR_ms
 import com.tezov.bank.ui.pageMain.lobby.lounge.PageLoungeAnimation.Step
-import com.tezov.lib_adr_sdk_core.animation.AnimationCompound
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_core.animation.AnimationCompound
+import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
 
 //TODO improve allocate when needed and release when done
 class PageLoungeAnimation : AnimationCompound<String, Step>() {

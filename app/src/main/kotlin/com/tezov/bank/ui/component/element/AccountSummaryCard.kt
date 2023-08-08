@@ -12,13 +12,13 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.*
 import com.tezov.bank.ui.pageMain.lobby.lounge.*
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.DropDownMenu
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Text
-import com.tezov.lib_adr_sdk_core.ui.modifier.*
-import com.tezov.lib_adr_sdk_core.ui.theme.style.*
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.ThemeColorsExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.DropDownMenu
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
+import com.tezov.lib_adr_ui_core.modifier.*
+import com.tezov.lib_adr_ui_core.theme.style.*
+import com.tezov.lib_adr_ui_core.theme.theme.ThemeColorsExtended
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
 import com.tezov.lib_kmm_core.delegate.DelegateNullFallBack
 import java.util.*
 

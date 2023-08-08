@@ -11,13 +11,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon.Simple.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Text
-import com.tezov.lib_adr_sdk_core.ui.theme.style.*
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.ThemeColorsExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon.Simple.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
+import com.tezov.lib_adr_ui_core.theme.style.*
+import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.theme.ThemeColorsExtended
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
 import com.tezov.lib_kmm_core.delegate.DelegateNullFallBack
 
 object SimpleTile {

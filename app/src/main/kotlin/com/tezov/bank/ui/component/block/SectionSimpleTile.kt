@@ -12,14 +12,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.tezov.bank.ui.component.element.SimpleTile
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Text
-import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionComposable
-import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionComposable.loopOver
-import com.tezov.lib_adr_sdk_core.ui.modifier.then
-import com.tezov.lib_adr_sdk_core.ui.modifier.thenOnNotNull
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_app_core.ui.extension.ExtensionComposable
+import com.tezov.lib_adr_app_core.ui.extension.ExtensionComposable.loopOver
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
+import com.tezov.lib_adr_ui_core.modifier.then
+import com.tezov.lib_adr_ui_core.modifier.thenOnNotNull
+import com.tezov.lib_adr_ui_core.theme.style.OutfitText
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
 import com.tezov.lib_kmm_core.delegate.DelegateNullFallBack
 
 object SectionSimpleTile {

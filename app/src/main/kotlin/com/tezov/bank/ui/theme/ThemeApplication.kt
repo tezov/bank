@@ -5,9 +5,10 @@ package com.tezov.bank.ui.theme
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
-import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionCompositionLocal
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.ThemeColorsExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.provides
+import com.tezov.lib_adr_app_core.ui.theme.theme.provides
+import com.tezov.lib_adr_ui_core.extension.ExtensionCompositionLocal
+import com.tezov.lib_adr_ui_core.theme.theme.ThemeColorsExtended
+import com.tezov.lib_adr_ui_core.theme.theme.provides
 
 object ThemeApplication {
     @Composable

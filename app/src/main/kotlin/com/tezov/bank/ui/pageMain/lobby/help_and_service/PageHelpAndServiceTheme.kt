@@ -14,14 +14,14 @@ import com.tezov.bank.ui.component.block.SectionSimpleRow
 import com.tezov.bank.ui.component.block.SectionSimpleRow.Style.Companion.copy
 import com.tezov.bank.ui.component.element.SimpleTile.Style.Companion.copy
 import com.tezov.bank.ui.theme.ThemeComponentProviders
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon.Simple.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitTextStateColor
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.colorsExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsIconExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.typographiesExtended
+import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon.Simple.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
+import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.OutfitTextStateColor
+import com.tezov.lib_adr_ui_core.theme.theme.colorsExtended
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsIconExtended
+import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_core.theme.theme.typographiesExtended
 
 val PageHelpAndServiceTheme.colors: PageHelpAndServiceTheme.Colors
     @Composable

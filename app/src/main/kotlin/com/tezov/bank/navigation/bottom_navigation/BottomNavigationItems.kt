@@ -4,8 +4,8 @@ package com.tezov.bank.navigation.bottom_navigation
 
 import com.tezov.app.R
 import com.tezov.bank.navigation.NavigationRoutes.*
-import com.tezov.lib_adr_sdk_core.navigation.NavigationRouteManager
-import com.tezov.lib_adr_sdk_core.navigation.bottom_navigation.BottomNavigationItemData
+import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager
+import com.tezov.lib_adr_app_core.navigation.bottom_navigation.BottomNavigationItemData
 
 sealed class BottomNavigationItems(
     titleResourceId: Int,

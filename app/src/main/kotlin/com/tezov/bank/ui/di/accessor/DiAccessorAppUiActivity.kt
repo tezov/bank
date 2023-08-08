@@ -6,11 +6,11 @@ import androidx.compose.runtime.Composable
 import com.tezov.bank.application.Application
 import com.tezov.bank.ui.di.component.ComponentAppUiActivity
 import com.tezov.bank.ui.di.component.DaggerComponentAppUiActivity_EntryPoint
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity.Companion.LocalCoreApplication
-import com.tezov.lib_adr_sdk_core.ui.di.accessor.DiAccessor
-import com.tezov.lib_adr_sdk_core.ui.di.accessor.DiAccessorCoreUiActivity
+import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity
+import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
+import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity.Companion.LocalCoreApplication
+import com.tezov.lib_adr_app_core.ui.di.accessor.DiAccessor
+import com.tezov.lib_adr_app_core.ui.di.accessor.DiAccessorCoreUiActivity
 
 class DiAccessorAppUiActivity protected constructor() :
     DiAccessor<ComponentAppUiActivity.EntryPoint>() {

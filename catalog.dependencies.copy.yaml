@@ -1,6 +1,3 @@
-#Common configuration
-domain: com.tezov
-
 resourcesExcluded:
   - META-INF/DEPENDENCIES
   - META-INF/LICENSE
@@ -210,7 +207,6 @@ projectPath:
       espresso_contrib: androidx.test.espresso:espresso-contrib:${projectVersion.dependencies_test.adr_core_integration.espresso_contrib}
       uiautomator: androidx.test.uiautomator:uiautomator:${projectVersion.dependencies_test.adr_core_integration.uiautomator}
 
-#Modules configuration
 plugin:
   android: com.android
   application: ${android}.application
@@ -220,47 +216,3 @@ plugin:
   ksp: com.google.devtools.ksp
   tezov_project: com.tezov.plugin_project
   tezov_project_config: ${tezov_project}.config
-
-app:
-  - ${plugin.application}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_adr_app_core:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_adr_ui_cpt:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_adr_ui_core:
-    - ${plugin.library}
-    - ${plugin.kotlin}
-    - ${plugin.kapt}
-    - ${plugin.tezov_project_config}
-lib_adr_core:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_kmm_core:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-#lib_test_common:
-#  - ${plugin.library}
-#  - ${plugin.kotlin}
-#  - ${plugin.kapt}
-#  - ${plugin.tezov_project_config}
-#lib_test_common_integration:
-#  - ${plugin.library}
-#  - ${plugin.kotlin}
-#  - ${plugin.tezov_project_config}
-#lib_test_common_unit:
-#  - ${plugin.library}
-#  - ${plugin.kotlin}
-#  - ${plugin.tezov_project_config}

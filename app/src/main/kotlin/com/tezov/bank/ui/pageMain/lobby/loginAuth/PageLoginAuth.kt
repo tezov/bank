@@ -27,11 +27,11 @@ import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
-import com.tezov.lib_adr_ui_cpt.core.component.block.KeyBoard
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.TextField
+import com.tezov.lib_adr_ui_cpt.component.core.block.KeyBoard
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Button
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Text
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.TextField
 import com.tezov.lib_adr_ui_core.extension.ExtensionCompositionLocal
 import com.tezov.lib_adr_ui_core.localProvider.LocalProviderTextField
 import com.tezov.lib_adr_ui_core.theme.style.OutfitBorder.StateColor.Style.Companion.copy
@@ -82,7 +82,7 @@ object PageLoginAuth : Page<PageLoginAuthState, PageLoginAuthAction> {
                 ) {
                     Icon(
                         modifier = Modifier.size(MaterialTheme.dimensionsIconExtended.modal.normal),
-                        painter = painterResource(id = R.drawable.ic_close_24dp),
+                        painter = painterResource(id = com.tezov.lib_adr_ui_cpt.R.drawable.ic_close_24dp),
                         contentDescription = stringResource(id = R.string.dlg_login_auth_icon_close),
                         tint = PageLoginAuthTheme.colors.onBackground,
                     )
@@ -164,7 +164,7 @@ object PageLoginAuth : Page<PageLoginAuthState, PageLoginAuthAction> {
                         painterIconStart = painterResource(id = R.drawable.ic_person_24dp),
                         descriptionIconStart = stringResource(id = R.string.dlg_login_auth_icon_login_clear),
                         painterIconEnd = when (login.current.isEmpty()) {
-                            false -> painterResource(id = R.drawable.ic_cancel_round_24dp)
+                            false -> painterResource(id = com.tezov.lib_adr_ui_cpt.R.drawable.ic_cancel_circle_24dp)
                             true -> null
                         },
                         descriptionIconEnd = stringResource(id = R.string.dlg_login_auth_icon_login_clear),

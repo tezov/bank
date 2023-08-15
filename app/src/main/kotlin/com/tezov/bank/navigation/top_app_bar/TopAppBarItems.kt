@@ -16,7 +16,7 @@ sealed class TopAppBarItems(icon: Int, route: Route) : TopAppBarItemData(icon, r
         }
     }
 
-    object Back : TopAppBarItemData(R.drawable.ic_arrow_left_24dp, NavigationRouteManager.Back)
+    object Back : TopAppBarItemData(com.tezov.lib_adr_ui_cpt.R.drawable.ic_arrow_left_24dp, NavigationRouteManager.Back)
 
 
 }

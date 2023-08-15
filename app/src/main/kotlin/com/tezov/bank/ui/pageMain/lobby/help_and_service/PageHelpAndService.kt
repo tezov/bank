@@ -14,14 +14,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.tezov.app.R
-import com.tezov.bank.ui.component.block.SectionSimpleTile
-import com.tezov.bank.ui.component.block.SectionSimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
 import com.tezov.lib_adr_ui_core.type.primaire.size
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Shadow
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Shadow
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Text
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
@@ -72,7 +72,7 @@ object PageHelpAndService : Page<PageHelpAndServiceState, PageHelpAndServiceActi
                     ) {
                         Icon(
                             modifier = Modifier.size(MaterialTheme.dimensionsIconExtended.modal.normal),
-                            painter = painterResource(id = R.drawable.ic_close_24dp),
+                            painter = painterResource(id = com.tezov.lib_adr_ui_cpt.R.drawable.ic_close_24dp),
                             contentDescription = stringResource(id = R.string.pg_h_and_s_icon_close),
                             tint = PageHelpAndServiceTheme.colors.accent,
                         )

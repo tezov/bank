@@ -2,14 +2,8 @@
 domain: com.tezov
 
 #Dependencies
-#dependencies catalog outside project, not in this git repo
+#dependencies catalog outside project, not in this git repo (check copy in you need it)
 dependencies : ${file://../catalog.dependencies.yaml}
-
-#uncoment to use project catalog (copy of main dependencies catalog)
-#dependencies : ${file://./catalog.dependencies.copy.yaml}
-
-#uncoment to use remote catalog
-#dependencies : ${url://https://raw.githubusercontent.com/tezov/bank/dev/split_modules/catalog.dependencies.yaml}
 
 #Modules configuration
 app:

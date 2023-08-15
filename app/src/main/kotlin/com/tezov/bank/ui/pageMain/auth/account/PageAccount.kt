@@ -16,15 +16,15 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.tezov.app.R
-import com.tezov.bank.ui.component.block.SectionAccountValueSimpleRow
-import com.tezov.bank.ui.component.element.AccountSummaryCard
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleValueRow
+import com.tezov.lib_adr_ui_cpt.component.animated.block.SummaryCardAnimated
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
 import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Shadow
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
-import com.tezov.lib_adr_ui_cpt.core.component.layout.ColumnCollapsibleHeader
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Shadow
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Text
+import com.tezov.lib_adr_ui_cpt.component.core.layout.ColumnCollapsibleHeader
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
@@ -147,7 +147,7 @@ object PageAccount : Page<PageAccountState, PageAccountAction> {
                     }
                     header.accountSummary?.let {
                         Row {
-                            AccountSummaryCard(
+                            SummaryCardAnimated(
                                 progress = progress,
                                 modifier = Modifier.fillMaxWidth(),
                                 style = PageAccountTheme.styles.accountSummary,
@@ -214,11 +214,11 @@ object PageAccount : Page<PageAccountState, PageAccountAction> {
     @Composable
     private fun ColumnScope.contentBody(
         action: PageAccountAction,
-        incoming: SectionAccountValueSimpleRow.Data?,
-        histories: List<SectionAccountValueSimpleRow.Data>?
+        incoming: SectionSimpleValueRow.Data?,
+        histories: List<SectionSimpleValueRow.Data>?
     ) {
         incoming?.let { data ->
-            SectionAccountValueSimpleRow(
+            SectionSimpleValueRow(
                 modifier = Modifier.padding(start = MaterialTheme.dimensionsPaddingExtended.page.small.horizontal),
                 data = data,
                 style = PageAccountTheme.styles.sectionAccountValue,
@@ -231,7 +231,7 @@ object PageAccount : Page<PageAccountState, PageAccountAction> {
         }
         histories?.let { list ->
             list.forEachIndexed { index, data ->
-                SectionAccountValueSimpleRow(
+                SectionSimpleValueRow(
                     modifier = Modifier.padding(start = MaterialTheme.dimensionsPaddingExtended.page.small.horizontal),
                     data = data,
                     style = PageAccountTheme.styles.sectionAccountValue,

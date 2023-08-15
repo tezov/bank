@@ -12,13 +12,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.tezov.app.R
-import com.tezov.bank.ui.component.block.SectionSimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
 import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Image
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Image
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Text
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state

@@ -19,7 +19,7 @@ import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.lib_adr_ui_core.animation.AnimationCompound.Companion.animate
 import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
 import com.tezov.lib_adr_ui_cpt.paintArt.Shape
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager
+import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalPager
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
@@ -27,11 +27,11 @@ import com.tezov.lib_adr_ui_core.extension.ExtensionCompositionLocal
 import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.style.padding
 import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.DropDownMenu
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Image
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Button
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.DropDownMenu
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Image
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Text
 
 object PageLounge : Page<PageLoungeState, PageLoungeAction> {
 
@@ -208,7 +208,7 @@ object PageLounge : Page<PageLoungeState, PageLoungeAction> {
                 onClick = action::onClickAdd
             ) {
                 Icon.StateColor(
-                    resourceId = R.drawable.ic_add_24dp,
+                    resourceId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_add_24dp,
                     style = PageLoungeTheme.styles.iconMedium,
                     description = stringResource(id = R.string.pg_login_icon_add_account)
                 )
@@ -216,7 +216,7 @@ object PageLounge : Page<PageLoungeState, PageLoungeAction> {
             Spacer(modifier = Modifier.width(PageLoungeTheme.dimensions.paddingStartToIconMedium))
             DropDownMenu.StateColor(
                 style = PageLoungeTheme.styles.dropDownMenu,
-                resourceId = R.drawable.ic_3dot_v_24dp,
+                resourceId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_3dot_v_24dp,
                 description = stringResource(id = R.string.pg_login_icon_more_action),
                 items = stringArrayResource(id = R.array.pg_login_drop_down_menu).toList(),
                 offset = DpOffset(

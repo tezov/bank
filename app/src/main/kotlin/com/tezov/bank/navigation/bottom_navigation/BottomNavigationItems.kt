@@ -19,8 +19,8 @@ sealed class BottomNavigationItems(
             setOf(
                 BottomNavigationItemData(
                     R.string.nav_btm_account,
-                    R.drawable.ic_home_24dp,
-                    R.drawable.ic_home_line_24dp,
+                    com.tezov.lib_adr_ui_cpt.R.drawable.ic_home_fill_24dp,
+                    com.tezov.lib_adr_ui_cpt.R.drawable.ic_home_24dp,
                     Route.Account
                 ),
                 BottomNavigationItemData(
@@ -37,8 +37,8 @@ sealed class BottomNavigationItems(
                 ),
                 BottomNavigationItemData(
                     R.string.nav_btm_help,
-                    R.drawable.ic_help_square_24dp,
-                    R.drawable.ic_help_square_line_24dp,
+                    com.tezov.lib_adr_ui_cpt.R.drawable.ic_help_square_fill_24dp,
+                    com.tezov.lib_adr_ui_cpt.R.drawable.ic_help_square_24dp,
                     Route.Help
                 ),
                 BottomNavigationItemData(

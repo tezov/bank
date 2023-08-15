@@ -3,10 +3,10 @@
 package com.tezov.bank.ui.pageMain.lobby.help_and_service
 
 import com.tezov.app.R
-import com.tezov.bank.ui.component.block.SectionSimpleRow
-import com.tezov.bank.ui.component.block.SectionSimpleTile
-import com.tezov.bank.ui.component.element.SimpleRow
-import com.tezov.bank.ui.component.element.SimpleTile
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile
+import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleTile
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
 class PageHelpAndServiceState private constructor() : PageState {
@@ -53,11 +53,11 @@ class PageHelpAndServiceState private constructor() : PageState {
                 ),
                 SimpleTile.Data(
                     title = "Découvrir l'application",
-                    iconInfoId = R.drawable.ic_search_24dp
+                    iconInfoId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_search_24dp
                 ),
                 SimpleTile.Data(
                     title = "Accéder à l'assitance technique",
-                    iconInfoId = R.drawable.ic_help_24dp
+                    iconInfoId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_help_24dp
                 ),
             )
         )
@@ -67,11 +67,11 @@ class PageHelpAndServiceState private constructor() : PageState {
             rows = listOf(
                 SimpleRow.Data(
                     title = "Appeler",
-                    iconInfoId = R.drawable.ic_call_24dp
+                    iconInfoId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_call_24dp
                 ),
                 SimpleRow.Data(
                     title = "Service sourds et malentendats",
-                    iconInfoId = R.drawable.ic_hearing_disabled_24dp
+                    iconInfoId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_hearing_disabled_24dp
                 ),
             )
         )

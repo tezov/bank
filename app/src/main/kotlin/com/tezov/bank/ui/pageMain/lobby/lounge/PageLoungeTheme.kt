@@ -14,10 +14,10 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.tezov.bank.ui.theme.ThemeComponentProviders
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager.WithIndicator.Style.Companion.copy
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.DropDownMenu.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalPager
+import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalPager.WithIndicator.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Button.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.DropDownMenu.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_app_core.ui.theme.theme.*
 import com.tezov.lib_adr_ui_core.theme.style.OutfitBorder.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.style.OutfitBorderStateColor
@@ -36,10 +36,10 @@ import com.tezov.lib_adr_ui_core.theme.theme.shapesExtended
 import com.tezov.lib_adr_ui_core.theme.theme.typographiesExtended
 import com.tezov.lib_adr_ui_core.type.primaire.DpSize
 import com.tezov.lib_adr_ui_core.type.primaire.dpSize
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.DropDownMenu
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Image
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Button
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.DropDownMenu
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Image
 
 val PageLoungeTheme.colors: PageLoungeTheme.Colors
     @Composable

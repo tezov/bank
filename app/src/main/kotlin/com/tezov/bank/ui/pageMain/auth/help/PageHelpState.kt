@@ -3,8 +3,8 @@
 package com.tezov.bank.ui.pageMain.auth.help
 
 import com.tezov.app.R
-import com.tezov.bank.ui.component.block.SectionSimpleRow
-import com.tezov.bank.ui.component.element.SimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleRow
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
 class PageHelpState private constructor() : PageState {
@@ -38,7 +38,7 @@ class PageHelpState private constructor() : PageState {
 
         emergencies = SectionSimpleRow.Data(
             title = "Urgence",
-            iconId = R.drawable.ic_call_24dp,
+            iconId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_call_24dp,
             rows = listOf(
                 SimpleRow.Data(title = "Paiment carte ou retrait refusé"),
                 SimpleRow.Data(title = "Perte ou vol de ma carte"),
@@ -51,7 +51,7 @@ class PageHelpState private constructor() : PageState {
 
         paymentModes = SectionSimpleRow.Data(
             title = "Moyens de paiment",
-            iconId = R.drawable.ic_call_24dp,
+            iconId = R.drawable.ic_checklist_24dp,
             rows = listOf(
                 SimpleRow.Data(title = "Carte bancaire"),
                 SimpleRow.Data(title = "Virement"),
@@ -62,7 +62,7 @@ class PageHelpState private constructor() : PageState {
 
         configuration = SectionSimpleRow.Data(
             title = "Profile, paramétres et sécurité",
-            iconId = R.drawable.ic_call_24dp,
+            iconId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_setting_24dp,
             rows = listOf(
                 SimpleRow.Data(title = "Clé Digitale"),
                 SimpleRow.Data(title = "Adresse postale"),
@@ -74,7 +74,7 @@ class PageHelpState private constructor() : PageState {
 
         accounts = SectionSimpleRow.Data(
             title = "Comptes, épargnes, crédit, assurance",
-            iconId = R.drawable.ic_call_24dp,
+            iconId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_euro_24dp,
             rows = listOf(
                 SimpleRow.Data(title = "Relevés, RIB"),
                 SimpleRow.Data(title = "Ouverture de compte individuel"),
@@ -89,7 +89,7 @@ class PageHelpState private constructor() : PageState {
 
         misc = SectionSimpleRow.Data(
             title = "Autres",
-            iconId = R.drawable.ic_call_24dp,
+            iconId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_dashboard_fill_24dp,
             rows = listOf(
                 SimpleRow.Data(title = "Parrainage"),
                 SimpleRow.Data(title = "Signaler un problème technique"),

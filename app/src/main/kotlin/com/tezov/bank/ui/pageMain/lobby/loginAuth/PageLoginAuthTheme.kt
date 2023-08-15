@@ -17,10 +17,10 @@ import com.tezov.bank.ui.theme.font.fontRoboto
 import com.tezov.lib_adr_app_core.ui.theme.theme.componentsButtonExtended
 import com.tezov.lib_adr_app_core.ui.theme.theme.componentsLinkExtended
 import com.tezov.lib_adr_ui_core.type.primaire.QuadDirection
-import com.tezov.lib_adr_ui_cpt.core.component.block.KeyBoard
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.TextField
+import com.tezov.lib_adr_ui_cpt.component.core.block.KeyBoard
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Button
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Button.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.TextField
 import com.tezov.lib_adr_ui_core.theme.style.OutfitBorder.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.style.OutfitFrame.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.style.OutfitFrameStateColor

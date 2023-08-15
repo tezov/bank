@@ -3,8 +3,8 @@
 package com.tezov.bank.ui.pageMain.auth.profile
 
 import com.tezov.app.R
-import com.tezov.bank.ui.component.block.SectionSimpleRow
-import com.tezov.bank.ui.component.element.SimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleRow
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
 class PageProfileState private constructor() : PageState {
@@ -40,7 +40,7 @@ class PageProfileState private constructor() : PageState {
                 ),
                 SimpleRow.Data(
                     title = "Mes paramètres",
-                    iconInfoId = R.drawable.ic_setting_24dp
+                    iconInfoId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_setting_24dp
                 ),
             )
         )

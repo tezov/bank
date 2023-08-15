@@ -125,7 +125,7 @@ object NavigationGraph {
                         (LocalActivity.current as MainActivity).withTopAppBar(
                             topAppBarTitleResourceId = R.string.nav_top_message_info,
                             topAppBarLeadingItem = object : TopAppBarItemData(
-                                icon = R.drawable.ic_arrow_left_24dp,
+                                icon = com.tezov.lib_adr_ui_cpt.R.drawable.ic_arrow_left_24dp,
                                 route = NavigationRouteManager.Back
                             ) {}
                         ) { innerPadding ->

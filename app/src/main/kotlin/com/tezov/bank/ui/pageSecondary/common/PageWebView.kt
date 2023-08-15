@@ -15,14 +15,14 @@ import androidx.compose.ui.res.stringResource
 import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Shadow
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.WebViewRawResource
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Shadow
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.WebViewRawResource
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
 import com.tezov.lib_kmm_core.type.collection.ListEntry
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.WebView
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.WebView
 import com.tezov.lib_adr_ui_core.extension.ExtensionCompositionLocal
 import com.tezov.lib_adr_ui_core.theme.style.padding
 import com.tezov.lib_adr_ui_core.theme.theme.dimensionsCommonExtended
@@ -76,7 +76,7 @@ object PageWebView : Page<PageWebViewState, PageWebViewAction> {
                 ) {
                     Icon(
                         modifier = Modifier.size(MaterialTheme.dimensionsIconExtended.modal.normal),
-                        painter = painterResource(id = R.drawable.ic_close_24dp),
+                        painter = painterResource(id = com.tezov.lib_adr_ui_cpt.R.drawable.ic_close_24dp),
                         contentDescription = stringResource(id = R.string.dlg_login_auth_icon_close),
                         tint = PageWebViewTheme.colors.accent,
                     )

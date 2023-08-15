@@ -46,7 +46,7 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle:8.1.0")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
-        classpath("com.tezov:plugin_project:1.0.4")
+        classpath("com.tezov:plugin_project:1.0.5")
     }
 
     repositories {

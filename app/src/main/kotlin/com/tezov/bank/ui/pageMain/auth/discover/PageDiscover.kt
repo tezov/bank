@@ -9,11 +9,10 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.tezov.bank.ui.component.block.*
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
 import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Text
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
@@ -21,6 +20,10 @@ import com.tezov.lib_adr_ui_core.extension.ExtensionCompositionLocal
 import com.tezov.lib_adr_ui_core.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
 import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
+import com.tezov.lib_adr_ui_cpt.component.slide.block.SectionCarouselCard
+import com.tezov.lib_adr_ui_cpt.component.slide.block.SectionRollerCard
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile
 
 object PageDiscover : Page<PageDiscoverState, PageDiscoverAction> {
 

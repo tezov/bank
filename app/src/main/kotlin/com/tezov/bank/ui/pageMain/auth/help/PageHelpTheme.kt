@@ -8,8 +8,8 @@ import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import com.tezov.bank.ui.component.block.SectionSimpleRow
-import com.tezov.bank.ui.component.block.SectionSimpleRow.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow.Style.Companion.copy
 import com.tezov.bank.ui.theme.ThemeComponentProviders
 import com.tezov.lib_adr_ui_core.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
 import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy

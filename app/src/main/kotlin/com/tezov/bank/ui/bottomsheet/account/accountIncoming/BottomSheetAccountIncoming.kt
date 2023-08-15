@@ -11,8 +11,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiModal
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Text
 import com.tezov.lib_adr_app_core.ui.compositionTree.modal.bottomSheet.BottomSheet
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
@@ -87,7 +87,7 @@ object BottomSheetAccountIncoming :
             ) {
                 Icon.StateColor(
                     style = BottomSheetAccountIncomingTheme.styles.iconClose,
-                    resourceId = R.drawable.ic_close_24dp,
+                    resourceId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_close_24dp,
                     description = stringResource(id = R.string.pg_a_bts_icon_close),
                 )
             }

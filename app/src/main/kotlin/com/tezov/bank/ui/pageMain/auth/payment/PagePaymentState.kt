@@ -4,8 +4,8 @@ package com.tezov.bank.ui.pageMain.auth.payment
 
 import androidx.compose.ui.graphics.Color
 import com.tezov.app.R
-import com.tezov.bank.ui.component.block.SectionSimpleTile
-import com.tezov.bank.ui.component.element.SimpleTile
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile
+import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleTile
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
 class PagePaymentState private constructor() : PageState {

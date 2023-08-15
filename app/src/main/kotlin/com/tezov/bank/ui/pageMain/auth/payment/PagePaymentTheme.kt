@@ -12,12 +12,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.tezov.bank.ui.component.block.SectionSimpleTile
-import com.tezov.bank.ui.component.block.SectionSimpleTile.Style.Companion.copy
-import com.tezov.bank.ui.component.element.SimpleTile.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleTile.Style.Companion.copy
 import com.tezov.bank.ui.theme.ThemeComponentProviders
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon.Simple.Style.Companion.copy
-import com.tezov.lib_adr_ui_cpt.core.component.layout.ColumnCollapsibleHeader
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon.Simple.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.core.layout.ColumnCollapsibleHeader
 import com.tezov.lib_adr_ui_core.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
 import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.style.OutfitTextStateColor

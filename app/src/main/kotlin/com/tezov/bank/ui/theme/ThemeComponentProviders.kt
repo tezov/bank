@@ -11,10 +11,8 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.tezov.bank.ui.component.block.*
-import com.tezov.bank.ui.component.block.SectionSimpleTile.Style.Companion.copy
-import com.tezov.bank.ui.component.element.*
-import com.tezov.bank.ui.component.element.SimpleTile.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleTile.Style.Companion.copy
 import com.tezov.bank.ui.theme.font.fontIbm
 import com.tezov.bank.ui.theme.font.fontIndie
 import com.tezov.bank.ui.theme.font.fontRoboto
@@ -27,11 +25,11 @@ import com.tezov.lib_adr_app_core.ui.theme.theme.ThemeComponentExtended
 import com.tezov.lib_adr_app_core.ui.theme.theme.componentsButtonExtended
 import com.tezov.lib_adr_app_core.ui.theme.theme.componentsLinkExtended
 import com.tezov.lib_adr_ui_core.type.primaire.dpSize
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager.WithIndicator.Style.Companion.copy
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalRoller
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalRoller.Simple.Style.Companion.copy
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalPager
+import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalPager.WithIndicator.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalRoller
+import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalRoller.Simple.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Button.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.style.*
 import com.tezov.lib_adr_ui_core.theme.style.OutfitBorder.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.style.OutfitFrame.StateColor.Style.Companion.copy
@@ -41,11 +39,24 @@ import com.tezov.lib_adr_ui_core.theme.style.OutfitState.Simple.Style.Companion.
 import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.asTextStateColor
 import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.theme.*
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.DropDownMenu
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Image
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.TextField
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Button
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.DropDownMenu
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Image
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.TextField
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleValueRow
+import com.tezov.lib_adr_ui_cpt.component.slide.block.SectionCarouselCard
+import com.tezov.lib_adr_ui_cpt.component.contact.block.SectionMessageRow
+import com.tezov.lib_adr_ui_cpt.component.slide.block.SectionRollerCard
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile
+import com.tezov.lib_adr_ui_cpt.component.animated.block.SummaryCardAnimated
+import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleValueRow
+import com.tezov.lib_adr_ui_cpt.component.slide.element.CarouselCard
+import com.tezov.lib_adr_ui_cpt.component.contact.element.MessageRow
+import com.tezov.lib_adr_ui_cpt.component.slide.element.RollerCard
+import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleTile
 
 object ThemeComponentProviders {
 
@@ -243,7 +254,7 @@ object ThemeComponentProviders {
     )
 
     @Composable
-    fun accountSummaryCard() = AccountSummaryCard.Style(
+    fun accountSummaryCard() = SummaryCardAnimated.Style(
         outfitFrame = OutfitFrameStateColor(
             outfitShape = MaterialTheme.shapesExtended.element.big.copy {
                 outfitState = MaterialTheme.colorsExtended.primary.default.asStateSimple
@@ -355,7 +366,7 @@ object ThemeComponentProviders {
     )
 
     @Composable
-    fun sectionAccountValueSimpleRowStyle() = SectionAccountValueSimpleRow.Style(
+    fun sectionAccountValueSimpleRowStyle() = SectionSimpleValueRow.Style(
         outfitTextTitle = MaterialTheme.typographiesExtended.label.big.copy {
             outfitState = MaterialTheme.colorsExtended.primary.shady.asStateSimple
         },
@@ -375,7 +386,7 @@ object ThemeComponentProviders {
     )
 
     @Composable
-    fun accountValueSimpleRowStyle() = AccountValueSimpleRow.Style(
+    fun accountValueSimpleRowStyle() = SimpleValueRow.Style(
         styleIconInfo = Icon.StateColor.Style(
             size = MaterialTheme.dimensionsIconExtended.info.small,
             tint = MaterialTheme.colorsExtended.background.default,

@@ -13,8 +13,8 @@ import androidx.compose.ui.Modifier
 import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.WebView
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.WebViewRawResource
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.WebView
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.WebViewRawResource
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_ui_core.theme.theme.colorsExtended

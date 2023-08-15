@@ -3,14 +3,14 @@
 package com.tezov.bank.ui.pageMain.auth.discover
 
 import com.tezov.app.R
-import com.tezov.bank.ui.component.block.SectionCarouselCard
-import com.tezov.bank.ui.component.block.SectionRollerCard
-import com.tezov.bank.ui.component.block.SectionSimpleRow
-import com.tezov.bank.ui.component.block.SectionSimpleTile
-import com.tezov.bank.ui.component.element.CarouselCard
-import com.tezov.bank.ui.component.element.RollerCard
-import com.tezov.bank.ui.component.element.SimpleRow
-import com.tezov.bank.ui.component.element.SimpleTile
+import com.tezov.lib_adr_ui_cpt.component.slide.block.SectionCarouselCard
+import com.tezov.lib_adr_ui_cpt.component.slide.block.SectionRollerCard
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile
+import com.tezov.lib_adr_ui_cpt.component.slide.element.CarouselCard
+import com.tezov.lib_adr_ui_cpt.component.slide.element.RollerCard
+import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleRow
+import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleTile
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
 class PageDiscoverState private constructor() : PageState {
@@ -43,13 +43,13 @@ class PageDiscoverState private constructor() : PageState {
                     title = "Parrainez un proche...",
                     body = "Jusqu'au 9 février, c'est 100€ pour vous et 80€ pour vos filleuls à chaque parrainage validé.",
                     action = "Parrainer",
-                    iconInfoId = R.drawable.ic_call_24dp
+                    iconInfoId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_call_24dp
                 ),
                 CarouselCard.Data(
                     title = "Roulez vert !",
                     body = "Grâce au Prêt Véhicule Vert, financez l'achat de votre véhicule peu polluant.",
                     action = "Découvrir",
-                    iconInfoId = R.drawable.ic_call_24dp
+                    iconInfoId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_call_24dp
                 ),
             )
 
@@ -62,19 +62,19 @@ class PageDiscoverState private constructor() : PageState {
                     title = "Envie de vous faire plaisir en vacances ?",
                     body = "Avec les 2 cartes Visa Hello Prime et les 2 cartes virtuelles de l'offre Hello Prime Duo, réglez vos hôtel et cocktails !",
                     action = "En savoir plus",
-                    iconInfoId = R.drawable.ic_call_24dp
+                    iconInfoId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_call_24dp
                 ),
                 CarouselCard.Data(
                     title = "Vous voulez vous lancer en bourse ?",
                     body = "Profitez de l'espace complet dédié à la Bourse dans notre appli.",
                     action = "En savoir plus",
-                    iconInfoId = R.drawable.ic_call_24dp
+                    iconInfoId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_call_24dp
                 ),
                 CarouselCard.Data(
                     title = "Envie de donner du sens à votre épargne ?",
                     body = "L'Assurance Vie Hello! permet d'investir de manière responsable dans des fonds ISR.",
                     action = "En savoir plus",
-                    iconInfoId = R.drawable.ic_call_24dp
+                    iconInfoId = com.tezov.lib_adr_ui_cpt.R.drawable.ic_call_24dp
                 ),
             )
         )

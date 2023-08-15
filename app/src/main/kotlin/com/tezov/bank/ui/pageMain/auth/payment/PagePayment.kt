@@ -10,13 +10,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.sp
-import com.tezov.bank.ui.component.block.SectionSimpleTile
+import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
 import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Shadow
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Text
-import com.tezov.lib_adr_ui_cpt.core.component.layout.ColumnCollapsibleHeader
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Shadow
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Text
+import com.tezov.lib_adr_ui_cpt.component.core.layout.ColumnCollapsibleHeader
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state

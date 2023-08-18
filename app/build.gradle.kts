@@ -13,7 +13,7 @@ tezovConfig {
     version {
         major = 0
         minor = 1
-        patch = 1
+        patch = 2
     }
 
     debug {
@@ -91,6 +91,7 @@ android {
     }
     buildTypes {
         getByName("release") {
+//            isDebuggable = false
             signingConfig = signingConfigs.getByName("release")
         }
         getByName("debug") {

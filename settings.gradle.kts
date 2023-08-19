@@ -11,16 +11,20 @@ include(
 //    ":lib_test_common_integration",
 )
 
+val libAdrBasePath = "../libs/lib_adr/"
+val libKmmBasePath = "../libs/lib_kmm/"
+//val libTestBasePath = "../libs/lib_test/"
+
 project(":lib_adr_app_core")
-    .projectDir = file("../lib_adr_app_core/")
+    .projectDir = file("${libAdrBasePath}lib_adr_app_core/")
 project(":lib_adr_ui_cpt")
-    .projectDir = file("../lib_adr_ui_cpt/")
+    .projectDir = file("${libAdrBasePath}lib_adr_ui_cpt/")
 project(":lib_adr_ui_core")
-    .projectDir = file("../lib_adr_ui_core/")
+    .projectDir = file("${libAdrBasePath}lib_adr_ui_core/")
 project(":lib_adr_core")
-    .projectDir = file("../lib_adr_core/")
+    .projectDir = file("${libAdrBasePath}lib_adr_core/")
 project(":lib_kmm_core")
-    .projectDir = file("../lib_kmm_core/")
+    .projectDir = file("${libKmmBasePath}lib_kmm_core/")
 
 
 //project(":lib_test_common")

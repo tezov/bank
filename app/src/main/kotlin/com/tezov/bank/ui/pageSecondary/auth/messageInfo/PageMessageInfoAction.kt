@@ -4,7 +4,7 @@ package com.tezov.bank.ui.pageSecondary.auth.messageInfo
 
 import androidx.compose.runtime.Composable
 import com.tezov.lib_adr_app_core.navigation.NavigationController
-import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.NotImplemented
+import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route.NotImplemented
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 
 class PageMessageInfoAction private constructor(

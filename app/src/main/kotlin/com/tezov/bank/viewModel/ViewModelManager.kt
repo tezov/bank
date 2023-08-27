@@ -3,7 +3,7 @@
 package com.tezov.bank.viewModel
 
 import androidx.compose.runtime.Composable
-import com.tezov.bank.navigation.NavigationRoutes.Route.WebView
+import com.tezov.bank.navigation.NavigationRouteManager.Route.WebView
 import com.tezov.bank.navigation.NavigationUrl
 import com.tezov.lib_adr_app_core.navigation.NavigationController
 import com.tezov.lib_adr_app_core.navigation.NavigationNotifier
@@ -44,10 +44,10 @@ class ViewModelManager private constructor(
                 releaseDataUntil(it.route, it.inclusive)
             }
             when(value.to) {
-                NavigationRouteManager.Back -> {
+                is NavigationRouteManager.Route.Back -> {
                     value.from?.let { releaseData(it) }
                 }
-                is NavigationRouteManager.Finish -> {
+                is NavigationRouteManager.Route.Finish -> {
                     releaseSession()
                 }
                 else -> {

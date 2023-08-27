@@ -3,7 +3,7 @@
 package com.tezov.bank.ui.dialog.auth.closeAppConfirmation
 
 import androidx.compose.runtime.Composable
-import com.tezov.bank.navigation.NavigationRoutes.Route
+import com.tezov.bank.navigation.NavigationRouteManager.Route
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.lib_adr_app_core.navigation.NavigationController
 import com.tezov.lib_adr_app_core.ui.composition.activity.sub.dialog.DialogAction

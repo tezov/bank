@@ -9,7 +9,6 @@ import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.navigation
 import com.tezov.app.R
-import com.tezov.bank.navigation.NavigationRoutes.Route
 import com.tezov.bank.ui.activity.MainActivity
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiActivity
 import com.tezov.bank.ui.pageMain.auth.account.PageAccount
@@ -26,13 +25,13 @@ import com.tezov.bank.ui.pageSecondary.common.PageWebView
 import com.tezov.lib_adr_app_core.navigation.NavHost
 import com.tezov.lib_adr_app_core.navigation.NavigationAnimation
 import com.tezov.lib_adr_app_core.navigation.NavigationAnimation.Slide.Effect
-import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager
 import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
 import com.tezov.lib_adr_app_core.navigation.navigator.composable.composableTransient
 import com.tezov.lib_adr_app_core.navigation.navigator.composableOverlay.composableOverlay
 import com.tezov.lib_adr_app_core.navigation.top_app_bar.TopAppBarItemData
 import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
+import com.tezov.bank.navigation.NavigationRouteManager.Route
 
 object NavigationGraph {
 
@@ -42,8 +41,8 @@ object NavigationGraph {
         val mainAction = accessor.contextMain().action()
 
         NavHost(
-            navController = mainAction.navigationRoutes.controller,
-            startRoute = NavigationRoutes.startNavRoute,
+            navController = mainAction.navigationRouteManager.controller,
+            startRoute = NavigationRouteManager.startNavRoute,
         ) {
             composableTransient(
                 route = Route.WebView(),
@@ -59,7 +58,7 @@ object NavigationGraph {
             }
             navigation(
                 route = Route.NavLobby,
-                startRoute = NavigationRoutes.startLobbyRoute
+                startRoute = NavigationRouteManager.startLobbyRoute
             ) {
                 composableTransient(
                     route = Route.Splash
@@ -101,7 +100,7 @@ object NavigationGraph {
             }
             navigation(
                 route = Route.NavAuth,
-                startRoute = NavigationRoutes.startAuthRoute
+                startRoute = NavigationRouteManager.startAuthRoute
             ) {
                 navigation(
                     route = Route.NavAccount.id,
@@ -126,7 +125,7 @@ object NavigationGraph {
                             topAppBarTitleResourceId = R.string.nav_top_message_info,
                             topAppBarLeadingItem = object : TopAppBarItemData(
                                 icon = com.tezov.lib_adr_ui_cpt.R.drawable.ic_arrow_left_24dp,
-                                route = NavigationRouteManager.Back
+                                route = com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route.Back()
                             ) {}
                         ) { innerPadding ->
                             PageMessageInfo(graphEntry = graphEntry, innerPadding = innerPadding)
@@ -166,8 +165,8 @@ object NavigationGraph {
     }
 
     private fun NavGraphBuilder.navigation(
-        startRoute: NavigationRouteManager.Route,
-        route: NavigationRouteManager.Route,
+        startRoute: com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route,
+        route: com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route,
         builder: NavGraphBuilder.() -> Unit
     ) = navigation(
         startDestination = startRoute.path,
@@ -176,7 +175,7 @@ object NavigationGraph {
     )
 
     private fun NavGraphBuilder.composableTransient(
-        route: NavigationRouteManager.Route,
+        route: com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route,
         arguments: List<NamedNavArgument> = emptyList(),
         animationConfig: NavigationAnimation.Config? = null,
         content: @Composable BoxScope.(GraphEntry) -> Unit
@@ -188,7 +187,7 @@ object NavigationGraph {
     )
 
     private fun NavGraphBuilder.composableOverlay(
-        route: NavigationRouteManager.Route,
+        route: com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route,
         arguments: List<NamedNavArgument> = emptyList(),
         animationConfig: NavigationAnimation.Config? = null,
         content: @Composable BoxScope.(GraphEntry) -> Unit,

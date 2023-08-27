@@ -4,7 +4,7 @@ package com.tezov.bank.ui.pageMain.auth.profile
 
 import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppConfirmation
 import com.tezov.lib_adr_app_core.navigation.NavigationController
-import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.NotImplemented
+import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route.NotImplemented
 import com.tezov.lib_adr_app_core.ui.composition.activity.sub.dialog.DialogAction
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 

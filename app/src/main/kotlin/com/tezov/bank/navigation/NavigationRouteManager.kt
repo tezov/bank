@@ -6,13 +6,17 @@ import com.tezov.lib_adr_app_core.navigation.NavigationController.Option
 import com.tezov.lib_adr_app_core.navigation.NavigationController.Request
 import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager
 import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.*
+import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route.Back
+import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route.Finish
+import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route.NotImplemented
+import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route.RequestFeedback
 import com.tezov.lib_adr_app_core.navigation.bottom_navigation.BottomNavigationAction
 import com.tezov.lib_adr_app_core.navigation.top_app_bar.TopAppBarAction
 import com.tezov.lib_adr_app_core.ui.composition.activity.sub.snackbar.SnackbarAction
 import com.tezov.lib_adr_app_core.ui.compositionTree.modal.dialog.DialogAction
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 
-class NavigationRoutes(
+class NavigationRouteManager(
     val controller: com.tezov.lib_adr_app_core.navigation.NavigationController,
     private val snackbarAction: SnackbarAction,
 ) : com.tezov.lib_adr_app_core.navigation.NavigationController.Friend {
@@ -30,6 +34,9 @@ class NavigationRoutes(
                     askedBy = null
                 )
             }
+            override fun newInstance() = NotHandled(request = request)
+
+            override val isReadOnly get() = this === default
         }
 
         //Graph        *********************************************
@@ -47,7 +54,9 @@ class NavigationRoutes(
                 putParameter(NAME_URL, url)
             }
 
-            override fun createRoute() = WebView(id)
+            override fun newInstance() = WebView(id)
+
+            override val isReadOnly get() = this === default
 
             var url:String
                 get() = getParameter(NAME_URL) ?: ""
@@ -90,14 +99,14 @@ class NavigationRoutes(
     }
 
     init {
-        controller.routes(this@NavigationRoutes).apply {
+        controller.routes(this@NavigationRouteManager).apply {
             add(NavLobby)
             add(NavAuth)
             add(WebView())
             add(NotHandled())
         }
         controller.addRequestHandler(
-            this@NavigationRoutes,
+            this@NavigationRouteManager,
             mapOf(
                 TopAppBarAction::class to this::navigateFromTopAppBar,
                 BottomNavigationAction::class to this::navigateFromBottomNavigation,
@@ -106,11 +115,11 @@ class NavigationRoutes(
             )
         )
         controller.setRequestExceptionHandler(
-            this@NavigationRoutes,
+            this@NavigationRouteManager,
             this::navigateException,
         )
         controller.setRequestFeedbackHandler(
-            this@NavigationRoutes,
+            this@NavigationRouteManager,
             this::navigateFeedback,
         )
     }
@@ -140,9 +149,9 @@ class NavigationRoutes(
         with(controller) {
             var failedToNavigate = true
             when (request.to) {
-                Back -> {
+                is Back -> {
                     navigateBack(
-                        this@NavigationRoutes,
+                        this@NavigationRouteManager,
                         request = request
                     )
                     failedToNavigate = false
@@ -157,7 +166,7 @@ class NavigationRoutes(
     private fun navigateFromBottomNavigation(request: Request) {
         with(controller) {
             navigate(
-                this@NavigationRoutes,
+                this@NavigationRouteManager,
                 request = request.apply {
                     option = option ?: Option.SingleTop(request.to)
                 }
@@ -174,7 +183,7 @@ class NavigationRoutes(
                     when (request.to) {
                         Lounge -> {
                             navigate(
-                                this@NavigationRoutes,
+                                this@NavigationRouteManager,
                                 request = request.apply {
                                     option = option ?: Option.ClearStack()
                                 }
@@ -187,14 +196,14 @@ class NavigationRoutes(
                     when (request.to) {
                         LoginAuth -> {
                             navigate(
-                                this@NavigationRoutes,
+                                this@NavigationRouteManager,
                                 request = request
                             )
                             failedToNavigate = false
                         }
                         HelpAndService -> {
                             navigate(
-                                this@NavigationRoutes,
+                                this@NavigationRouteManager,
                                 request = request
                             )
                             failedToNavigate = false
@@ -205,7 +214,7 @@ class NavigationRoutes(
                     when (request.to) {
                         NavAuth -> {
                             navigate(
-                                this@NavigationRoutes,
+                                this@NavigationRouteManager,
                                 request = request.apply {
                                     option = option ?: Option.ClearStack()
                                 }
@@ -214,14 +223,14 @@ class NavigationRoutes(
                         }
                         is WebView -> {
                             navigate(
-                                this@NavigationRoutes,
+                                this@NavigationRouteManager,
                                 request = request
                             )
                             failedToNavigate = false
                         }
-                        Back -> {
+                        is Back -> {
                             navigateBack(
-                                this@NavigationRoutes,
+                                this@NavigationRouteManager,
                                 request = request
                             )
                             failedToNavigate = false
@@ -230,9 +239,9 @@ class NavigationRoutes(
                 }
                 HelpAndService -> {
                     when (request.to) {
-                        Back -> {
+                        is Back -> {
                             navigateBack(
-                                this@NavigationRoutes,
+                                this@NavigationRouteManager,
                                 request = request
                             )
                             failedToNavigate = false
@@ -244,7 +253,7 @@ class NavigationRoutes(
                     when (request.to) {
                         MessageInfo -> {
                             navigate(
-                                this@NavigationRoutes,
+                                this@NavigationRouteManager,
                                 request = request
                             )
                             failedToNavigate = false
@@ -254,9 +263,9 @@ class NavigationRoutes(
                 //COMMON
                 is WebView -> {
                     when (request.to) {
-                        Back -> {
+                        is Back -> {
                             navigateBack(
-                                this@NavigationRoutes,
+                                this@NavigationRouteManager,
                                 request = request
                             )
                             failedToNavigate = false
@@ -276,9 +285,9 @@ class NavigationRoutes(
             when (request.from) {
                 Account, Discover, Payment, Help, Profile -> {
                     when (request.to) {
-                        Finish -> {
+                        is Finish -> {
                             navigate(
-                                this@NavigationRoutes,
+                                this@NavigationRouteManager,
                                 request
                             )
                             failedToNavigate = false

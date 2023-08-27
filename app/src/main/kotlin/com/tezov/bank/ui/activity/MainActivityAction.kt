@@ -3,12 +3,12 @@
 package com.tezov.bank.ui.activity
 
 import androidx.compose.runtime.Composable
-import com.tezov.bank.navigation.NavigationRoutes
+import com.tezov.bank.navigation.NavigationRouteManager
 import com.tezov.lib_adr_app_core.ui.composition.activity.sub.snackbar.SnackbarAction
 import com.tezov.lib_adr_app_core.ui.compositionTree.activity.ActivityAction
 
 class MainActivityAction private constructor(
-    val navigationRoutes: NavigationRoutes,
+    val navigationRouteManager: NavigationRouteManager,
 ) : ActivityAction<MainActivityState> {
 
     companion object {
@@ -18,7 +18,7 @@ class MainActivityAction private constructor(
             snackbarAction: SnackbarAction,
         ): MainActivityAction {
             return MainActivityAction(
-                navigationRoutes = NavigationRoutes(
+                navigationRouteManager = NavigationRouteManager(
                     controller = navigationController,
                     snackbarAction = snackbarAction,
                 ),

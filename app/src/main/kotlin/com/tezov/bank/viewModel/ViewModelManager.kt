@@ -3,6 +3,8 @@
 package com.tezov.bank.viewModel
 
 import androidx.compose.runtime.Composable
+import com.tezov.app.R
+import com.tezov.bank.navigation.NavigationRouteManager.Route.Terms
 import com.tezov.bank.navigation.NavigationRouteManager.Route.WebView
 import com.tezov.bank.navigation.NavigationUrl
 import com.tezov.lib_adr_app_core.navigation.NavigationController
@@ -70,6 +72,9 @@ class ViewModelManager private constructor(
             is WebView ->{
                 dataProvider.remove(from.url)
             }
+            is Terms ->{
+                dataProvider.remove(from.url)
+            }
         }
     }
 
@@ -86,11 +91,14 @@ class ViewModelManager private constructor(
                     else -> {}
                 }
             }
+            is Terms -> {
+                dataProvider[to.url] = R.raw.html_terms
+            }
         }
     }
 
 
-    private val dataProvider = mutableMapOf<String, String>()
+    private val dataProvider = mutableMapOf<String, Any>()
 
     fun retrieveData(page: PageState, key:String) = dataProvider[key]?: "No Data Found"
 

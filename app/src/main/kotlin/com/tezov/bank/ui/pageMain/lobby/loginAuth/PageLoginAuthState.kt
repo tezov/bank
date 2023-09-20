@@ -8,7 +8,7 @@ import com.tezov.lib_kmm_core.type.collection.ListEntry
 
 class PageLoginAuthState private constructor(
     val textFieldValues: ListEntry<Field, TextField.State> = ListEntry(),
-) : PageState {
+) : PageState() {
 
     enum class Field{
         Login, Password

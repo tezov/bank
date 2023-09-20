@@ -8,7 +8,7 @@ import com.tezov.lib_adr_ui_cpt.component.contact.element.MessageRow
 import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalPager
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
-class PageMessageInfoState private constructor() : PageState {
+class PageMessageInfoState private constructor() : PageState() {
 
     var header: Header? = null
     var messages: SectionMessageRow.Data? = null

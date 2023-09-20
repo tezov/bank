@@ -9,7 +9,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 class PagePaymentAction private constructor(
     private val navigationController: NavigationController,
 ) :
-    PageAction<PagePaymentState> {
+    PageAction<PagePaymentState>() {
 
 
     companion object {

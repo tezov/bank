@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.navigation.navigator.ComposableNavigator
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Text
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
@@ -28,7 +28,7 @@ import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile
 object PageDiscover : Page<PageDiscoverState, PageDiscoverAction> {
 
     @Composable
-    override fun Page<PageDiscoverState, PageDiscoverAction>.content(graphEntry: GraphEntry, innerPadding: PaddingValues) {
+    override fun Page<PageDiscoverState, PageDiscoverAction>.content(graphEntry: ComposableNavigator.GraphEntry, innerPadding: PaddingValues) {
         val accessor = DiAccessorAppUiPage().with(key = this).contextDiscover().apply {
             remember()
         }

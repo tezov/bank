@@ -15,7 +15,7 @@ import com.tezov.app.R
 import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.navigation.navigator.ComposableNavigator
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Image
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Text
@@ -29,7 +29,7 @@ import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
 object PageProfile : Page<PageProfileState, PageProfileAction> {
 
     @Composable
-    override fun Page<PageProfileState, PageProfileAction>.content(graphEntry: GraphEntry, innerPadding: PaddingValues) {
+    override fun Page<PageProfileState, PageProfileAction>.content(graphEntry: ComposableNavigator.GraphEntry, innerPadding: PaddingValues) {
         val accessor = DiAccessorAppUiPage().with(key = this).contextProfile().apply {
             remember()
         }

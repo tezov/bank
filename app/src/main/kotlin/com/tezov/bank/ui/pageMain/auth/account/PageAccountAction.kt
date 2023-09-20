@@ -13,7 +13,7 @@ class PageAccountAction private constructor(
     private val navigationController: NavigationController,
     private val bottomsheetAction: BottomSheetAction,
 ) :
-    PageAction<PageAccountState> {
+    PageAction<PageAccountState>() {
 
     companion object {
 

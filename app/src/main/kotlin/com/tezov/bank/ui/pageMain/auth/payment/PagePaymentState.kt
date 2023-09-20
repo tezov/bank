@@ -8,7 +8,7 @@ import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile
 import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleTile
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
-class PagePaymentState private constructor() : PageState {
+class PagePaymentState private constructor() : PageState() {
 
     var header: Header? = null
     var cardsSmall: SectionSimpleTile.Data? = null

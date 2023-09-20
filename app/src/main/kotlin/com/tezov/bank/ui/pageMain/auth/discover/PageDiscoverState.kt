@@ -13,7 +13,7 @@ import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleRow
 import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleTile
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
-class PageDiscoverState private constructor() : PageState {
+class PageDiscoverState private constructor() : PageState() {
 
     var header: Header? = null
     var cardsWithButton: SectionCarouselCard.Data? = null

@@ -25,13 +25,13 @@ import com.tezov.bank.ui.pageSecondary.common.PageWebView
 import com.tezov.lib_adr_app_core.navigation.NavHost
 import com.tezov.lib_adr_app_core.navigation.NavigationAnimation
 import com.tezov.lib_adr_app_core.navigation.NavigationAnimation.Slide.Effect
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_app_core.navigation.navigator.composable.composableTransient
-import com.tezov.lib_adr_app_core.navigation.navigator.composableOverlay.composableOverlay
 import com.tezov.lib_adr_app_core.navigation.top_app_bar.TopAppBarItemData
 import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.bank.navigation.NavigationRouteManager.Route
+import com.tezov.lib_adr_app_core.navigation.navigator.composableOverlay
+import com.tezov.lib_adr_app_core.navigation.navigator.composableTransient
+import com.tezov.lib_adr_app_core.navigation.navigator.navigation
 
 object NavigationGraph {
 
@@ -95,6 +95,18 @@ object NavigationGraph {
                 ) { graphEntry ->
                     (LocalActivity.current as MainActivity).empty { innerPadding ->
                         PageHelpAndService(graphEntry = graphEntry, innerPadding = innerPadding)
+                    }
+                }
+                composableTransient(
+                    route = Route.Terms,
+                    animationConfig = NavigationAnimation.Config(
+                        default = NavigationAnimation.Config.Type.SlideHorizontal(
+                            entrance = NavigationAnimation.Slide.Horizontal.Entrance.FromStart,
+                        )
+                    )
+                ) { graphEntry ->
+                    (LocalActivity.current as MainActivity).empty { innerPadding ->
+                        PageWebView(graphEntry = graphEntry, innerPadding = innerPadding)
                     }
                 }
             }
@@ -163,39 +175,4 @@ object NavigationGraph {
             }
         }
     }
-
-    private fun NavGraphBuilder.navigation(
-        startRoute: com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route,
-        route: com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route,
-        builder: NavGraphBuilder.() -> Unit
-    ) = navigation(
-        startDestination = startRoute.path,
-        route = route.path,
-        builder = builder,
-    )
-
-    private fun NavGraphBuilder.composableTransient(
-        route: com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route,
-        arguments: List<NamedNavArgument> = emptyList(),
-        animationConfig: NavigationAnimation.Config? = null,
-        content: @Composable BoxScope.(GraphEntry) -> Unit
-    ) = composableTransient(
-        route = route.path,
-        arguments = arguments,
-        animationConfig = animationConfig,
-        content = content
-    )
-
-    private fun NavGraphBuilder.composableOverlay(
-        route: com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route,
-        arguments: List<NamedNavArgument> = emptyList(),
-        animationConfig: NavigationAnimation.Config? = null,
-        content: @Composable BoxScope.(GraphEntry) -> Unit,
-    ) = composableOverlay(
-        route = route.path,
-        arguments = arguments,
-        animationConfig = animationConfig,
-        content = content
-    )
-
 }

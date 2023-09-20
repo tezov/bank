@@ -8,7 +8,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 class PageWebViewAction private constructor(
     private val navigationController: NavigationController,
 ) :
-    PageAction<PageWebViewState> {
+    PageAction<PageWebViewState>() {
 
 
     companion object {

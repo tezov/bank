@@ -7,7 +7,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.modal.bottomSheet.BottomShe
 
 class BottomSheetAccountIncomingState private constructor(
 
-) : BottomSheetState {
+) : BottomSheetState() {
 
     var contentData: ContentData
 

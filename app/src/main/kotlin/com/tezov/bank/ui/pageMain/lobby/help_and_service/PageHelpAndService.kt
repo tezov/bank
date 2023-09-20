@@ -17,7 +17,7 @@ import com.tezov.app.R
 import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleTile
 import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.navigation.navigator.ComposableNavigator
 import com.tezov.lib_adr_ui_core.type.primaire.size
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Shadow
@@ -32,7 +32,7 @@ import com.tezov.lib_adr_ui_core.theme.theme.*
 object PageHelpAndService : Page<PageHelpAndServiceState, PageHelpAndServiceAction> {
 
     @Composable
-    override fun Page<PageHelpAndServiceState, PageHelpAndServiceAction>.content(graphEntry: GraphEntry, innerPadding: PaddingValues) {
+    override fun Page<PageHelpAndServiceState, PageHelpAndServiceAction>.content(graphEntry: ComposableNavigator.GraphEntry, innerPadding: PaddingValues) {
         val accessor = DiAccessorAppUiPage().with(key = this).contextHelpAndService().apply {
             remember()
         }

@@ -9,7 +9,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 class PageDiscoverAction private constructor(
     private val navigationController: NavigationController,
 ) :
-    PageAction<PageDiscoverState> {
+    PageAction<PageDiscoverState>() {
 
 
     companion object {

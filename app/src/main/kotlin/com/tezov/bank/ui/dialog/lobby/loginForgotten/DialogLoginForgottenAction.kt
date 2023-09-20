@@ -10,7 +10,7 @@ import com.tezov.lib_kmm_core.async.notifier.Event
 class DialogLoginForgottenAction private constructor(
     private val action: com.tezov.lib_adr_app_core.ui.composition.activity.sub.dialog.DialogAction,
     private val navigationController: NavigationController,
-) : DialogAction<DialogLoginForgottenState> {
+) : DialogAction<DialogLoginForgottenState>() {
 
     companion object {
         @Composable

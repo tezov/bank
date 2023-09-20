@@ -41,22 +41,15 @@ class NavigationRouteManager(
 
         //Graph        *********************************************
         //COMMON
-        class WebView(url:String?): NavigationRouteManager.Route("web_view"){
+        abstract class WebView2 protected constructor(url:String?, id:String): NavigationRouteManager.Route(id){
 
             companion object {
                 private const val NAME_URL = "url"
-                private val default = WebView(null)
-                operator fun invoke() = default
-
             }
 
             init {
                 putParameter(NAME_URL, url)
             }
-
-            override fun newInstance() = WebView(id)
-
-            override val isReadOnly get() = this === default
 
             var url:String
                 get() = getParameter(NAME_URL) ?: ""
@@ -64,6 +57,30 @@ class NavigationRouteManager(
                     putParameter(NAME_URL, value)
                 }
 
+        }
+        class WebView(url:String?): WebView2(url, "web_view"){
+
+            companion object {
+                private val default = WebView(null)
+                operator fun invoke() = default
+
+            }
+
+            override fun newInstance() = WebView(id)
+
+            override val isReadOnly get() = this === default
+
+        }
+        object Terms: WebView2(NavigationUrl.HTTPS_TERMS, "terms"){
+            private var initialized = false
+
+            init {
+                initialized = true
+            }
+
+            override fun newInstance() = WebView(id)
+
+            override val isReadOnly get() = initialized
         }
 
         //LOBBY
@@ -73,7 +90,7 @@ class NavigationRouteManager(
         object HelpAndService : NavigationRouteManager.Route("help_and_service")
         object NavLobby : Routes(
             "navLobby",
-            child = setOf(Splash, Lounge, LoginAuth, HelpAndService)
+            child = setOf(Splash, Lounge, LoginAuth, HelpAndService, Terms)
         )
 
         //AUTH
@@ -208,6 +225,13 @@ class NavigationRouteManager(
                             )
                             failedToNavigate = false
                         }
+                        is Terms -> {
+                            navigate(
+                                this@NavigationRouteManager,
+                                request = request
+                            )
+                            failedToNavigate = false
+                        }
                     }
                 }
                 LoginAuth -> {
@@ -238,6 +262,17 @@ class NavigationRouteManager(
                     }
                 }
                 HelpAndService -> {
+                    when (request.to) {
+                        is Back -> {
+                            navigateBack(
+                                this@NavigationRouteManager,
+                                request = request
+                            )
+                            failedToNavigate = false
+                        }
+                    }
+                }
+                Terms -> {
                     when (request.to) {
                         is Back -> {
                             navigateBack(

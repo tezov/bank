@@ -9,7 +9,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.activity.ActivityAction
 
 class MainActivityAction private constructor(
     val navigationRouteManager: NavigationRouteManager,
-) : ActivityAction<MainActivityState> {
+) : ActivityAction<MainActivityState>() {
 
     companion object {
         @Composable

@@ -7,7 +7,7 @@ import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
 import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleRow
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
-class PageHelpState private constructor() : PageState {
+class PageHelpState private constructor() : PageState() {
 
     var header: Header? = null
     var emergencies: SectionSimpleRow.Data? = null

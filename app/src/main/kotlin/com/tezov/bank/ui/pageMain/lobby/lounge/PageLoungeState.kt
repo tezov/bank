@@ -13,7 +13,7 @@ class PageLoungeState private constructor(
     val animation: PageLoungeAnimation,
     val nameState: State<String>,
     val iconState: State<Int>,
-) : PageState {
+) : PageState() {
 
     var header: Header? = null
 

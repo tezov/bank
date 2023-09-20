@@ -11,7 +11,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 class PageProfileAction private constructor(
     private val navigationController: NavigationController,
     private val dialogAction: DialogAction,
-) : PageAction<PageProfileState> {
+) : PageAction<PageProfileState>() {
 
     companion object {
 

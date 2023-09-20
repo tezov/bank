@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleRow
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.navigation.navigator.ComposableNavigator
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Text
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
@@ -23,7 +23,7 @@ import com.tezov.lib_adr_ui_core.theme.theme.dimensionsPaddingExtended
 object PageHelp : Page<PageHelpState, PageHelpAction> {
 
     @Composable
-    override fun Page<PageHelpState, PageHelpAction>.content(graphEntry: GraphEntry, innerPadding: PaddingValues) {
+    override fun Page<PageHelpState, PageHelpAction>.content(graphEntry: ComposableNavigator.GraphEntry, innerPadding: PaddingValues) {
         val accessor = DiAccessorAppUiPage().with(key = this).contextHelp().apply {
             remember()
         }

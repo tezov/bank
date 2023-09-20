@@ -5,7 +5,7 @@ package com.tezov.bank.ui.dialog.lobby.loginForgotten
 import androidx.compose.runtime.Composable
 import com.tezov.lib_adr_app_core.ui.compositionTree.modal.dialog.DialogState
 
-class DialogLoginForgottenState private constructor( ) : DialogState {
+class DialogLoginForgottenState private constructor( ) : DialogState() {
     var contentData: ContentData
 
     companion object {

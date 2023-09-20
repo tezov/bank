@@ -10,7 +10,7 @@ import com.tezov.lib_adr_ui_cpt.component.menu.element.SimpleValueRow
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 import com.tezov.lib_adr_ui_core.theme.style.OutfitStateSemantic
 
-class PageAccountState private constructor() : PageState {
+class PageAccountState private constructor() : PageState() {
     var header: Header?=null
     var incomings: SectionSimpleValueRow.Data?=null
     var histories: List<SectionSimpleValueRow.Data>?=null

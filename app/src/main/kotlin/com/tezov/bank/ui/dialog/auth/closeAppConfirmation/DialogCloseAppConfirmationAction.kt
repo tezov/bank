@@ -10,7 +10,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.modal.dialog.DialogAction
 class DialogCloseAppConfirmationAction private constructor(
     private val action: com.tezov.lib_adr_app_core.ui.composition.activity.sub.dialog.DialogAction,
     private val navigationController: NavigationController,
-) : DialogAction<DialogCloseAppConfirmationState> {
+) : DialogAction<DialogCloseAppConfirmationState>() {
 
     companion object {
         @Composable

@@ -14,7 +14,7 @@ import com.tezov.lib_kmm_core.async.notifier.observer.event.ObserverEventE
 class PageLoginAuthAction private constructor(
     private val navigationController: NavigationController,
     private val dialogAction: DialogAction,
-) : PageAction<PageLoginAuthState> {
+) : PageAction<PageLoginAuthState>() {
 
 
     companion object {

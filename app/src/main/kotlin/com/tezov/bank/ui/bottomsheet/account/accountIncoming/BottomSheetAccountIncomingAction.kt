@@ -6,7 +6,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.modal.bottomSheet.BottomShe
 
 class BottomSheetAccountIncomingAction private constructor(
     private val action: com.tezov.lib_adr_app_core.ui.composition.activity.sub.bottomsheet.BottomSheetAction,
-) : BottomSheetAction<BottomSheetAccountIncomingState> {
+) : BottomSheetAction<BottomSheetAccountIncomingState>() {
 
 
     companion object {

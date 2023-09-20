@@ -3,13 +3,14 @@
 package com.tezov.bank.ui.pageMain.lobby.lounge
 
 import com.tezov.bank.navigation.NavigationRouteManager.Route
+import com.tezov.bank.navigation.NavigationUrl
 import com.tezov.lib_adr_app_core.navigation.NavigationController
 import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route.NotImplemented
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 
 class PageLoungeAction private constructor(
     private val navigationController: NavigationController,
-) : PageAction<PageLoungeState> {
+) : PageAction<PageLoungeState>() {
 
     companion object {
 
@@ -42,6 +43,10 @@ class PageLoungeAction private constructor(
 
     fun onClickHelpAndService() {
         navigationController.requestNavigate(Route.HelpAndService, this)
+    }
+
+    fun onClickTerms() {
+        navigationController.requestNavigate(Route.Terms, this)
     }
 
 }

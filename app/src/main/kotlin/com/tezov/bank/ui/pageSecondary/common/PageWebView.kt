@@ -14,7 +14,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.navigation.navigator.ComposableNavigator
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Shadow
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.WebViewRawResource
@@ -33,7 +33,7 @@ import com.tezov.lib_adr_ui_core.type.primaire.size
 object PageWebView : Page<PageWebViewState, PageWebViewAction> {
 
     @Composable
-    override fun Page<PageWebViewState, PageWebViewAction>.content(graphEntry: GraphEntry, innerPadding: PaddingValues) {
+    override fun Page<PageWebViewState, PageWebViewAction>.content(graphEntry: ComposableNavigator.GraphEntry, innerPadding: PaddingValues) {
         val accessor = DiAccessorAppUiPage(requester = this).contextWebView().apply {
             remember()
         }
@@ -50,7 +50,7 @@ object PageWebView : Page<PageWebViewState, PageWebViewAction> {
                     .background(PageWebViewTheme.colors.backgroundBody)
             ) {
                 contentHeader(action = action)
-                contentBody(placeholders = state.placeholders)
+                contentBody(rawResourceId = state.resourceId, placeholders = state.placeholders)
             }
         }
 
@@ -90,13 +90,15 @@ object PageWebView : Page<PageWebViewState, PageWebViewAction> {
 
     @Composable
     private fun ColumnScope.contentBody(
+        rawResourceId: Int?,
         placeholders:ListEntry<String, String>?
     ) {
+        rawResourceId ?: return
         WebView(
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1.0f),
-            rawHtmlResourceId = R.raw.html_not_implemented,
+            rawHtmlResourceId = rawResourceId,
             placeholders = placeholders,
             onUnavailable = {
                 Box(

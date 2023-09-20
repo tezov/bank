@@ -8,7 +8,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.activity.ActivityState
 
 class MainActivityState private constructor(
     val scaffoldState: ScaffoldState
-) : ActivityState {
+) : ActivityState() {
 
     companion object {
         @Composable

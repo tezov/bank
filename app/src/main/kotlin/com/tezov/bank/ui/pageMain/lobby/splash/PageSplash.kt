@@ -12,9 +12,8 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.navigation.navigator.ComposableNavigator
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.WebView
-import com.tezov.lib_adr_ui_cpt.component.core.chunk.WebViewRawResource
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_ui_core.theme.theme.colorsExtended
@@ -24,7 +23,7 @@ object PageSplash : Page<PageSplashState, PageSplashAction> {
 
     @Composable
     override fun Page<PageSplashState, PageSplashAction>.content(
-        graphEntry: GraphEntry,
+        graphEntry: ComposableNavigator.GraphEntry,
         innerPadding: PaddingValues
     ) {
         val accessor = DiAccessorAppUiPage(requester = this).contextSplash().apply {
@@ -39,7 +38,7 @@ object PageSplash : Page<PageSplashState, PageSplashAction> {
                 Modifier
                     .padding(innerPadding)
                     .fillMaxSize(),
-                rawHtmlResourceId = R.raw.html_terms,
+                rawHtmlResourceId = R.raw.html_splash,
                 onUnavailable = {
                     //hack: webview crash if missing
                     LaunchedEffect(Unit){

@@ -20,7 +20,7 @@ import com.tezov.lib_adr_ui_cpt.component.menu.block.SectionSimpleValueRow
 import com.tezov.lib_adr_ui_cpt.component.animated.block.SummaryCardAnimated
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.navigation.navigator.ComposableNavigator
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Shadow
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Text
@@ -42,7 +42,7 @@ object PageAccount : Page<PageAccountState, PageAccountAction> {
     private const val ICON_ACTION_Y_OFFSET_FACTOR = 0.15f
 
     @Composable
-    override fun Page<PageAccountState, PageAccountAction>.content(graphEntry: GraphEntry, innerPadding: PaddingValues) {
+    override fun Page<PageAccountState, PageAccountAction>.content(graphEntry: ComposableNavigator.GraphEntry, innerPadding: PaddingValues) {
         val accessor = DiAccessorAppUiPage().with(key = this).contextAccount().apply {
             remember()
         }

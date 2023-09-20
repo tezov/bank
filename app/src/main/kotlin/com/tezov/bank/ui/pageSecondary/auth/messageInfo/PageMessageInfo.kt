@@ -16,7 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.tezov.lib_adr_ui_cpt.component.contact.block.SectionMessageRow
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.navigation.navigator.ComposableNavigator
 import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalPager
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
@@ -27,7 +27,7 @@ import com.tezov.lib_kmm_core.type.collection.ListEntry
 object PageMessageInfo : Page<PageMessageInfoState, PageMessageInfoAction> {
 
     @Composable
-    override fun Page<PageMessageInfoState, PageMessageInfoAction>.content(graphEntry: GraphEntry, innerPadding: PaddingValues) {
+    override fun Page<PageMessageInfoState, PageMessageInfoAction>.content(graphEntry: ComposableNavigator.GraphEntry, innerPadding: PaddingValues) {
         val accessor = DiAccessorAppUiPage().with(key = this).contextMessageInfo().apply {
             remember()
         }

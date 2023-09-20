@@ -23,7 +23,7 @@ import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.bank.ui.pageMain.lobby.loginAuth.PageLoginAuthState.Companion.LOGIN_LENGTH
 import com.tezov.bank.ui.pageMain.lobby.loginAuth.PageLoginAuthState.Companion.PASSWORD_LENGTH
 import com.tezov.bank.ui.pageMain.lobby.loginAuth.PageLoginAuthState.Field
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.navigation.navigator.ComposableNavigator
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
@@ -46,7 +46,7 @@ object PageLoginAuth : Page<PageLoginAuthState, PageLoginAuthAction> {
 
     @Composable
     override fun Page<PageLoginAuthState, PageLoginAuthAction>.content(
-        graphEntry: GraphEntry,
+        graphEntry: ComposableNavigator.GraphEntry,
         innerPadding: PaddingValues
     ) {
         val accessor = DiAccessorAppUiPage().with(key = this).contextLoginAuth().apply {

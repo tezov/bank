@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en"
         xmlns="http://www.w3.org/1999/xhtml">
@@ -8,86 +6,71 @@
                 content="text/html; charset=UTF-8"
                 http-equiv="Content-Type" />
         <link
-                href="/assets/html_terms.css"
+                href="./privacy_policy.css"
                 rel="stylesheet">
     </head>
     <body>
-        <div id="block">
-            <img src="/res/drawable/html_specimen.png" />
-            <h2>Tezov Bank Application</h2>
-            <p>L'application "Tezov Bank" (dénommée cette "App") présente une application de démonstration.
-                Toutes les données présentées sont fictives. Cette App ne vend rien et ne collecte aucune donnée.
-                Elle est totalement gratuite d'utilisation et est la propriété de Tezov.
-            </p>
-            <br/>
-            <p>A savoir :</p>
-            <ul>
-                <li>Tous les identifiants et mots de passe sont acceptés. Il suffit de mettre 4 chiffres.</li>
-                <li>Toutes les pages ne sont pas implémentées. Quand il n'y a pas de contenu, un snackbar vous en informe.</li>
-            </ul>
-            <br/>
-            <p>Vous pouvez parcourir la suite de ce document pour avoir des informations supplémentaires.</p>
-            <div id="button">
-                <a href="local://onStart">** Démarrer l'application **</a>
-            </div>
-        </div>
-        <div id="block">
-            <h3>En savoir plus</h3>
-            <p>Cette application est réalisée majoritairement en Kotlin. L'interface visuelle est entièrement réalisée avec Compose.</p>
-            <ul>
-                <li>Architecture : 3 modules (core - 100% Kotlin, core - Android UI, application - UI)</li>
-                <li>Injection de dépendances avec Dagger multi-module (State et Action fournis à l'UI)</li>
-                <li>Séparation de l'UI avec injection du State (données + états de la vue) et Action (gestion des actions de l'utilisateur)</li>
-                <li>Navigation en seule source de vérité (coordinator pattern)</li>
-                <li>La totalité du contenu affiché par l'UI sera reçue par le viewModel (Sauf bottom navigation, top app bar et icône/image). La vue se construit en fonction des données reçues</li>
-            </ul>
-            <br/>
-            <p><b>En cours d'ajout :</b></p>
-            <ul>
-                <li>Un module qui contiendra le viewModel</li>
-                <li>Un module qui contiendra la logique serveur</li>
-                <li>Un module qui contiendra les fonctionnalités propres à la plateforme (réseaux, persistance de données, caméra, etc...)</li>
-            </ul>
-            <p>Le tout organisé avec une logique de clean architecture.</p>
-        </div>
-        <div id="block">
-            <h3>UI</h3>
-            <p>Liste des composants UI que l'on trouve dans cette application :</p>
-            <ul>
-                <li>Custom navigation et navigator avec animations</li>
-                <li>Bottom navigation bar</li>
-                <li>Top navigation bar</li>
-                <li>Dialog</li>
-                <li>Bottom sheet</li>
-                <li>Snackbar</li>
-                <li>Tablayout</li>
-                <li>Pager (plein écran et carousel)</li>
-                <li>Collapsible animated header (Compose animation + Motion Layout + Custom Layout)</li>
-                <li>Drop down menu</li>
-                <li>Vue personnalisée cf. clavier de connexion</li>
-            </ul>
-            <p>Le theming est intégralement réalisé en Kotlin pour Compose.
-                Un thème général est fourni à tous les composants, peu importe le niveau de hiérarchie.
-                Chaque composant peut personnaliser son propre style.
-                L'architecture du thème est fournie par le module core - Android UI qui complète le materialTheme
-                et apporte une notion d'états (default, success, error, alert, ...) d'un composant affectant le jeu de couleurs/graisse/dimension, etc.
-            </p>
-        </div>
-        <div id="block">
-            <h3>Me contacter</h3>
-            <p>tezov.app@gmail.com</p>
-        </div>
-        <div id="block">
-            <h3>Plus</h3>
-            <p>Tezov Bank est focalisé sur l'UI et restera à l'état de démo. Je vous invite à consulter 3 autres applications finalisées et disponibles sur le store.
-                Ces applications ne sont plus mises à jour pour le moment (fonctionnelles de l'API 21 à l'API 31). Elles sont focalisées sur la technique plutôt que sur l'UI.</p>
-            <ul>
-                <li><a href="https://play.google.com/store/apps/details?id=com.tezov.wifer.rse">Wifier (Java) :</a> Application sur le streaming de données. Échanges robustes entre le serveur et le client avec détection automatique des appareils.</li>
-                <li><a href="https://play.google.com/store/apps/details?id=com.tezov.crypter.rse">Crypter (Java) :</a> Application sur le cryptage. Génération, partage et sauvegarde de clés. Le chiffrement respecte scrupuleusement les bonnes pratiques. Utilisation de 'Caméra 2' en direct, persistance des données, xml/json parser custom, deep linking, etc...</li>
-                <li><a href="https://play.google.com/store/apps/details?id=com.tezov.gofo.rse">Gofo (Java / Kotlin) :</a> Application sur les échanges REST. Avec défilement infini à la volée sans blocage ni surcharge réseau. (API Unsplash en freeware limitée en nombre de requêtes)</li>
-            </ul>
-        </div>
-        <br/>
-        <br/>
+        <p>
+            <strong>Politique de confidentialité</strong>
+        </p>
+        <p>
+            L'application "Bank" (dénommé "cette App") est gratuite d'utilisation
+            et sans publicité. Cette App propose aucun achat, toutes les fonctionnalités sont disponibles gratuitements.
+            Cette App est la propriété de Tezov, fournie gratuitement et utilisable dans l'états.
+        </p>
+        <p>
+            Cette page a pour but d'informer l'utilisateur de cette App (dénommé "Utilisateur") de
+            sa politique de confidentialité
+            (dénommé "Politique") concernant la collecte, l'utilisation et la
+            divulgation des informations personnelles
+            de l'Utilisateur (dénommé "Données").
+        </p>
+        <p>
+            <strong>1.Collecte de Données</strong>
+        </p>
+        <p>
+            Cet App ne collecte aucune données.
+        </p>
+        <p>
+            <strong>2.Securité</strong>
+        </p>
+        <p>
+            Cette App est une applications de démo. Il n'y a rien à sécuriser.
+        </p>
+        <p>
+            <strong>3.Log Information</strong>
+        </p>
+        <p>
+            Soyez informé qu'en cas d'erreur pendant l'utilisation de cet App, des informations
+            peuvent être collectées par google. Cet app n'a aucune responsibilité dans sur la collecte de données fait par Google.
+            les informations de connection de l'Utilisateur comme l'IP, le nom de l'appareil de
+            l'utilisateur, le systéme d'exploitation
+            de l'Utilisateur, la configuration de l'Utilisateur, l'heure et la date. Pour plus d'informations, consulter la politique de confidentialité de Google.
+        </p>
+        <p>
+            <strong>6.Public et Contenu</strong>
+        </p>
+        <p>
+            Cette app ne promo aucun contenu pour adulte. Si un service tiers utilisé
+            par cette App propose un contenu en violation avec cette Politique, ce service sera
+            immédiatement supprimé.
+        </p>
+        <p>
+            <strong>7.Mise à jour de cette Politique</strong>
+        </p>
+        <p>
+            Il est possible que des modifications soit apportées à cette Politique. Nous recommendons
+            donc à l'utilisateur
+            de visiter périodiquement cette page. Nous notifirons l'Utilisateur de tout changement
+            apporté en mettant à jour cette page.
+        </p>
+        <p>Cette Politique est active depuis le 13-05-2023</p>
+        <p>
+            <strong>Nous Contacter</strong>
+        </p>
+        <p>
+            Si l'utilisateur souhaite nous contacter, il peut nous envoyer un email à
+            tezov.app@gmail.
+        </p>
     </body>
 </html>

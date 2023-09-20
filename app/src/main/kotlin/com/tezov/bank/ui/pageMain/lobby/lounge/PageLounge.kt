@@ -16,8 +16,8 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import com.tezov.app.R
 import com.tezov.bank.ui.di.accessor.DiAccessorAppUiPage
+import com.tezov.lib_adr_app_core.navigation.navigator.ComposableNavigator
 import com.tezov.lib_adr_ui_core.animation.AnimationCompound.Companion.animate
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
 import com.tezov.lib_adr_ui_cpt.paintArt.Shape
 import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalPager
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
@@ -37,7 +37,7 @@ object PageLounge : Page<PageLoungeState, PageLoungeAction> {
 
     @Composable
     override fun Page<PageLoungeState, PageLoungeAction>.content(
-        graphEntry: GraphEntry,
+        graphEntry: ComposableNavigator.GraphEntry,
         innerPadding: PaddingValues
     ) {
         val accessor = DiAccessorAppUiPage().with(key = this).contextLounge().apply {
@@ -316,13 +316,24 @@ object PageLounge : Page<PageLoungeState, PageLoungeAction> {
                 onClick = action::onClickSendMoney,
             )
             Spacer(modifier = Modifier.height(PageLoungeTheme.dimensions.spacingTopFromLinkService))
-            Text.Clickable.invoke(
-                onClick = action::onClickHelpAndService,
-            ) {
-                Text.StateColor(
-                    text = stringResource(id = R.string.pg_login_link_help_and_service),
-                    style = PageLoungeTheme.styles.link,
-                )
+            Row {
+                Text.Clickable.invoke(
+                    onClick = action::onClickTerms,
+                ) {
+                    Text.StateColor(
+                        text = stringResource(id = R.string.pg_login_link_terms),
+                        style = PageLoungeTheme.styles.link,
+                    )
+                }
+                Spacer(modifier = Modifier.weight(1.0f))
+                Text.Clickable.invoke(
+                    onClick = action::onClickHelpAndService,
+                ) {
+                    Text.StateColor(
+                        text = stringResource(id = R.string.pg_login_link_help_and_service),
+                        style = PageLoungeTheme.styles.link,
+                    )
+                }
             }
         }
     }

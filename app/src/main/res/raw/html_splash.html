@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en"
         xmlns="http://www.w3.org/1999/xhtml">
@@ -35,20 +33,13 @@
             <h3>En savoir plus</h3>
             <p>Cette application est réalisée majoritairement en Kotlin. L'interface visuelle est entièrement réalisée avec Compose.</p>
             <ul>
-                <li>Architecture : 3 modules (core - 100% Kotlin, core - Android UI, application - UI)</li>
-                <li>Injection de dépendances avec Dagger multi-module (State et Action fournis à l'UI)</li>
-                <li>Séparation de l'UI avec injection du State (données + états de la vue) et Action (gestion des actions de l'utilisateur)</li>
+                <li>Architecture multi-modulaires compatible kmm</li>
+                <li>Injection de dépendances UI avec Dagger multi-modules (State et Action fournis à l'UI)</li>
+                <li>Séparation de l'UI avec injection du State (données + états de la vue) et Action (gestion des actions de l'utilisateur ou application)</li>
                 <li>Navigation en seule source de vérité (coordinator pattern)</li>
                 <li>La totalité du contenu affiché par l'UI sera reçue par le viewModel (Sauf bottom navigation, top app bar et icône/image). La vue se construit en fonction des données reçues</li>
             </ul>
             <br/>
-            <p><b>En cours d'ajout :</b></p>
-            <ul>
-                <li>Un module qui contiendra le viewModel</li>
-                <li>Un module qui contiendra la logique serveur</li>
-                <li>Un module qui contiendra les fonctionnalités propres à la plateforme (réseaux, persistance de données, caméra, etc...)</li>
-            </ul>
-            <p>Le tout organisé avec une logique de clean architecture.</p>
         </div>
         <div id="block">
             <h3>UI</h3>
@@ -86,6 +77,9 @@
                 <li><a href="https://play.google.com/store/apps/details?id=com.tezov.crypter.rse">Crypter (Java) :</a> Application sur le cryptage. Génération, partage et sauvegarde de clés. Le chiffrement respecte scrupuleusement les bonnes pratiques. Utilisation de 'Caméra 2' en direct, persistance des données, xml/json parser custom, deep linking, etc...</li>
                 <li><a href="https://play.google.com/store/apps/details?id=com.tezov.gofo.rse">Gofo (Java / Kotlin) :</a> Application sur les échanges REST. Avec défilement infini à la volée sans blocage ni surcharge réseau. (API Unsplash en freeware limitée en nombre de requêtes)</li>
             </ul>
+        </div>
+        <div id="block">
+            <a href="http://terms.tezov.com/bank/privacy_policy_fr.html">Politque de confidentialité</a>
         </div>
         <br/>
         <br/>

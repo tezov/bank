@@ -11,7 +11,7 @@
     <string name="pg_login_btn_send_money">Envoyer de l\'argent avec paylib</string>
     <string name="pg_login_btn_activate_balance">Activer le solde</string>
     <string name="pg_login_link_help_and_service">Aide &amp; Services</string>
-    <string name="pg_login_link_terms">Privacy Policies</string>
+    <string name="pg_login_link_terms">Privacy Policy</string>
     <string name="pg_login_img_logo">image logo banque</string>
     <string name="pg_login_img_suit_case">icon utilisateur</string>
     <string name="pg_login_icon_add_account">icon ajouter un compte</string>

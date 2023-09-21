@@ -16,8 +16,6 @@
 
 This project is done in Kotlin with Compose in order to find a convenient architecture to fast build an app with stable UI modules. 
 
-I'm also using this project to refactor [my Java lib](https://github.com/tezov/crypter_and_lib) in Kotlin. Right now, just doing the bare minimum.
-
 This application is available in the playstore [App](https://play.google.com/store/apps/details?id=com.tezov.bank.rse). 
 
 Right now I'm working only on the UI side with a clean theming
@@ -25,8 +23,6 @@ Right now I'm working only on the UI side with a clean theming
 ---
 
 Ce projet est en Kotlin avec Compose pour trouver une architecture viable de création rapide d'application avec des modules core stable en tentant d'adopter une structure de clean architecture et par la suite avec des modules intégralement testable.
-
-Je me sers de ce projet également pour migrer [ma librairie java](https://github.com/tezov/crypter_and_lib) vers Kotlin. Pour le moment, je fais que le strict minimum pour récupérer les outils Java dont j'ai besoin.
 
 L'application est disponible sur le playstore [App](https://play.google.com/store/apps/details?id=com.tezov.bank.rse)
 

@@ -8,10 +8,12 @@ import com.tezov.bank.ui.dialog.lobby.loginForgotten.DialogLoginForgotten
 import com.tezov.lib_adr_app_core.navigation.NavigationController
 import com.tezov.lib_adr_app_core.ui.composition.activity.sub.dialog.DialogAction
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
+import com.tezov.lib_adr_app_core.ui.di.module.ModuleCoreUiActivity
 import com.tezov.lib_kmm_core.async.notifier.Event
-import com.tezov.lib_kmm_core.async.notifier.observer.event.ObserverEventE
+import kotlinx.coroutines.CoroutineScope
 
 class PageLoginAuthAction private constructor(
+    private val coroutineScope: CoroutineScope,
     private val navigationController: NavigationController,
     private val dialogAction: DialogAction,
 ) : PageAction<PageLoginAuthState>() {
@@ -20,9 +22,11 @@ class PageLoginAuthAction private constructor(
     companion object {
 
         fun create(
+            coroutineScope: CoroutineScope,
             navigationController: NavigationController,
             dialogAction: DialogAction
         ) = PageLoginAuthAction(
+            coroutineScope = coroutineScope,
             navigationController = navigationController,
             dialogAction = dialogAction,
         )
@@ -37,13 +41,9 @@ class PageLoginAuthAction private constructor(
     }
 
     fun onClickLoginForgotten() {
-        dialogAction.unregisterAll(this)
-        dialogAction.register(object : ObserverEventE<Event, Any?>(this, Event.Confirm) {
-            override fun onComplete(event: Event, value: Any?) {
-                unsubscribe()
-                requestLoginRecovery()
-            }
-        })
+        dialogAction.collectNavigateOnce(coroutineScope) {
+            requestLoginRecovery()
+        }
         dialogAction.showOnCardWithOverlay(this) {
             DialogLoginForgotten()
         }

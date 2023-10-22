@@ -1,5 +1,3 @@
-
-
 package com.tezov.bank.ui.di.module
 
 import com.tezov.bank.ui.activity.MainActivityAction
@@ -32,7 +30,7 @@ interface ModuleAppUiActivity {
             private val scaffoldState: ModuleCoreUiActivity.State.ScaffoldState
         ) : ComposableWrapper<MainActivityState>() {
             @androidx.compose.runtime.Composable
-            override fun create() = MainActivityState.create(scaffoldState.get())
+            override fun create() = MainActivityState.create(scaffoldState = scaffoldState.get())
         }
     }
 
@@ -44,8 +42,8 @@ interface ModuleAppUiActivity {
         ) : ComposableWrapper<MainActivityAction>() {
             @androidx.compose.runtime.Composable
             override fun create() = MainActivityAction.create(
-                navigationController.get(),
-                snackbarAction.get()
+                navigationController = navigationController.get(),
+                snackbarAction = snackbarAction.get()
             )
         }
     }

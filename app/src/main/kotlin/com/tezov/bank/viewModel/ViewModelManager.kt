@@ -14,12 +14,13 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 import com.tezov.lib_adr_app_core.ui.di.accessor.DiAccessorCoreUiActivity
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
-import com.tezov.lib_kmm_core.async.notifier.Notifier
-import com.tezov.lib_adr_core.async.notifier.observer.value.ObserverValue
+import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
 import com.tezov.lib_kmm_core.extension.ExtensionBoolean.isTrue
+import kotlinx.coroutines.CoroutineScope
 
 //TODO, ViewModel complet async + adapter la navigation en async pour gérer l'attente réponse avant ouverture page.
 class ViewModelManager private constructor(
+    coroutineScope: CoroutineScope,
     navigationNotifier: NavigationNotifier,
 ) {
 
@@ -28,17 +29,19 @@ class ViewModelManager private constructor(
         @Composable
         operator fun invoke():ViewModelManager{
             val accessor = DiAccessorCoreUiActivity().with(Activity.LocalActivity.current)
+            val state = accessor.contextCore().state()
             val action = accessor.contextCore().action()
-            return ViewModelManager(action.navigationNotifier)
+            return ViewModelManager(
+                coroutineScope = state.coroutineScope,
+                navigationNotifier = action.navigationNotifier
+            )
         }
 
     }
 
-    private val subscription: Notifier.Subscription = navigationNotifier.register(object :
-        ObserverValue<NavigationController.Request>(this) {
-        override fun onComplete(
-            value: NavigationController.Request
-        ) {
+    init {
+
+        navigationNotifier.collectNavigate(coroutineScope) { value ->
             if( value.option?.clearStack.isTrue){
                 value.from?.let { releaseDataUntil(it, false) }
             }
@@ -57,7 +60,8 @@ class ViewModelManager private constructor(
                 }
             }
         }
-    })
+
+    }
 
     private fun releaseSession(){
 

@@ -1,5 +1,3 @@
-
-
 package com.tezov.bank.ui.di.module
 
 
@@ -77,8 +75,8 @@ interface ModuleAppUiModal {
             @androidx.compose.runtime.Composable
             override fun create() =
                 com.tezov.bank.ui.dialog.auth.closeAppConfirmation.DialogCloseAppConfirmationAction.create(
-                    action.get(),
-                    navigationController.get()
+                    action = action.get(),
+                    navigationController = navigationController.get()
                 )
         }
 
@@ -90,8 +88,8 @@ interface ModuleAppUiModal {
             @androidx.compose.runtime.Composable
             override fun create() =
                 com.tezov.bank.ui.dialog.lobby.loginForgotten.DialogLoginForgottenAction.create(
-                    action.get(),
-                    navigationController.get()
+                    action = action.get(),
+                    navigationController = navigationController.get()
                 )
         }
 
@@ -102,7 +100,7 @@ interface ModuleAppUiModal {
             @androidx.compose.runtime.Composable
             override fun create() =
                 com.tezov.bank.ui.bottomsheet.account.accountIncoming.BottomSheetAccountIncomingAction.create(
-                    action.get(),
+                    action = action.get(),
                 )
         }
 

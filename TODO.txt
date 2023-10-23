@@ -4,7 +4,6 @@ Ensuite:
 - check TODO //
 - Finir les regles proguard de Dagger pour une release correcte
 - Rotation, Nav, keep scroll and other saved/restore
-- Remove notifier vers kotlin flow
 
 Details:
 - Scroll end blanc visible sous le bleu?

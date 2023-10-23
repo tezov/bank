@@ -2,6 +2,7 @@
 
 package com.tezov.bank.ui.pageMain.lobby.loginAuth
 
+import android.util.Log
 import com.tezov.bank.navigation.NavigationRouteManager.Route
 import com.tezov.bank.navigation.NavigationUrl
 import com.tezov.bank.ui.dialog.lobby.loginForgotten.DialogLoginForgotten
@@ -17,7 +18,6 @@ class PageLoginAuthAction private constructor(
     private val navigationController: NavigationController,
     private val dialogAction: DialogAction,
 ) : PageAction<PageLoginAuthState>() {
-
 
     companion object {
 
@@ -41,8 +41,9 @@ class PageLoginAuthAction private constructor(
     }
 
     fun onClickLoginForgotten() {
+        //TODO how to unregister on multiple click ??? Before unregister all with notifier
         dialogAction.collectNavigateOnce(coroutineScope) {
-            requestLoginRecovery()
+            if(it == Event.Confirm) { requestLoginRecovery() }
         }
         dialogAction.showOnCardWithOverlay(this) {
             DialogLoginForgotten()

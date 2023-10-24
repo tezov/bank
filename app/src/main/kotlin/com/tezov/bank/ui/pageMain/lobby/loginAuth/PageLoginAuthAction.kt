@@ -12,6 +12,8 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 import com.tezov.lib_adr_app_core.ui.di.module.ModuleCoreUiActivity
 import com.tezov.lib_kmm_core.async.notifier.Event
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.cancel
 
 class PageLoginAuthAction private constructor(
     private val coroutineScope: CoroutineScope,
@@ -32,6 +34,8 @@ class PageLoginAuthAction private constructor(
         )
     }
 
+    private var dialogLoginForgottenListener: Job? = null
+
     fun onClickClose() {
         navigationController.requestNavigateBack(this)
     }
@@ -41,8 +45,9 @@ class PageLoginAuthAction private constructor(
     }
 
     fun onClickLoginForgotten() {
-        //TODO how to unregister on multiple click ??? Before unregister all with notifier
-        dialogAction.collectNavigateOnce(coroutineScope) {
+        dialogLoginForgottenListener?.cancel()
+        dialogLoginForgottenListener = dialogAction.collect.once(coroutineScope) {
+            dialogLoginForgottenListener = null
             if(it == Event.Confirm) { requestLoginRecovery() }
         }
         dialogAction.showOnCardWithOverlay(this) {

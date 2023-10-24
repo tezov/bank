@@ -40,7 +40,7 @@ class ViewModelManager private constructor(
     }
 
     init {
-        navigationNotifier.collectNavigate(coroutineScope) { value ->
+        navigationNotifier.collect.forever(coroutineScope) { value ->
             if( value.option?.clearStack.isTrue){
                 value.from?.let { releaseDataUntil(it, false) }
             }

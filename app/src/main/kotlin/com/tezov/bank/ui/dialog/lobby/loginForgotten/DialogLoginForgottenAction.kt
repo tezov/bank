@@ -28,7 +28,7 @@ class DialogLoginForgottenAction private constructor(
     }
 
     fun onClickConfirm() {
-        action.notify(Event.Confirm)
+        action.notifier.tryEmit(Event.Confirm)
         action.close()
     }
 

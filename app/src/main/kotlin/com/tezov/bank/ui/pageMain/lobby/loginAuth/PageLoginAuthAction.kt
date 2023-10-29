@@ -10,7 +10,7 @@ import com.tezov.lib_adr_app_core.navigation.NavigationController
 import com.tezov.lib_adr_app_core.ui.composition.activity.sub.dialog.DialogAction
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 import com.tezov.lib_adr_app_core.ui.di.module.ModuleCoreUiActivity
-import com.tezov.lib_kmm_core.async.notifier.Event
+import com.tezov.lib_adr_core.async.notifier.Event
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel

@@ -21,7 +21,7 @@ import com.tezov.lib_adr_ui_cpt.component.core.chunk.WebViewRawResource
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
-import com.tezov.lib_kmm_core.type.collection.ListEntry
+import com.tezov.lib_adr_core.type.collection.ListEntry
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.WebView
 import com.tezov.lib_adr_ui_core.extension.ExtensionCompositionLocal
 import com.tezov.lib_adr_ui_core.theme.style.padding

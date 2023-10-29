@@ -4,7 +4,7 @@ package com.tezov.bank.ui.pageMain.lobby.loginAuth
 
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.TextField
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
-import com.tezov.lib_kmm_core.type.collection.ListEntry
+import com.tezov.lib_adr_core.type.collection.ListEntry
 
 class PageLoginAuthState private constructor(
     val textFieldValues: ListEntry<Field, TextField.State> = ListEntry(),

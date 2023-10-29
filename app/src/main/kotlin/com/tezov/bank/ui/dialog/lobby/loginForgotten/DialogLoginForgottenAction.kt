@@ -5,7 +5,7 @@ package com.tezov.bank.ui.dialog.lobby.loginForgotten
 import androidx.compose.runtime.Composable
 import com.tezov.lib_adr_app_core.navigation.NavigationController
 import com.tezov.lib_adr_app_core.ui.compositionTree.modal.dialog.DialogAction
-import com.tezov.lib_kmm_core.async.notifier.Event
+import com.tezov.lib_adr_core.async.notifier.Event
 
 class DialogLoginForgottenAction private constructor(
     private val action: com.tezov.lib_adr_app_core.ui.composition.activity.sub.dialog.DialogAction,

@@ -15,7 +15,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 import com.tezov.lib_adr_app_core.ui.di.accessor.DiAccessorCoreUiActivity
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
-import com.tezov.lib_kmm_core.extension.ExtensionBoolean.isTrue
+import com.tezov.lib_adr_core.extension.ExtensionBoolean.isTrue
 import kotlinx.coroutines.CoroutineScope
 
 //TODO, ViewModel complet async + adapter la navigation en async pour gérer l'attente réponse avant ouverture page.

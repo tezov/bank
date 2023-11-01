@@ -3,6 +3,10 @@
 package com.tezov.bank.ui.pageMain.lobby.loginAuth
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.focus.onFocusChanged
 import com.tezov.bank.ui.pageMain.lobby.loginAuth.PageLoginAuthState.Field
 import com.tezov.lib_adr_ui_core.misc.FocusDispatcher
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.TextField
@@ -11,7 +15,14 @@ import com.tezov.lib_adr_core.type.collection.ListEntry
 //TODO modifier lenght control par une validation login / password
 //doit etre fait a travers le TextField.State par un Validator (cf. reprendre le travail en Java)
 
-class PageLoginAuthFormManager(
+@Composable
+fun rememberPageLoginAuthFormManager(textFieldValues: ListEntry<Field, TextField.State>):PageLoginAuthFormManager {
+    return remember {
+        PageLoginAuthFormManager(textFieldValues = textFieldValues)
+    }.also { it.compose() }
+}
+
+class PageLoginAuthFormManager internal constructor(
     private var focusDispatcher: FocusDispatcher = FocusDispatcher(),
     private val textFieldValues: ListEntry<Field, TextField.State>,
 ) {
@@ -22,7 +33,7 @@ class PageLoginAuthFormManager(
     }
 
     @Composable
-    fun compose() = focusDispatcher.compose()
+    internal fun compose() = focusDispatcher.compose()
 
     fun hideKeyboard() = focusDispatcher.hideKeyboard()
 

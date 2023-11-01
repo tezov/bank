@@ -1,5 +1,3 @@
-
-
 package com.tezov.bank.ui.pageMain.lobby.loginAuth
 
 import androidx.compose.foundation.background
@@ -124,18 +122,9 @@ object PageLoginAuth : Page<PageLoginAuthState, PageLoginAuthAction> {
             LocalProviderTextField.textSelectionColorsNoColor,
             LocalProviderTextField.textSelectionToolbarDisabled
         ) {
-            val formManager = remember {
-                PageLoginAuthFormManager(textFieldValues = textFieldValues)
-            }
-            formManager.compose()
-
-            val login = remember {
-                textFieldValues.getValue(Field.Login)
-            }
-            val password = remember {
-                textFieldValues.getValue(Field.Password)
-            }
-
+            val formManager = rememberPageLoginAuthFormManager(textFieldValues = textFieldValues)
+            val login = remember { textFieldValues.getValue(Field.Login) }
+            val password = remember { textFieldValues.getValue(Field.Password) }
             if (login == null || password == null) {
                 throw IllegalStateException("can't be null")
             }

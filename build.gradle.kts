@@ -1,7 +1,3 @@
-plugins {
-    id("com.tezov.plugin_project.catalog")
-}
-
 tezovCatalog {
     catalogFile = catalogFromFile("${project.projectDir}/catalog.bank.yaml")
 //    catalogFile = catalogFromUrl("https://raw.githubusercontent.com/tezov/bank/dev/split_modules/catalog.bank.yaml")

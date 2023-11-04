@@ -40,7 +40,7 @@ android {
         baseline = file("lint-baseline.xml")
     }
     tezovCatalog {
-        with("projectVersion") {
+        with("projectVersions") {
             compileSdk = int("defaultCompileSdk")
             compileOptions {
                 sourceCompatibility = javaVersion("javaSource")
@@ -103,11 +103,11 @@ android {
 dependencies {
     implementation(project(":lib_adr_app_core"))
     tezovCatalog {
-        with("projectPath.dependencies.adr_core") {
+        with("libraries.runtime.adr_core") {
             implementation(string("dagger"))
             kapt(string("dagger_kapt"))
         }
-        with("projectPath.dependencies_debug.adr_compose") {
+        with("libraries.debug.adr_compose") {
             implementation(string("ui_tooling_preview"))
             debugImplementation(string("ui_tooling"))
             debugImplementation(string("ui_manifest"))

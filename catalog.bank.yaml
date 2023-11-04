@@ -3,49 +3,51 @@ domain: com.tezov
 
 #Dependencies
 #dependencies catalog outside project, not in this git repo (check copy in you need it)
-dependencies : ${file://../catalog.dependencies.yaml}
+merge : ${file://../catalog.dependencies.yaml}
 
 #Modules configuration
-app:
-  - ${plugin.application}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_adr_app_core:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_adr_ui_cpt:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_adr_ui_core:
-    - ${plugin.library}
-    - ${plugin.kotlin}
-    - ${plugin.kapt}
-    - ${plugin.tezov_project_config}
-lib_adr_core:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_kmm_core:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-#lib_test_common:
-#  - ${plugin.library}
-#  - ${plugin.kotlin}
-#  - ${plugin.kapt}
-#  - ${plugin.tezov_project_config}
-#lib_test_common_integration:
-#  - ${plugin.library}
-#  - ${plugin.kotlin}
-#  - ${plugin.tezov_project_config}
-#lib_test_common_unit:
-#  - ${plugin.library}
-#  - ${plugin.kotlin}
-#  - ${plugin.tezov_project_config}
+plugins_apply_to:
+  app:
+    - ${plugins.application}
+    - ${plugins.kotlin}
+    - ${plugins.kapt}
+    - ${plugins.tezov_project_config}
+  lib_adr_app_core:
+    - ${plugins.library}
+    - ${plugins.kotlin}
+    - ${plugins.kapt}
+    - ${plugins.tezov_project_config}
+  lib_adr_ui_cpt:
+    - ${plugins.library}
+    - ${plugins.kotlin}
+    - ${plugins.kapt}
+    - ${plugins.tezov_project_config}
+  lib_adr_ui_core:
+    - ${plugins.library}
+    - ${plugins.kotlin}
+    - ${plugins.kapt}
+    - ${plugins.tezov_project_config}
+  lib_adr_core:
+    - ${plugins.library}
+    - ${plugins.kotlin}
+    - ${plugins.kapt}
+    - ${plugins.tezov_project_config}
+  lib_kmm_core:
+    - ${plugins.library}
+    - ${plugins.kotlin}
+    - ${plugins.kapt}
+    - ${plugins.tezov_project_config}
+
+#  lib_test_common:
+#    - ${plugins.library}
+#    - ${plugins.kotlin}
+#    - ${plugins.kapt}
+#    - ${plugins.tezov_project_config}
+#  lib_test_common_integration:
+#    - ${plugins.library}
+#    - ${plugins.kotlin}
+#    - ${plugins.tezov_project_config}
+#  lib_test_common_unit:
+#    - ${plugins.library}
+#    - ${plugins.kotlin}
+#    - ${plugins.tezov_project_config}

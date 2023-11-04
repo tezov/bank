@@ -10,7 +10,7 @@ resourcesExcluded:
   - META-INF/ASL2.0
   - META-INF/LGPL2.1
 
-projectVersion:
+projectVersions:
   defaultCompileSdk: 34
   defaultMinCompileSdk: 24
   defaultTargetCompileSdk: ${defaultCompileSdk}
@@ -18,23 +18,25 @@ projectVersion:
   javaTarget: ${javaSource}
   jvmTarget: ${javaSource}
   composeCompiler: 1.5.1
-  dependencies:
+
+versions:
+  runtime:
     kmm_core:
       kotlin: 1.10.1
       annotation: 1.6.0
       coroutines: 1.7.3
       reflection: 1.9.0
 
-    kmm_lib:
-      #todo add serialisation + koin + coil for compose + date_time + ?
-      ktor_core: ?.?.?
-      ktor_negociation: ${ktor_core}
-      ktor_json: ${ktor_core}
-      ktor_android: ${ktor_core}
-      ktor_ios: ${ktor_core}
-      sql_delight: ?.?.?
-      sql_delight_android: ${sql_delight}
-      sql_delight_ios: ${sql_delight}
+    #    kmm_lib:
+    #      todo add serialisation + koin + coil for compose + date_time + ?
+    #      ktor_core: ?.?.?
+    #      ktor_negociation: ${ktor_core}
+    #      ktor_json: ${ktor_core}
+    #      ktor_android: ${ktor_core}
+    #      ktor_ios: ${ktor_core}
+    #      sql_delight: ?.?.?
+    #      sql_delight_android: ${sql_delight}
+    #      sql_delight_ios: ${sql_delight}
 
     adr_core:
       multidex: 2.0.1
@@ -77,8 +79,6 @@ projectVersion:
       gson: 2.10.1
       jackson_core: 2.15.2
       jackson_databind: 2.15.2
-      kotlin_serialization: 1.8.22
-      kotlin_serialization_json: 1.5.1
       google_play_services_maps: 18.1.0
       okhttp3_interceptor: 5.0.0-alpha.11
       retrofit: 2.9.0
@@ -87,12 +87,14 @@ projectVersion:
       glide: 4.15.1
       glide_kapt: 4.15.1
       glide_okhttp3: 4.15.1
-  dependencies_debug:
+
+  debug:
     adr_compose:
       ui_tooling_preview: 1.4.3
       ui_tooling: 1.4.3
       ui_manifest: 1.4.3
-  dependencies_test:
+
+  test:
     kmm_core_unit:
       coroutine: 1.7.3
 
@@ -111,103 +113,100 @@ projectVersion:
       espresso_contrib: 3.5.1
       uiautomator: 2.2.0
 
-projectPath:
-  dependencies:
+libraries:
+  runtime:
     kmm_core:
-      kotlin: androidx.core:core-ktx:${projectVersion.dependencies.kmm_core.kotlin}
-      annotation: androidx.annotation:annotation-jvm:${projectVersion.dependencies.kmm_core.annotation}
-      coroutines: org.jetbrains.kotlinx:kotlinx-coroutines-core:${projectVersion.dependencies.kmm_core.coroutines}
-      reflection: org.jetbrains.kotlin:kotlin-reflect:${projectVersion.dependencies.kmm_core.reflection}
+      kotlin: androidx.core:core-ktx:${versions.runtime.kmm_core.kotlin}
+      annotation: androidx.annotation:annotation-jvm:${versions.runtime.kmm_core.annotation}
+      coroutines: org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.runtime.kmm_core.coroutines}
+      reflection: org.jetbrains.kotlin:kotlin-reflect:${versions.runtime.kmm_core.reflection}
 
-    kmm_lib:
-      ktor_core: io.ktor:ktor-client-core:${projectVersion.dependencies.kmm_lib.ktor_core}
-      ktor_negociation: io.ktor:ktor-client-content-negotiation:${projectVersion.dependencies.kmm_lib.ktor_negociation}
-      ktor_json: io.ktor:ktor-serialization-kotlinx-json:${projectVersion.dependencies.kmm_lib.ktor_json}
-      ktor_android: io.ktor:ktor-client-android:${projectVersion.dependencies.kmm_lib.ktor_android}
-      ktor_ios: io.ktor:ktor-client-darwin:${projectVersion.dependencies.kmm_lib.ktor_ios}
-
-      sql_delight: com.squareup.sqldelight:runtime:${projectVersion.dependencies.kmm_lib.sql_delight}
-      sql_delight_android: com.squareup.sqldelight:android-driver:${projectVersion.dependencies.kmm_lib.sql_delight_android}
-      sql_delight_ios: com.squareup.sqldelight:native-driver:${projectVersion.dependencies.kmm_lib.sql_delight_ios}
+    #    kmm_lib:
+    #      ktor_core: io.ktor:ktor-client-core:${versions.runtime.kmm_lib.ktor_core}
+    #      ktor_negociation: io.ktor:ktor-client-content-negotiation:${versions.runtime.kmm_lib.ktor_negociation}
+    #      ktor_json: io.ktor:ktor-serialization-kotlinx-json:${versions.runtime.kmm_lib.ktor_json}
+    #      ktor_android: io.ktor:ktor-client-android:${versions.runtime.kmm_lib.ktor_android}
+    #      ktor_ios: io.ktor:ktor-client-darwin:${versions.runtime.kmm_lib.ktor_ios}
+    #      sql_delight: com.squareup.sqldelight:runtime:${versions.runtime.kmm_lib.sql_delight}
+    #      sql_delight_android: com.squareup.sqldelight:android-driver:${versions.runtime.kmm_lib.sql_delight_android}
+    #      sql_delight_ios: com.squareup.sqldelight:native-driver:${versions.runtime.kmm_lib.sql_delight_ios}
 
     adr_core:
-      multidex: androidx.multidex:multidex:${projectVersion.dependencies.adr_core.multidex}
-      coroutines_android: org.jetbrains.kotlinx:kotlinx-coroutines-android:${projectVersion.dependencies.adr_core.coroutines_android}
-      appcompat: androidx.appcompat:appcompat:${projectVersion.dependencies.adr_core.appcompat}
-      appcompat_resources: androidx.appcompat:appcompat-resources:${projectVersion.dependencies.adr_core.appcompat_resources}
-      material: com.google.android.material:material:${projectVersion.dependencies.adr_core.material}
-      viewmodel: androidx.lifecycle:lifecycle-viewmodel-ktx:${projectVersion.dependencies.adr_core.viewmodel}
-      viewmodel_saved_state: androidx.lifecycle:lifecycle-viewmodel-savedstate:${projectVersion.dependencies.adr_core.viewmodel_saved_state}
-      lifecycle_runtime: androidx.lifecycle:lifecycle-runtime-ktx:${projectVersion.dependencies.adr_core.lifecycle_runtime}
-      lifecycle_extensions: androidx.lifecycle:lifecycle-extensions:${projectVersion.dependencies.adr_core.lifecycle_extensions}
-      lifecycle_livedata: androidx.lifecycle:lifecycle-livedata-ktx:${projectVersion.dependencies.adr_core.lifecycle_livedata}
-      dagger: com.google.dagger:dagger:${projectVersion.dependencies.adr_core.dagger}
-      dagger_kapt: com.google.dagger:dagger-compiler:${projectVersion.dependencies.adr_core.dagger_kapt}
+      multidex: androidx.multidex:multidex:${versions.runtime.adr_core.multidex}
+      coroutines_android: org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.runtime.adr_core.coroutines_android}
+      appcompat: androidx.appcompat:appcompat:${versions.runtime.adr_core.appcompat}
+      appcompat_resources: androidx.appcompat:appcompat-resources:${versions.runtime.adr_core.appcompat_resources}
+      material: com.google.android.material:material:${versions.runtime.adr_core.material}
+      viewmodel: androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.runtime.adr_core.viewmodel}
+      viewmodel_saved_state: androidx.lifecycle:lifecycle-viewmodel-savedstate:${versions.runtime.adr_core.viewmodel_saved_state}
+      lifecycle_runtime: androidx.lifecycle:lifecycle-runtime-ktx:${versions.runtime.adr_core.lifecycle_runtime}
+      lifecycle_extensions: androidx.lifecycle:lifecycle-extensions:${versions.runtime.adr_core.lifecycle_extensions}
+      lifecycle_livedata: androidx.lifecycle:lifecycle-livedata-ktx:${versions.runtime.adr_core.lifecycle_livedata}
+      dagger: com.google.dagger:dagger:${versions.runtime.adr_core.dagger}
+      dagger_kapt: com.google.dagger:dagger-compiler:${versions.runtime.adr_core.dagger_kapt}
 
     adr_compose:
-      activity: androidx.activity:activity-compose:${projectVersion.dependencies.adr_compose.activity}
-      ui: androidx.compose.ui:ui:${projectVersion.dependencies.adr_compose.ui}
-      ui_util: androidx.compose.ui:ui-util:${projectVersion.dependencies.adr_compose.ui_util}
-      runtime: androidx.compose.runtime:runtime:${projectVersion.dependencies.adr_compose.runtime}
-      material: androidx.compose.material:material:${projectVersion.dependencies.adr_compose.material}
-      foundation: androidx.compose.foundation:foundation:${projectVersion.dependencies.adr_compose.foundation}
-      animation: androidx.compose.ui:ui-graphics:${projectVersion.dependencies.adr_compose.animation}
-      livedata: androidx.compose.runtime:runtime-livedata:${projectVersion.dependencies.adr_compose.livedata}
-      material3: androidx.compose.material3:material3:${projectVersion.dependencies.adr_compose.material3}
-      material_icons_core: androidx.compose.material:material-icons-core:${projectVersion.dependencies.adr_compose.material_icons_core}
-      material_icons_extended: androidx.compose.material:material-icons-extended:${projectVersion.dependencies.adr_compose.material_icons_extended}
-      accompanist_pager_indicators: com.google.accompanist:accompanist-pager-indicators:${projectVersion.dependencies.adr_compose.accompanist_pager_indicators}
-      constraintlayout: androidx.constraintlayout:constraintlayout-compose:${projectVersion.dependencies.adr_compose.constraintlayout}
-      viewmodel: androidx.lifecycle:lifecycle-viewmodel-compose:${projectVersion.dependencies.adr_compose.viewmodel}
-      navigation: androidx.navigation:navigation-compose:${projectVersion.dependencies.adr_compose.navigation}
-      google_maps: com.google.maps.android:maps-compose:${projectVersion.dependencies.adr_compose.google_maps}
+      activity: androidx.activity:activity-compose:${versions.runtime.adr_compose.activity}
+      ui: androidx.compose.ui:ui:${versions.runtime.adr_compose.ui}
+      ui_util: androidx.compose.ui:ui-util:${versions.runtime.adr_compose.ui_util}
+      runtime: androidx.compose.runtime:runtime:${versions.runtime.adr_compose.runtime}
+      material: androidx.compose.material:material:${versions.runtime.adr_compose.material}
+      foundation: androidx.compose.foundation:foundation:${versions.runtime.adr_compose.foundation}
+      animation: androidx.compose.ui:ui-graphics:${versions.runtime.adr_compose.animation}
+      livedata: androidx.compose.runtime:runtime-livedata:${versions.runtime.adr_compose.livedata}
+      material3: androidx.compose.material3:material3:${versions.runtime.adr_compose.material3}
+      material_icons_core: androidx.compose.material:material-icons-core:${versions.runtime.adr_compose.material_icons_core}
+      material_icons_extended: androidx.compose.material:material-icons-extended:${versions.runtime.adr_compose.material_icons_extended}
+      accompanist_pager_indicators: com.google.accompanist:accompanist-pager-indicators:${versions.runtime.adr_compose.accompanist_pager_indicators}
+      constraintlayout: androidx.constraintlayout:constraintlayout-compose:${versions.runtime.adr_compose.constraintlayout}
+      viewmodel: androidx.lifecycle:lifecycle-viewmodel-compose:${versions.runtime.adr_compose.viewmodel}
+      navigation: androidx.navigation:navigation-compose:${versions.runtime.adr_compose.navigation}
+      google_maps: com.google.maps.android:maps-compose:${versions.runtime.adr_compose.google_maps}
 
     adr_lib:
-      threetenabp: com.jakewharton.threetenabp:threetenabp:${projectVersion.dependencies.adr_lib.threetenabp}
-      bouncycastle: org.bouncycastle:bcpkix-jdk15to18:${projectVersion.dependencies.adr_lib.bouncycastle}
-      zxing: com.google.zxing:core:${projectVersion.dependencies.adr_lib.zxing}
-      webkit: androidx.webkit:webkit:${projectVersion.dependencies.adr_lib.webkit}
-      browser: androidx.browser:browser:${projectVersion.dependencies.adr_lib.browser}
-      gson: com.google.code.gson:gson:${projectVersion.dependencies.adr_lib.gson}
-      jackson_core: com.fasterxml.jackson.core:jackson-core:${projectVersion.dependencies.adr_lib.jackson_core}
-      jackson_databind: com.fasterxml.jackson.core:jackson-databind:${projectVersion.dependencies.adr_lib.jackson_databind}
-      kotlin_serialization: org.jetbrains.kotlin.plugin.serialization:${projectVersion.dependencies.adr_lib.kotlin_serialization}
-      kotlin_serialization_json: org.jetbrains.kotlin.plugin.serialization-json:${projectVersion.dependencies.adr_lib.kotlin_serialization_json}
-      google_play_services_maps: com.google.android.gms:play-services-maps:${projectVersion.dependencies.adr_lib.google_play_services_maps}
-      okhttp3_interceptor: com.squareup.okhttp3:logging-interceptor:${projectVersion.dependencies.adr_lib.okhttp3_interceptor}
-      retrofit: com.squareup.retrofit2:retrofit:${projectVersion.dependencies.adr_lib.retrofit}
-      retrofit2_scalar: com.squareup.retrofit2:converter-scalars:${projectVersion.dependencies.adr_lib.retrofit2_scalar}
-      retrofit2_gson: com.squareup.retrofit2:converter-gson:${projectVersion.dependencies.adr_lib.retrofit2_gson}
-      glide: com.github.bumptech.glide:glide:${projectVersion.dependencies.adr_lib.glide}
-      glide_kapt: com.github.bumptech.glide:compiler:${projectVersion.dependencies.adr_lib.glide_kapt}
-      glide_okhttp3: com.github.bumptech.glide:okhttp3-integration:${projectVersion.dependencies.adr_lib.glide_okhttp3}
+      threetenabp: com.jakewharton.threetenabp:threetenabp:${versions.runtime.adr_lib.threetenabp}
+      bouncycastle: org.bouncycastle:bcpkix-jdk15to18:${versions.runtime.adr_lib.bouncycastle}
+      zxing: com.google.zxing:core:${versions.runtime.adr_lib.zxing}
+      webkit: androidx.webkit:webkit:${versions.runtime.adr_lib.webkit}
+      browser: androidx.browser:browser:${versions.runtime.adr_lib.browser}
+      gson: com.google.code.gson:gson:${versions.runtime.adr_lib.gson}
+      jackson_core: com.fasterxml.jackson.core:jackson-core:${versions.runtime.adr_lib.jackson_core}
+      jackson_databind: com.fasterxml.jackson.core:jackson-databind:${versions.runtime.adr_lib.jackson_databind}
+      google_play_services_maps: com.google.android.gms:play-services-maps:${versions.runtime.adr_lib.google_play_services_maps}
+      okhttp3_interceptor: com.squareup.okhttp3:logging-interceptor:${versions.runtime.adr_lib.okhttp3_interceptor}
+      retrofit: com.squareup.retrofit2:retrofit:${versions.runtime.adr_lib.retrofit}
+      retrofit2_scalar: com.squareup.retrofit2:converter-scalars:${versions.runtime.adr_lib.retrofit2_scalar}
+      retrofit2_gson: com.squareup.retrofit2:converter-gson:${versions.runtime.adr_lib.retrofit2_gson}
+      glide: com.github.bumptech.glide:glide:${versions.runtime.adr_lib.glide}
+      glide_kapt: com.github.bumptech.glide:compiler:${versions.runtime.adr_lib.glide_kapt}
+      glide_okhttp3: com.github.bumptech.glide:okhttp3-integration:${versions.runtime.adr_lib.glide_okhttp3}
 
-  dependencies_debug:
+  debug:
     adr_compose:
-      ui_tooling_preview: androidx.compose.ui:ui-tooling-preview:${projectVersion.dependencies_debug.adr_compose.ui_tooling_preview}
-      ui_tooling: androidx.compose.ui:ui-tooling:${projectVersion.dependencies_debug.adr_compose.ui_tooling}
-      ui_manifest: androidx.compose.ui:ui-test-manifest:${projectVersion.dependencies_debug.adr_compose.ui_manifest}
+      ui_tooling_preview: androidx.compose.ui:ui-tooling-preview:${versions.debug.adr_compose.ui_tooling_preview}
+      ui_tooling: androidx.compose.ui:ui-tooling:${versions.debug.adr_compose.ui_tooling}
+      ui_manifest: androidx.compose.ui:ui-test-manifest:${versions.debug.adr_compose.ui_manifest}
 
-  dependencies_test:
+  test:
     kmm_core_unit:
-      coroutine: org.jetbrains.kotlinx:kotlinx-coroutines-test:${projectVersion.dependencies_test.kmm_core_unit.coroutine}
+      coroutine: org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.test.kmm_core_unit.coroutine}
 
     adr_core_unit:
-      juint: junit:junit:${projectVersion.dependencies_test.adr_core_unit.juint}
-      truth: com.google.truth:truth:${projectVersion.dependencies_test.adr_core_unit.truth}
-      mockk: io.mockk:mockk:${projectVersion.dependencies_test.adr_core_unit.mockk}
-      mockk_android: io.mockk:mockk-android:${projectVersion.dependencies_test.adr_core_unit.mockk_android}
+      juint: junit:junit:${versions.test.adr_core_unit.juint}
+      truth: com.google.truth:truth:${versions.test.adr_core_unit.truth}
+      mockk: io.mockk:mockk:${versions.test.adr_core_unit.mockk}
+      mockk_android: io.mockk:mockk-android:${versions.test.adr_core_unit.mockk_android}
 
     adr_core_integration:
-      test: androidx.test:core:${projectVersion.dependencies_test.adr_core_integration.test}
-      test_ktx: androidx.test:core-ktx:${projectVersion.dependencies_test.adr_core_integration.test_ktx}
-      junit_test: androidx.test.ext:junit:${projectVersion.dependencies_test.adr_core_integration.junit_test}
-      junit_test_ktx: androidx.test.ext:junit-ktx:${projectVersion.dependencies_test.adr_core_integration.junit_test_ktx}
-      espresso_core: androidx.test.espresso:espresso-core:${projectVersion.dependencies_test.adr_core_integration.espresso_core}
-      espresso_contrib: androidx.test.espresso:espresso-contrib:${projectVersion.dependencies_test.adr_core_integration.espresso_contrib}
-      uiautomator: androidx.test.uiautomator:uiautomator:${projectVersion.dependencies_test.adr_core_integration.uiautomator}
+      test: androidx.test:core:${versions.test.adr_core_integration.test}
+      test_ktx: androidx.test:core-ktx:${versions.test.adr_core_integration.test_ktx}
+      junit_test: androidx.test.ext:junit:${versions.test.adr_core_integration.junit_test}
+      junit_test_ktx: androidx.test.ext:junit-ktx:${versions.test.adr_core_integration.junit_test_ktx}
+      espresso_core: androidx.test.espresso:espresso-core:${versions.test.adr_core_integration.espresso_core}
+      espresso_contrib: androidx.test.espresso:espresso-contrib:${versions.test.adr_core_integration.espresso_contrib}
+      uiautomator: androidx.test.uiautomator:uiautomator:${versions.test.adr_core_integration.uiautomator}
 
-plugin:
+plugins:
   android: com.android
   application: ${android}.application
   library: ${android}.library

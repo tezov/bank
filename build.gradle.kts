@@ -1,8 +1,4 @@
 tezovCatalog {
-    catalogFile = catalogFromFile("${project.projectDir}/catalog.bank.yaml")
-//    catalogFile = catalogFromUrl("https://raw.githubusercontent.com/tezov/bank/dev/split_modules/catalog.bank.yaml")
-    configureProjects()
-
 //    val ignore_alpha = true
 //    val ignore_beta = false
 //    val ignore_rc = false
